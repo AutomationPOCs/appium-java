@@ -1,0 +1,13 @@
+com.NFK.database
+com.NFK.support
+com.NFK.version1.android.beans
+com.NFK.version1.android.component
+com.NFK.version1.android.pages
+com.NFK.version1.android.steps
+com.NFK.version1.iOS.beans
+com.NFK.version1.iOS.component
+com.NFK.version1.iOS.pages
+com.NFK.version1.iOS.steps
+com.NFK.version1.listener
+com.NFK.web.common.pages
+com.qmetry.qaf.automation.integration.qtest

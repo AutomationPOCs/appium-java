@@ -1,0 +1,322 @@
+SCENARIO: Verify Opt-in checkbox selection and de-selection on My Account screen
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15344", "description":"Verify user can start and stop sensor from My Devices screen", "groups":["CGM"], "Module":" ","author":["Roshani"]}
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Account
+	And user selects checkbox of optin
+	Then user verify optin screen
+	And user clicks on cancel and again select checkbox of optin
+	And user clicks on agree and verify optin check box selected
+	And user de-select optin checkbox
+	And user selects checkbox of optin and clicks on cancel
+	And user closes the app
+END
+
+SCENARIO: Verify user can Skip pair sensor screen
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15376", "description":"Verify user can Skip pair sensor screen", "groups":["CGM"], "Module":" ","author":["Priya"]}
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user closes the app
+	And user opens app
+	And user skips sensor Pairing
+	And user clicks on Start Tour button
+	And user verifies the App tour screens on home screen
+	And user verifies app should not display app tour button on home screen
+END
+
+SCENARIO: Verify user's session is not expired when app is killed from background.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15341", "description":"Verify user's session is not expired when app is killed from background.", "groups":["CGM"], "Module":" ","author":["Roshani"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+And user gets redirected to Home page
+And user closes the app
+And user opens app
+And user verify gets redirected to Home page
+And user closes the app
+END
+#
+SCENARIO: Verify Help menu
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15533", "description":"Verify Help menu", "groups":["CGM"], "Module":"Sensor Pairing","author":["Vaibhav"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Help option
+	Then user verify help page options
+	Then user verify the Saftey Onboarding screens
+	Then user verifies the App tour screens
+	Then user verifies the Sensor Application screen
+	Then user validate the various options of Sensor application
+	Then user click back button for 'SensorApp'
+	Then user verifies the App User Guide
+	Then user click back button for 'AppuserGuide'
+	Then user verifies the About screen
+	Then user click back button for 'About'
+	Then user verify the License screens
+	Then user click back button for 'License'
+	And user closes the app
+END
+#
+SCENARIO: Verify app doesn't display country field on edit account screen
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15342", "description":"Verify app doesn't display country field on edit account screen", "groups":["CGM"], "Module":" ","author":["Roshani"]}
+Given user resets application
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+When user clicks on more menu
+And user clicks on Account
+And user clicks edit profile button
+And user verify app doesnt display country field on edit screen
+And user closes the app
+END
+#
+SCENARIO: Verify Opt-in checkbox selection and deselection
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15333", "description":"Verify Opt-in checkbox selection and deselection.", "groups":["CGM"], "Module":" ","author":["Roshani"]}
+Given user resets application
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user select optin checkbox
+And user taps on cancel button and verify optin checkbox deselected
+And user again select optin checkbox and click on I agree button
+And user verify signup first screen with optin checkbox selected 
+And user deselect optin checkbox
+And user closes the app
+END
+#
+SCENARIO: Verify user can access all four menus of the application.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15338", "description":"Verify user can access all four menus of the application.", "groups":["NFKjob3","CGM"], "Module":"Sensor Pairing","author":["Vaibhav"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user clicks on logbook tab
+	And user clicks on My Progress
+	And user clicks on more menu
+	And user clicks on Home tab
+	And user closes the app
+END
+#
+SCENARIO: Verify region-native set country is displayed at top of the country list
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15297", "description":"Verify region-native set country is displayed at top of the country list.", "groups":["NFKjob3"], "Module":" ","author":["Roshani"]}
+Given user resets application
+And user opens app
+And user verifies by default country region
+When user selects a country '${uomcg_country.name}' from country list
+And user display selected '${uomcg_country.name}' country at top with green mark
+And user closes the app
+END
+#
+SCENARIO: Verification of Email
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17183", "description":"Verification of Email", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+Given user resets application
+And user opens app
+When user selects country '${country.name}' from country list
+And user gets redirected to 'SIGN-UP MYSELF' Page
+And user enters signup details using 'signup.user1'
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair 
+When user clicks on more menu
+And user clicks on share 
+Then user gets redirected to Share Page
+When user clicks on Add Follower button 
+And user verifies Sharing First Use Statements
+And user clicks on Invite Followers button
+Then user gets redirected to Add Follower page 
+When user enters name and email address of follower and clicks on next button 
+Then user gets redirected to Set Follower page
+Then user toggles trend graph and sensor expiration
+And clicks on Invite button
+Then user open browser and enter enter url 'https://www.mailinator.com/v4/public/inboxes.jsp?to=' with a emailID 'follower@mailinator.com'
+And user closes the app
+END
+#
+
+SCENARIO: Verification of Invited status on Share screen.
+META-DATA: {"testCaseId":"","manualTestCaseId":"TC-16995", "description":" Verification of Invited status on Share screen..", "groups":["CGM"], "Module":"Share screen","author":["Pradnya"]}
+Given user resets application
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user selects opt-in as 'I Agree' in sign up page    
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair 
+When user clicks on more menu
+And user clicks on Share
+Then user clicks on Add followers feild and verify share your data screen
+ And user click on invite followers button of invite followers screen
+ Then user enter follower details 'signup.user1'
+Then user click on invited follower name
+Then user click on add follower button using 'signup.user1'
+ Then user click follower name
+And user closes the app
+END
+
+SCENARIO: Verify user can continue to next screen after entering all signup details
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15298", "description":"Verify user can continue to next screen after entering all signup details", "groups":["CGM"], "Module":"Non-Sensor Pairing","author":["Shubham"]} 
+ Given user resets application
+ And user opens app 
+ When user selects country '${country.name}' from country list 
+ Then user gets redirected to 'SIGN-UP MYSELF' Page
+ And user clicks on the DOB field and verify the date 
+ And user clicks on the green hyperlink and verifies Opt-in screen
+ And user clicks on the back button and redirected to the signup screen
+ When user enters signup details using 'signup.user1'
+ And user clicks on continue button 
+ And user closes the app
+END
+
+SCENARIO: Verify Safety Onboarding	
+META-DATA: {"description": "Verify Safety Onboarding","author":"Rushikesh","testCaseId":"15573","groups":[""CGM","SE_2020""]}
+Given user resets application
+And user opens app 
+When user selects country '${country.name}' from country list 
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user clicks on continue button 
+Then user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+And user clicks on signup button and verifies safety onboarding screen-1
+And user clicks on next button and verifies safety onboarding screen-2
+And user clicks on I Understand checkbox and verifies safety onboarding screen-3
+And user clicks on I Understand checkbox and verifies safety onboarding screen-4
+And user clicks on next button and verifies safety onboarding screen-5
+And user clicks on I Understand checkbox and verifies safety onboarding screen-6
+And user clicks on I Understand checkbox and verifies safety onboarding screen-7
+And user clicks on next button and verifies safety onboarding screen-8
+And user click on I Understand checkbox and app should display send you notification popup
+And user click on Don't allow button and redirected to alert notification popup screen
+And user click on OK button and verifies safety onboarding screen-9
+And user clicks on next button and verifies safety onboarding screen-10
+And user clicks on allow button and app should display pair sensor screen
+And user clicks skip button and redirected to home screen
+And user Un-install and Install the app 
+When user selects country '${country.name}' from country list
+And user gets redirected to 'LOG-IN OWN' Page
+Then user enters newly created details to Login
+And user clicks on login button
+And user completes Safety Onboarding and skips Sensor pair
+And user closes the app
+END
+
+SCENARIO: Verify First Time Login for HCP Created User via Username and Email Address
+META-DATA: {"testCaseId":"TC-19372","description":"Verify First Time Login for HCP Created User via Username and Email Address", "groups":["CGM"], "Module":"Non Sensor Pairing","author":["Pradnya"]}
+Given user resets application
+When user opens app 
+When user selects country '${country.name}' from country list
+And user gets redirected to 'LOG-IN OWN' Page
+Then user enters login details 'Login.hcpuser'
+And user clicks login button	
+And user verifies reset password screen
+And user enters details on reset password screen using 'Login.hcpuser'
+Then user minimize the app and open setting
+Given user resets app
+When user opens app 
+When user selects country '${country.name}' from country list
+And user gets redirected to 'LOG-IN OWN' Page
+Then user enters login details 'Login.hcpuser'
+And user clicks login button		
+And user verifies notice screen
+END
+#SCENARIO: Apply Sensor screen from safety Onboarding for 6-17 years old patient.
+#META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20862", "description":"Apply Sensor screen and 'How to apply the sensor' link from home screen & My Device screen", "groups":["CGM"], "Module":"Sensor Pairing","author":["Shubham"]}
+# Given user resets app
+# And user opens app
+# When user selects country '${country.name}' from country list
+# Then user gets redirected to 'SIGN-UP DEPENDENT' Page 
+# When Guardian enters signup details using 'signupuser.guardian'   
+# And user clicks on continue button 
+# Then Guardian selects dependent gender as 'MALE' and diabetes type as 'TYPE 1'
+# And Guardian enters dependent details and 'dependent.dob'
+# Then user clicks on signup button
+# And user completes Safety Onboarding
+# And user verify on the home screen how to apply the home screen
+# And user verify Instructions on How to apply the sensor screen
+# And user verify right and left Abdomen
+# And user verify right and left upper arm
+# And user verify the Start Pairing Sensor screen
+# And user verify on the home screen how to apply the home screen
+# And user verify Instructions on How to apply the sensor screen
+# And user verify Instructions on the See Helpful Tips screen
+# And user clicks on the skip button and verify home screen
+# And user closes the app
+#END
+
+SCENARIO: Verify error popups when user taps on Delete Account button from account screen	
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15467", "description":"Verify error popups when user taps on Delete Account button from account screen", "groups":["CGM"], "Module":"Non-Sensor","author":["Rushikesh"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+And user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair 
+When user clicks on more menu
+And user clicks on Account
+And user clicks on delete account
+And user verifies field validation on delete account screen using 'fieldValidations.deleteAccount'
+And user turned off wifi and verifies delete account screen using 'fieldValidations.deleteAccount'
+And user closes the app
+END
+
+SCENARIO: Verification of Reset Alert when Sensor is Not Paired	
+META-DATA: {"testCaseId":"","manualTestCaseId":"TC-17307", "description":"Verification of Reset Alert when Sensor is Not Paired", "groups":["CGM"], "Module":"Alert screen","author":["Rushikesh"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+When user clicks on more menu
+And user clicks on Alerts
+And user update the alert setting and navigate to home screen
+And user navigate to alert screen and verify reset alert setting button
+And user clicks on reset setting button and verify confirmation screen
+And user clicks on cancel button and verify no changes are made on alert screen
+And user reset alert setting and verify app should reset all the alerts setting configuration
+And user closes the app
+END

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Login>
+		<Sensor_UserDetail>
+			<username>dsplautomation+rt00@testmail.com</username>
+			<password>test1234</password>
+		</Sensor_UserDetail>
+		<Sensor_UserDetail1>
+			<username>dsplautomation+rt01@testmail.com</username>
+			<password>test1234</password>
+		</Sensor_UserDetail1>
+		<Sensor_UserDetail2>
+			<username>dsplautomation+rt04@testmail.com</username>
+			<password>test1234</password>
+		</Sensor_UserDetail2>
+		<Sensor_UserDetail3>
+			<username>dsplautomation+rt05@testmail.com</username>
+			<password>test1234</password>
+		</Sensor_UserDetail3>
+		<Sensor_UserDetail4>
+			<username>dsplautomation+rt06@testmail.com</username>
+			<password>test1234</password>
+		</Sensor_UserDetail4>
+		<Sensor_UserDetail5>
+			<username>dsplautomation+rt07@testmail.com</username>
+			<password>test1234</password>
+		</Sensor_UserDetail5>
+		<Sensor_UserDetail_sensor>
+			<username>test+user909@mailinator.com</username>
+			<password>test1234</password>
+		</Sensor_UserDetail_sensor>
+			<Sensor_UserDetail6>
+			<username>dsplautomation+rt08@testmail.com</username>
+			<password>test1234</password>
+		</Sensor_UserDetail6>
+		<Sensor_UserDetail7>
+			<username>dsplautomation+rt09@testmail.com</username>
+			<password>test1234</password>
+		</Sensor_UserDetail7>
+		<Sensor_UserDetail8>
+			<username>dsplautomation+rt10@testmail.com</username>
+			<password>test1234</password>
+		</Sensor_UserDetail8>
+		<Sensor_UserDetail9>
+			<username>dsplautomation+rt11@testmail.com</username>
+			<password>test1234</password>
+		</Sensor_UserDetail9>
+		<Sensor_UserDetail10>
+			<username>dsplautomation+rt12@testmail.com</username>
+			<password>test1234</password>
+		</Sensor_UserDetail10>
+			<Sensor_UserDetail11>
+			<username>testsafe@mailinator.com</username>
+			<password>test1234</password>
+		</Sensor_UserDetail11>
+		<Sensor_UserDetail12>
+			<username>test0108@mailinator.com</username>
+			<password>test1234</password>
+		</Sensor_UserDetail12>
+		<Sensor_UserHigh2>
+			<username>high2@mailinator.com</username>
+			<password>test1234</password>
+		</Sensor_UserHigh2>
+	<Sensor_duch>
+			<username>duchuser@mailinator.com</username>
+			<password>test1234</password>
+	
+	</Sensor_duch>
+	<Sensor_viet>
+			<username>vietuser@mailinator.com</username>
+			<password>test1234</password>
+	
+	</Sensor_viet>
+	<Sensor_uk>
+			<username>ukuser@mailinator.com</username>
+			<password>test1234</password>
+	</Sensor_uk>
+	
+	</Login>
+
+</root>

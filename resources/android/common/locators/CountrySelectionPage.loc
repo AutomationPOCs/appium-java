@@ -1,0 +1,9 @@
+NFK.countryselectionpage.next.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'nextButton')]|//*[contains(@resourceid,'nextButton')]\",\"desc\":\"Next button\"}
+NFK.countryselect.wheredoyoulive.txt = {\"locator\":\"xpath=//*[contains(@resource-id,'whereDoYouLiveTitle')]|//*[contains(@resourceid,'whereDoYouLiveTitle')]\",\"desc\":\"Heading\"}							  
+NFK.countryselectionpage.statictext.lbl = {\"locator\":\"xpath=//*[contains(@text,\\\"%s\\\")]\",\"desc\":\"Static text lable\"}
+NFK.countryselectionpage.countryselected.iagree.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'nextButton')]\",\"desc\":\"i agree button on all language page\"}
+NFK.countryselect.wheredoyoulive.txt = {\"locator\":\"xpath=//*[@resource-id='com.lifescan.norfolk:id/whereDoYouLiveTitle']\"}
+NFK.countryselectionpage.next.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'nextButton')]|//*[contains(@text,'Next')]\",\"desc\":\"Next button on Country selection page\"}
+NFK.countryselectionpage.countryselected.iagree.btn = {\"locator\":\"xpath=//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.TextView[2]\"} 
+NFK.countryselectionpage.consent.iUnderstand.checkbox={\"locator\":\"xpath=//*[contains(@resource-id,'checkBoxIUnderstand')]\",\"desc\":\"I understand checkbox\"}
+NFKios.countryselectionPage.Iunderstand.chkbx={\"locator\":\"xpath=//*[contains(@resource-id,'com.lifescan.norfolk.continuous.adhoctest:id/checkBoxIUnderstand')]\",\"desc\":\"beforesignupcheckbox txt\"}

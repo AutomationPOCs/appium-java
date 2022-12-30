@@ -1,0 +1,49 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="NFK1.0" verbose="0" parallel="tests" thread-count="2">
+
+	<parameter name="platformName" value="android"></parameter>
+	<parameter name="channel" value="android"></parameter>
+    <parameter name="language.name" value="en-us"></parameter>
+	<parameter name="country.name" value="United States"></parameter>
+	<parameter name="gdpr_country.name" value="United Kingdom and Ireland"></parameter>
+	<parameter name="uomcg_country.name" value="Deutschland"></parameter>
+	<parameter name="uomcv_country.name" value="Việt Nam"></parameter>
+	<parameter name="channel" value="android"></parameter>
+	<parameter name="env.resources" value="resources;resources/${channel}/common;resources/${channel}/${language.name};resources/testData"></parameter>
+	
+	<parameter name="env.baseurl"
+		value="https://jnjdiabetes.perfectomobile.com/nexperience/perfectomobile/wd/hub/fast"></parameter>
+	<parameter name="selenium.server"
+		value="https://jnjdiabetes.perfectomobile.com/nexperience/perfectomobile/wd/hub/fast"></parameter>
+	<listeners>
+		<listener class-name="com.NFK.version1.listener.TestNGListener"></listener>
+		<listener class-name="com.NFK.version1.listener.ReportiumListener"></listener>
+	</listeners>
+	
+	<test name="Android - Pixel6pro" enabled="true">
+		<parameter name="scenario.file.loc"
+			value="scenarios\version1\android\NFKv1_Android_CGM.bdd"></parameter>
+		<parameter name="appium.additional.capabilities"
+			value="{'deviceName':'R58N60AEANF',		
+			'securityToken':'eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5NTQzZGY4NS1iZjRjLTRlOGQtOTkxNy05YzY3NjE2MjRhZWMifQ.eyJqdGkiOiIyNDMzNDI0OC1mMDE5LTQ2OGMtOGUyOC05OTFiNzc0OWNiOTgiLCJleHAiOjAsIm5iZiI6MCwiaWF0IjoxNjA2MjE1OTQxLCJpc3MiOiJodHRwczovL2F1dGgucGVyZmVjdG9tb2JpbGUuY29tL2F1dGgvcmVhbG1zL2puamRpYWJldGVzLXBlcmZlY3RvbW9iaWxlLWNvbSIsImF1ZCI6Imh0dHBzOi8vYXV0aC5wZXJmZWN0b21vYmlsZS5jb20vYXV0aC9yZWFsbXMvam5qZGlhYmV0ZXMtcGVyZmVjdG9tb2JpbGUtY29tIiwic3ViIjoiMTA3MjY5MWUtNmM1NS00Y2Q1LWE5OTEtYTA4ODc1YmVkZDllIiwidHlwIjoiT2ZmbGluZSIsImF6cCI6Im9mZmxpbmUtdG9rZW4tZ2VuZXJhdG9yIiwibm9uY2UiOiIyOGU4OTFhNS1lMGEzLTRlMDMtYTYzNS05YmEzYTk5MGM2OTciLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiJjNDRjNzNiZS03ZDJjLTRlZTMtYTYzZC1kYzIzMGIwZGVlZmYiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7InJlcG9ydGl1bSI6eyJyb2xlcyI6WyJyZXBvcnRfYWRtaW4iXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIG9mZmxpbmVfYWNjZXNzIn0.nQLFO3cwF9YnYPxvJCoEZYJ5rRLjv5Odlr_73A4uLzw',
+			'automationName':'Appium','appPackage':'com.lifescan.norfolk.continuous.adhoctest',
+			'javascriptEnabled':true,'newCommandTimeout':'120',
+			'driver.class':'io.appium.java_client.android.AndroidDriver',
+			'platformName':'Android','locationServicesEnabled':true,
+			'locationServicesAuthorized':true,'autoLaunch':true,'fullReset':true,
+	           'app':'PUBLIC:Android_25837.apk',
+			'autoInstrument':false,'sensorInstrument':false,
+			'unicodeKeyboard':true,'resetKeyboard':true,
+ 			'scriptName':'Android-Pixel6 NFK'}"></parameter>
+		<groups>
+			<run>
+				<include name="CGM" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.qmetry.qaf.automation.step.client.text.BDDTestFactory"></class>
+		</classes>
+	</test>
+
+</suite>

@@ -1,0 +1,174 @@
+﻿NFK.signuppage.dob.txt = {\"locator\":\"xpath=//*[contains(@text,'Date of Birth')]|//*[contains(@resource-id,'customTextInputEditText')]\",\"desc\":\"Date Of Birth text field\"}
+NFK.signupPage.picker.year.pkr1.new = {\"locator\":\"xpath=//*[contains(@resource-id,'android:id/date_picker_header_year')]\",\"desc\":\"Date Of Birth text field\"}
+NFK.signupPage.picker.date.pkr = {\"locator\":\"xpath=(//*[contains(@resource-id,'android:id/numberpicker_input')])[2]\",\"desc\":\"Date picker\"}
+NFK.signupPage.picker.date.pkr1.new = {\"locator\":\"xpath=//*[contains(@resource-id,'android:id/date_picker_header_date')]\",\"desc\":\"Date picker\"}
+NFK.signupPage.picker.year.pkr = {\"locator\":\"xpath=//hierarchy/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.DatePicker[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.NumberPicker[3]/android.widget.EditText[1]\"}
+NFK.signuppage.dob.list.year={\"locator\":\"xpath=//*[contains(@resource-id,'android:id/text1')]\",\"desc\":\"List of years Birth \"}
+NFK.signupPage.picker.month.pkr = {\"locator\":\"xpath=(//*[contains(@resource-id,'android:id/numberpicker_input')])[1]\",\"desc\":\"Month picker\"}
+NFK.signuppage.email.txt = {\"locator\":\"xpath=//*[contains(@text,'Email Address')]\"}
+NFK.signuppage.confirmemail.txt = {\"locator\":\"xpath=//*[contains(@text,'Confirm Email Address')]\",\"desc\":\"Confirm Email field\"}
+NFK.signuppage.password.txt = {\"locator\":\"xpath=//*[contains(@resourceid,'et_password')]|//*[contains(@text,'Password')]\",\"desc\":\"Password field\"}
+NFK.signupPage.confirmPassword.txt= {\"locator\":\"xpath=//*[contains(@text,'Confirm Password')]\",\"desc\":\"Confirm Password field\"}
+NFK.signuppage.cliniccode.txt = {\"locator\":\"xpath=//*[contains(@text,'Clinic Code (optional)')]\",\"desc\":\"Clinic code field\"}
+NFK.signupPage.clinic.consent.chkbox = {\"locator\":\"xpath=//*[contains(@resource-id,'cbShareInformation"')]\",\"desc\":\"Check box on Add clinic\"}
+NFK.signupPage.clinic.send.btn = {\"locator\":\"xpath=//*[contains(@text,'nextButton')]\",\"desc\":\"Send button on Add Clinic\"}
+NFK.signuppage.termofservice.check.box = {\"locator\":\"xpath=//*[contains(@resource-id,'checkAgreementTerm')]\",\"desc\":\"Terms of use and pivecy policy text\"}
+NFK.signuppage.continueButton.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'continueButton')]|//*[contains(@text,'Continue')]\",\"desc\":\"Continue button on Create Account page\"}
+NFK.signuppage.firstname.txt = {\"locator\":\"xpath=//*[contains(@text,'First Name')]\",\"desc\":\"First Name text field\"}
+NFK.signuppage.lastname.txt = {\"locator\":\"xpath=//*[contains(@text,'Last Name')]\",\"desc\":\"Last Name text field\"}
+NFK.signupPage.gender.male.radio.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'id/male')]\",\"desc\":\"Male radio btn\"}
+NFK.signupPage.gender.female.radio.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'id/female')]\",\"desc\":\"Female radio btn\"}
+NFK.signupPage.diabetes.type1.radio.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'id/type1')]\",\"desc\":\"Type1 radio btn\"}
+NFK.signupPage.diabetes.type2.radio.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'id/type2')]\",\"desc\":\"Type 2 radio btn\"}
+NFK.signupPage.diabetes.gestational.radio.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'id/gestational')]\",\"desc\":\"Gestational radio btn\"}
+NFK.signuppage.signup.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'signUpButton')]|//*[contains(@text,'signUpButton')]|//*[contains(@resource-id,'continueButton')]|//*[contains(@text,'Sign Up')]\",\"desc\":\"Sign up button\"}
+NFK.signuppage.importantMessageOk.btn = {\"locator\":\"xpath=//*[@resource-id='android:id/button1']\",\"desc\":\"Ok btn\"}
+NFK.signuppage.importantMessageOk.btn1.new = {\"locator\":\"xpath=//*[@text,'OK']\",\"desc\":\"Ok btn\"}
+NFK.signupPage.optin.title.lbl= {\"locator\":\"xpath=//*[contains(@text,'Opt In')]\",\"desc\":\"Opt in title label\"}
+NFK.signuppage.dob.ok.btn={\"locator\":\"xpath=//*[contains(@resource-id,'android:id/button1')]\"}
+NFK.signuppage.login.lnk = {\"locator\":\"xpath=//*[@resource-id='alreadyHaveAnAccount']|//*[contains(@text,'Already Have an Account? Log In')]\",\"desc\":\"Login navigation link\"}
+NFK.signuppage.dynamic.txt = {\"locator\":\"xpath=//*[@text='%s']|//*[@content-desc='%s']\",\"desc\":\"Dynamic textss\"}
+NFK.signuppage.promotionalcode.chkbox={\"locator\":\"xpath=//*[contains(@resource-id,'promotionalOffers')]\",\"desc\":\"optin checkbox\"}
+NFK.signuppage.iagree.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'nextButton')]\",\"desc\":\"I agree on optin page\"}
+NFK.signuppage.safety.next.btn = {\"locator\":\"xpath=//*[contains(@text,'Next')]\",\"desc\":\"Next button on safety onboarding screen\"}
+NFK.signuppage.safety.iunstd.check.box = {\"locator\":\"xpath=//*[contains(@resource-id,'id/iUnderstandCheckBox')]\",\"desc\":\"I understand checkbox on safety onboarding screen\"}
+NFK.signuppage.safety.done.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'id/nextTutorialPage')]\",\"desc\":\"Done button on safety onboarding screen\"}
+NFK.signuppage.safety.allow.btn.old = {\"locator\":\"xpath=//*[contains(@resource-id,'id/permission_allow_button')]\",\"desc\":\"allow button on safety onboarding last screen\"}
+NFK.signuppage.safety.skip.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'id/nextButton')]\",\"desc\":\"skip button on sensor screen\"}
+NFK.signuppage.pair.sensor.title={\"locator\":\"xpath=//*[contains(@resource-id,'/textTitle')]\",\"desc\":\"Title of Pair Sensor screen\"}
+NFK.signuppage.sensor.pair.skip.btn= {\"locator\":\"xpath=//*[contains(@resource-id,'/nextButton')]\",\"desc\":\"Skip the sensor pair screen using skip btn\"}
+NFK.signup.safety.deny.btn= {\"locator\":\"xpath=//*[contains(@resource-id,'/permission_deny_button')]\",\"desc\":\"Deny the  acces to permission\"}
+NFK.signuppage.safety.allow.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'id/permission_allow_button')]|//*[contains(@resource-id,'id/permission_allow_foreground_only_button')]\",\"desc\":\"allow button on safety onboarding last screen\"}
+NFK.signup.dependent.guardian.fname= {\"locator\":\"xpath=//*[contains(@resource-id,'id/guardianFirstName')]\",\"desc\":\"Guardian First Name\"}
+NFK.signup.dependent.guardian.lname = {\"locator\":\"xpath=//*[contains(@resource-id,'id/guardianLastName')]\",\"desc\":\"Guardian Last Name\"}
+NFK.signup.dependent.password.txt = {\"locator\":\"xpath=//*[contains(@resource-id,'id/password')]\",\"desc\":\"Password Textfield\"}
+NFK.signup.dependent.confpassword.txt = {\"locator\":\"xpath=//*[contains(@resource-id,'id/confirmPassword')]\",\"desc\":\"Confirm password textfield\"}
+NFK.signup.dependent.emailAddress.txt = {\"locator\":\"xpath=//*[contains(@text,'Email Address')]\",\"desc\":\"Email address field\"}
+NFK.signup.dependent.confemailaddress.txt = {\"locator\":\"xpath=//*[contains(@resource-id,'id/confirmEmailAddress')]\",\"desc\":\"Confirm email address\"}
+NFK.signup.dependent.CheckAgreementTerm.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'id/checkAgreementTerm')]\",\"desc\":\"check agreement term\"}
+NFK.signup.dependent.checkPromotionalOffers.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'id/checkPromotionalOffers')]\",\"desc\":\"check promotion offers\"}
+NFK.signup.dependentpage.txt= {\"locator\":\"xpath=//*[contains(@resource-id,'id/guardianAccountInfo')]\",\"desc\":\"create guardian account tetxt\"}
+NFK.signup.dependent.clinic.txt = {\"locator\":\"xpath=//*[contains(@text,'Clinic Code (optional)')]\",\"desc\":\"Clinic field\"}
+NFK.signupPage.clinic.title.lbl = {\"locator\":\"xpath=//*[contains(@resource-id,'id/title')]\",\"desc\":\"Add clinic title\"}
+NFK.signupPage.clinic.consent.chkbox= {\"locator\":\"xpath=//*[contains(@resource-id,'id/cbShareInformation')]\",\"desc\":\"Share Information\"}
+NFK.signupPage.clinic.send.btn = {\"locator\":\"xpath=//*[contains(@resource-id,'id/nextButton')]\",\"desc\":\"Add clinic send button\"}
+NFK.signuppage.safety.settings.btn= {\"locator\":\"xpath=//*[contains(@resource-id,'settingsButton')]\",\"desc\":\"Settings button\"}
+NFK.device.setting.onetouch.txt= {\"locator\":\"xpath=//*[contains(@text,'OneTouch� 24/7 CGM')]\",\"desc\":\"One Touch Text\"}
+NFK.device.setting.switch.btn= {\"locator\":\"xpath=//*[contains(@resource-id,'switch_widget')]\",\"desc\":\"Switch button\"}
+NFK.device.setting.allow.btn= {\"locator\":\"xpath=//*[contains(@resource-id,'button1')]\",\"desc\":\"Allow button\"}
+NFK.signup.page.UOM.select.title = {\"locator\":\"xpath=//*[@text='Unit of Measure']\",\"desc\":\"Unit of Measure title\"}
+NFK.signup.page.UOM.select.text = {\"locator\":\"xpath=//*[@text='Select the unit of measure that you and your Care Team use when discussing your diabetes. If you're unsure, check your blood glucose meter.']\",\"desc\":\"Unit of Measure text\"}
+NFK.signup.page.UOM.select.mgdl.button.text = {\"locator\":\"xpath=//*[@text='120 mg/dL']\",\"desc\":\"Unit of Measure mgdl text\"}
+NFK.signup.page.UOM.select.mgdl.button = {\"locator\":\"xpath=//*[contains(@resource-id,'id/mgdlButton')]\",\"desc\":\"Unit of Measure mgdl button\"}
+NFK.signup.page.UOM.select.mmol.button.text = {\"locator\":\"xpath=//*[@text='6.7 mmol/L']\",\"desc\":\"Unit of Measure mmol text\"}
+NFK.signup.page.UOM.select.mmol.button = {\"locator\":\"xpath=//*[contains(@resource-id,'id/mmollButton')]\",\"desc\":\"Unit of Measure mmol button\"}
+NFK.signuppage.clinic.name= {\"locator\":\"xpath=//*[contains(@resource-id,'id/tvClinicName')]\",\"desc\":\"Clinic Name\"}
+NFK.signuppage.clinic.phone= {\"locator\":\"xpath=//*[contains(@resource-id,'id/tvClinicPhone')]\",\"desc\":\"Clinic Phone no.\"}
+NFK.signuppage.clinic.info.name= {\"locator\":\"xpath=//*[contains(@resource-id,'id/nameClinic')]\",\"desc\":\"Clinic Name on signup\"}
+NFK.signuppage.clinic.info.phone= {\"locator\":\"xpath=//*[contains(@resource-id,'id/phoneClinic')]\",\"desc\":\"Clinic Phone no. on Signup\"}
+NFK.signuppage.clinic.info.msgrequest= {\"locator\":\"xpath=//*[contains(@resource-id,'id/messageRequest')]\",\"desc\":\"Message request text\"}
+NFK.signuppage.clinic.info.tikmark= {\"locator\":\"xpath=//*[contains(@resource-id,'id/checkClinic')]\",\"desc\":\"Green Tik mark\"}
+NFK.signuppage.clinic.info.close.btn= {\"locator\":\"xpath=//*[contains(@resource-id,'id/removeClinic')]\",\"desc\":\"Close btn on Clinic Info field\"}
+NFK.signupPage.optin.customer.service.link={\"locator\":\"xpath=//*[@text='testt@test.com']\",\"desc\":\"Customer service LInk\"}
+NFK.signupPage.optin.customer.service.link.redirects.newmail.txt={\"locator\":\"xpath=//*[@text=\\\"Gmail\\\"]|//*[@resource-id,'id/text1']\",\"desc\":\"Gmail text\"}
+NFK.applysensor.title= {\"locator\":\"xpath=//*[contains(@resource-id,'id/textTitle')]\",\"desc\":\"Title Apply Sensor screen\"}
+NFK.applysensor.skip.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/nextButton')]\",\"desc\":\"Skip button on Apply sensor screen\"}
+NFK.email.validation.error.msg = {\"locator\":\"xpath=//*[contains(@resource-id,'customErrorTextView')]\",\"desc\":\"Invalid email address format\"}
+NFK.confirm.email.validation.error.msg = {\"locator\":\"xpath=//*[contains(@resource-id,'confirmEmailAddress')]|//*[contains(@resource-id,'customErrorTextView')]\",\"desc\":\"Invalid email address format Confirm email address\"}
+NFK.password.validation.error.msg = {\"locator\":\"xpath=//*[contains(@resource-id,'customErrorTextView')]\",\"desc\":\"Invalid Password\"}
+NFK.validation.error.icon = {\"locator\":\"xpath=//*[contains(@resource-id,'text_input_end_icon')]\",\"desc\":\"Error Icon\"}
+NFK.signuppage.age.restriction.popup = {\"locator\":\"xpath=//*[@text='Age Restriction']|//*[contains(@resource-id,'customAlertTitle')]\",\"desc\":\"Age Restriction\"}
+NFK.signupPage.age.restriction.popup.cancel.btn= {\"locator\":\"xpath=//*[contains(@resource-id,'android:id/button2')]\"}
+NFK.signuppage.age.restriction.popup.signupdependent.btn= {\"locator\":\"xpath=//*[contains(@resource-id,'android:id/button1')]\"}
+NFK.signuppage.back.btn= {\"locator\":\"xpath=//*[contains(@resource-id,'id/backButton')]\"}
+NFK.signuppage.emailexist.popup= {\"locator\":\"xpath=//*[contains(@resource-id,'id/scrollView')]\"}
+NFK.signup.emancipation.title = {\"locator\":\"xpath=//*[contains(@resource-id,'tvEmancipationMessageHappyBirthday')]\",\"desc\":\"Emancipation title\"}
+NFK.system.settings.conectedDevice= {\"locator\":\"xpath=//*[contains(@text,'Connected devices')]\",\"desc\":\"Connected devices\"}
+NFK.system.settings.conectedPref= {\"locator\":\"xpath=//*[contains(@text,'Connection preferences')]\",\"desc\":\"Connection preferences\"}
+NFK.system.settings.Bluetooth= {\"locator\":\"xpath=//*[contains(@text,'Bluetooth')]\",\"desc\":\"Bluetooth\"}
+NFK.signuppage.sensor.next.btn = {'locator':'id=next','desc':'Next button on ApplySensor screen'}
+NFK.signuppage.sensor.location.permission.txt={'locator':'id=permission_message','desc':'Access location permission'}
+NFK.signuppage.sensor.location.permission.allowtime={\"locator\":\"xpath=//*[contains(@resource-id,'id/permission_allow_button')]\",\"desc\":\"Allow\"}
+NFK.signuppage.sensor.location.permission.deny={\"locator\":\"xpath=//*[contains(@resource-id,'id/permission_deny_button')]\",\"desc\":\"Dont allow\"}
+NFK.signuppage.sensor.bluetooth.txt={'locator':'id=message','desc':'Bluetooth permission'}
+NFK.signuppage.dob.field1 = {\"locator\":\"xpath=//*[contains(@text,'Date of Birth')]|//*[contains(@resource-id,'customTextInputEditText')]\",\"desc\":\"Date Of Birth text field\"}
+
+NFK.signuppage.important.popup = {\"locator\":\"xpath=//*[@text='Important']\",\"desc\":\"Age Restriction\"}
+NFK.signuppage.optin.cancel.btn={\"locator\":\"xpath=//*[contains(@text,'Cancel')]\",\"desc\":\"cancel btn\"}
+NFK.signuppage.optin.check.box={\"locator\":\"xpath=//*[contains(@resource-id,'checkPromotionalOffers')]\",\"desc\":\"optin check box\"}
+NFK.signuppage.optin.Iagree.btn={\"locator\":\"xpath=//*[contains(@text,'I Agree')]\",\"desc\":\"agree btn\"}
+NFK.signuppage.optin.title={\"locator\":\"xpath=//*[contains(@resource-id,'id/title')]\",\"desc\":\"optin title\"}
+NFK.signupPage.dateOfBirth.txt={\"locator\":\"xpath=//*[contains(@resource-id,'id/birthDate')]\",\"desc\":\"dateOfBirth txt\"}
+NFK.signupPage.greenLink.txt={\"locator\":\"xpath=//*[contains(@resource-id,'id/promotionalOffers')]\",\"desc\":\"greenLink txt\"}
+NFK.signupPage.greenLink.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/title')]\",\"desc\":\"greenLink btn\"}
+NFK.signupPage.cancel.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/backButton')]\",\"desc\":\"cancel btn\"}
+NFK.signupPage.privacyPolicy.txt={\"locator\":\"xpath=//*[contains(@text,'Privacy Policy')]\",\"desc\":\"privacyPolicy btn\"}
+NFK.signupPage.privacyPolicyBack.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/backButton')]\",\"desc\":\"privacyPolicyBack btn\"}
+NFK.signuppage.clinicodebox.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/clinicCodeInfo')]\",\"desc\":\"clinicodebox btn\"}
+NFK.signupPage.clinicCodeText.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/tvLegalConsent')]\",\"desc\":\"clinicodeinsidetxt btn\"}
+NFK.signupPage.clinicCode.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/clinicCodeInfo')]\",\"desc\":\"clinicCode btn\"}
+NFK.signupPage.checkBox.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/cbShareInformation')]\",\"desc\":\"checkBox btn\"}
+NFK.signupPage.send.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/nextButton')]\",\"desc\":\"send btn\"}
+NFK.safetyonboarding.onetouch.logo={\"locator\":\"xpath=//*[contains(@resource-id,'id/logo')]\",\"desc\":\"one touch 24/7 icon\"}
+NFK.safetyonboarding.next.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/nextTutorialPage')]\",\"desc\":\"Next Button\"}
+NFK.safetyonboarding.bloodmeter.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/image')]\",\"desc\":\" A image of blood measure on meter\"}
+NFK.safetyonboarding.IUnderstand.checkbox={\"locator\":\"xpath=//*[contains(@resource-id,'id/iUnderstandCheckBox')]\",\"desc\":\"I Understand Checkbox\"}
+NFK.safetyonboarding.back.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/backTutorialPage')]\",\"desc\":\"back button\"}
+NFK.safetyonboarding.AreaOfCaution.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/image')]\",\"desc\":\" Area of caution image\"}
+NFK.safetyonboarding.SupportedUOM.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/targetImage')]\",\"desc\":\" Supported UOM\"}
+NFK.safetyonboarding.currentreading.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/image')]\",\"desc\":\" Current reading image\"}
+NFK.safetyonboarding.trendArrowRisingQuickly.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/trendArrowRisingQuickly')]\",\"desc\":\" trendArrowRisingQuickly image\"}
+NFK.safetyonboarding.trendArrowRising.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/trendArrowRising')]\",\"desc\":\" trendArrowRising image\"}
+NFK.safetyonboarding.trendArrowRisingSlowly.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/trendArrowRisingSlowly')]\",\"desc\":\" trendArrowRisingSlowly\"}
+NFK.safetyonboarding.trendArrowSteady.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/trendArrowSteady')]\",\"desc\":\" trendArrowSteadyimage\"}
+NFK.safetyonboarding.trendArrowFallingSlowly.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/trendArrowFallingSlowly')]\",\"desc\":\"trendArrowFallingSlowly image\"}
+NFK.safetyonboarding.trendArrowFalling.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/trendArrowFalling')]\",\"desc\":\"trendArrowFalling image\"}
+NFK.safetyonboarding.trendArrowFallingQuickly.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/trendArrowFallingQuickly')]\",\"desc\":\"trendArrowFallingQuickly image\"}
+NFK.safetyonboarding.highReading.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/highReading')]\",\"desc\":\"highReading image\"}
+NFK.safetyonboarding.inRangeReading.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/inRangeReading')]\",\"desc\":\"inRangeReading image\"}
+NFK.safetyonboarding.lowReading.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/lowReading')]\",\"desc\":\"lowReading image\"}
+NFK.safetyonboarding.alert.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/alert')]\",\"desc\":\"alert image\"}
+NFK.safetyonboarding.smartphone.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/smartphone')]\",\"desc\":\"smartphone image\"}
+NFK.safetyonboarding.urgentSoonContainer.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/urgentSoonContainer')]\",\"desc\":\"urgentSoonContainer image\"}
+NFK.safetyonboarding.urgentAlarmContainer.image={\"locator\":\"xpath=//*[contains(@resource-id,'id/urgentAlarmContainer')]\",\"desc\":\"urgentAlarmContainer image\"}
+NFK.safetyonboarding.setting.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/settingsButton')]\",\"desc\":\"settingsButton btn\"}
+NFK.safetyonboarding.setting.switch.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/switch_widget')]\",\"desc\":\"id/switch_widget btn\"}
+NFK.safetyonboarding.setting.allow.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/button1')]\",\"desc\":\"allow btn\"}
+NFK.safetyonboarding.setting.deny.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/button2')]\",\"desc\":\"deny btn\"}
+NFK.safetyonboarding.setting.back.btn={\"locator\":\"xpath=//*[contains(@resource-id,':id/backButton')]\",\"desc\":\"backButton btn\"}
+NFK.safetyonboarding.secondscreen.text={\"locator\":\"xpath=//*[contains(@resource-id,'id/content')]\",\"desc\":\"second screen text\"}
+NFK.safetyonboarding.fourthscreen.text={\"locator\":\"xpath=//*[contains(@resource-id,'id/content')]\",\"desc\":\"fourthscreen text\"}
+NFK.safetyonboarding.fifthscreen.text={\"locator\":\"xpath=//*[contains(@resource-id,'id/content')]\",\"desc\":\"fifthscreen text\"}
+NFK.safetyonboarding.seventhscreen.title={\"locator\":\"xpath=//*[contains(@resource-id,'id/title')]\",\"desc\":\"seventhscreen title\"}
+NFK.safetyonboarding.seventhscreen.text={\"locator\":\"xpath=//*[contains(@resource-id,'id/content')]\",\"desc\":\"seventhscreen text\"}
+NFK.safetyonboarding.DNDPopup.title={\"locator\":\"xpath=//*[contains(@resource-id,'id/alertTitle')]\",\"desc\":\"DNDPopup title\"}
+NFK.safetyonboarding.DNDPopup.text={\"locator\":\"xpath=//*[contains(@resource-id,'id/contentPanel')]\",\"desc\":\"DNDPopup.text\"}
+
+NFK.signuppage.applySensor.btn={\"locator\":\"xpath=//*[contains(@resource-id,'com.lifescan.norfolk.continuous.adhoctest:id/buttonLinkInfo')]\",\"desc\":\"applySensor lnk\"}
+NFK.signuppage.sensorWear.btn={\"locator\":\"xpath=//*[contains(@text,'For best results with sensor wear')]\",\"desc\":\"sensorWear btn\"}
+NFK.signuppage.backUpperArm.btn={\"locator\":\"xpath=//*[contains(@resource-id,'com.lifescan.norfolk.continuous.adhoctest:id/ivHowToApplySensor')]\",\"desc\":\"backUpperArm btn\"}
+NFK.signuppage.removePaperBacking.btn={\"locator\":\"xpath=//*[contains(@resource-id,'com.lifescan.norfolk.continuous.adhoctest:id/ivHowToApplySensor')]\",\"desc\":\"removePaperBacking btn\"}
+NFK.signuppage.rightAbdomenButton.btn={\"locator\":\"xpath=//*[contains(@resource-id,'com.lifescan.norfolk.continuous.adhoctest:id/rightAbdomen')]\",\"desc\":\"rightAbdomenButton btn\"}
+NFK.signuppage.leftAbdomenButton.btn={\"locator\":\"xpath=//*[contains(@resource-id,'com.lifescan.norfolk.continuous.adhoctest:id/leftAbdomen')]\",\"desc\":\"leftAbdomenButton btn\"}
+NFK.signuppage.leftArm.btn={\"locator\":\"xpath=//*[contains(@resource-id,'com.lifescan.norfolk.continuous.adhoctest:id/leftArm')]\",\"desc\":\"leftArm lnk\"}
+NFK.signuppage.rightArm.lnk={\"locator\":\"xpath=//*[contains(@resource-id,'com.lifescan.norfolk.continuous.adhoctest:id/rightArm')]\",\"desc\":\"rightArm lnk\"}
+NFK.signuppage.urgentLowText.btn={\"locator\":\"xpath=//*[contains(@resource-id,'com.lifescan.norfolk.continuous.adhoctest:id/title')]\",\"desc\":\"urgentLowText txt\"}
+NFK.signuppage.applySensor.txt={\"locator\":\"xpath=//*[contains(@class,'android.widget.TextView')]\",\"desc\":\"applySensorText txt\"}
+NFK.signuppage.helpFulTips.btn={\"locator\":\"xpath=//*[contains(@resource-id,'com.lifescan.norfolk.continuous.adhoctest:id/buttonSeeHelpfulTips')]\",\"desc\":\"helpFulTips btn\"}
+NFK.signuppage.helpfulTipsText.btn={\"locator\":\"xpath=//*[contains(@resource-id,'com.lifescan.norfolk.continuous.adhoctest:id/title')]\",\"desc\":\"helpfulTipsText btn\"}
+NFK.signuppage.helpfulTipsCross.btn={\"locator\":\"xpath=//*[contains(@resource-id,'com.lifescan.norfolk.continuous.adhoctest:id/closeButton')]\",\"desc\":\"helpfulTipsCross btn\"}
+NFK.signuppage.helpfulTipsPair.btn={\"locator\":\"xpath=//*[contains(@resource-id,'com.lifescan.norfolk.continuous.adhoctest:id/nextButton')]\",\"desc\":\"helpfulTipsPair txt\"}
+NFK.signuppage.whileUsingTheApp.txt={\"locator\":\"xpath=//*[contains(@resource-id,'com.android.permissioncontroller:id/permission_allow_foreground_only_button')]\",\"desc\":\"whileUsingTheApp txt\"}
+NFK.signuppage.washAndDryHand.btn={\"locator\":\"xpath=//*[contains(@resource-id,'com.lifescan.norfolk.continuous.adhoctest:id/ivHowToApplySensor')]\",\"desc\":\"washandryhandtxts txt\"}
+
+NFK.signuppage.sensorApplication.btn={\"locator\":\"xpath=//*[@resource-id="com.lifescan.norfolk.continuous.adhoctest:id/help_list"]/android.widget.FrameLayout[2]/android.view.ViewGroup[1]/android.view.View[1]\",\"desc\":\"sensorApplication btn\"}
+NFK.signuppage.howToApplyInHelpMenu.btn={\"locator\":\"xpath=//*[@resource-id="com.lifescan.norfolk.continuous.adhoctest:id/help_list"]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.view.View[1]\",\"desc\":\"howToApplyInHelpMenu btn\"}
+NFK.signuppage.healthcareInstructions.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/tvHowToApplySensor')]\",\"desc\":\"healthcareInstructions txt\"}
+NFK.signuppage.pairSensorHomeScreen.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/pairSensorButton')]\",\"desc\":\"pairSensorHomeScreen btn\"}
+NFK.signuppage.helpfulTipsBelow6Year.lnk={\"locator\":\"xpath=//*[contains(@resource-id,'id/buttonPairSensor')]\",\"desc\":\"helpfulTipsBelow6Year txt\"}
+NFK.signuppage.footerLabel.txt={\"locator\":\"xpath=//*[contains(@resource-id,'id/textBottom')]\",\"desc\":\"footerLabel txt\"}
+
+NFK.signuppage.done.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/nextButton')]\",\"desc\":\"done txt\"}
+NFK.signuppage.cancelBelow6Year.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/back')]\",\"desc\":\"cancelBelow6Year btn\"}
+NFK.signuppage.nextBelow6Year.btn={\"locator\":\"xpath=//*[contains(@resource-id,'id/next')]\",\"desc\":\"nextBelow6Year btn\"}
+NFK.signuppage.important.popop={\"locator\":\"xpath=//*[contains(@resource-id,'id/customAlertTitle')]\",\"desc\":\"important popop\"}

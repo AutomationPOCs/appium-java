@@ -1,0 +1,3708 @@
+SCENARIO: Verification of Low Alert during Signal Loss Killing the app
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-16495", "description":"Verification of Low Alert during Signal Loss Killing the app", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on Low Alert and sets Repeat picker to 'Fifteen'
+	And user navigate Back to Home screen from alert screen
+	And user stuffs the emulator 'emulator1' with data '5MW_20853_1' on machine '${emulator.systemip}'
+	When user clicks on Pair sensor Button
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '100016492'
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user verifies 'Low Glucose Alert' popup on home screen
+	And user wait and closes app
+	When user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user closes the app
+END
+
+SCENARIO: Verification of High Alert Repeat Condition doesn't Exist
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-16761", "description":"Verification of High Alert Repeat Condition doesnt Exist", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail4'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on High Alert and sets Repeat picker to 'Fifteen'
+	And user navigate Back to Home screen from alert screen
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '16712' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111016761'
+	#	And the user closes sensor expires popup
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	And user verifies 'High Glucose Alert' popup on home screen without ack
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail4'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on High Alert and sets Repeat picker to 'Fifteen'
+	And user navigate Back to Home screen from alert screen
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '16712' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111016761'
+	#	And the user closes sensor expires popup
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	And user closes the app
+END
+
+SCENARIO: Verification of Low Alert Realarm Condition doesn't Exist
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-16494", "description":"Verification of Low Alert Realarm Condition doesn't Exist", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail4'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on Low Alert and sets Repeat picker to 'Never'
+	And user navigate Back to Home screen from alert screen
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '16712' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111016494'
+	#	And the user closes sensor expires popup
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user verifies 'Low Glucose Alert' popup on home screen without ack
+	Then user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user verifies 'Low Glucose Alert' popup on home screen without ack
+	Then user open notifications
+	And user verifies Low glucose Alert not displayed
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail4'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on Low Alert and sets Repeat picker to 'Never'
+	And user navigate Back to Home screen from alert screen
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '16712' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111016494'
+	#	And the user closes sensor expires popup
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user verifies 'Low Glucose Alert' popup on home screen without ack
+	Then user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user verifies 'Low Glucose Alert' popup on home screen
+	And user closes the app
+END
+
+SCENARIO: Verification of High Alert Realarm Condition doesnt Exist
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-16710", "description":"Verification of High Alert Realarm Condition doesnt Exist", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":["Roshani"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail_sensor'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on High Alert and sets Repeat picker to 'Never'
+	And user navigate Back to Home screen from high alert screen
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '1MW_7HIGHIN_16710' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '100016710'
+	#	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen without ack
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen without ack
+	Then user open notifications
+	And user verifies High Glucose Alert not displayed
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail4'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on High Alert and sets Repeat picker to 'Never'
+	And user navigate Back to Home screen from high alert screen
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '1MW_7HIGHIN_16710' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '100016710'
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen without ack
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	And user closes the app
+END
+
+SCENARIO: Verification of High Alert during Signal Loss Killing the app
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17090", "description":"Verification of High Alert during Signal Loss Killing the app", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on High Alert and sets Repeat picker to 'Fifteen'
+	And user navigate Back to Home screen from high alert screen
+	And user stuffs the emulator 'emulator1' with data '5MW_45HIGH' on machine '${emulator.systemip}'
+	When user clicks on Pair sensor Button
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '100017090'
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	And user wait and closes app
+	When user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user closes the app
+END
+
+
+###SCENARIO: Verify app functionality for Sensor shell life less than expected.
+###META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20955", "description":"Verify app functionality for Sensor shell life less than expected.", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+###	Given user resets application
+###	When user opens app
+###	Then user selects country '${country.name}' from country list
+###	And user gets redirected to 'LOG-IN OWN' Page
+###	And user enters login details using 'Login.Sensor_UserDetail6'
+###	And user clicks on login button
+###	And user completes Safety Onboarding
+###	And user stuffs the emulator 'emulator1' with data '5MW_20853_1' on machine '${emulator.systemip}'
+###	And user selects 'LEFTARM' location of body to apply sensor and click on next
+###	And user enters the passkey '123123' for sensor id '111020955'
+###	And user verifies sensor expires popup without close
+###	And the user closes sensor expires popup
+###	And the user closes sensor warmup alert
+###	Given user resets application
+###	When user opens app
+###	Then user selects country '${country.name}' from country list
+###	And user gets redirected to 'LOG-IN OWN' Page
+###	And user enters login details using 'Login.Sensor_UserDetail6'
+###	And user clicks on login button
+###	And user completes Safety Onboarding
+###	#And user stuffs the emulator '682402338' with data '5MW_20853_1'
+###	And user selects 'LEFTARM' location of body to apply sensor and click on next
+###	And user enters the passkey '123123' for sensor id '111020955'
+###	And user verifies sensor expires popup without close
+###	Then user open notifications
+###	Then user verifies 'Sensor Warmup Complete' push notification
+###	And user verifies sensor expires popup not displayed
+###	Given user resets application
+###	When user opens app
+###	Then user selects country '${country.name}' from country list
+###	And user gets redirected to 'LOG-IN OWN' Page
+###	And user enters login details using 'Login.Sensor_UserDetail6'
+###	And user clicks on login button
+###	And user completes Safety Onboarding
+###	#	#And user stuffs the emulator '682402338' with data '5MW_20853_1'
+###	And user selects 'LEFTARM' location of body to apply sensor and click on next
+###	And user enters the passkey '123123' for sensor id '100020955'
+###	And user verifies sensor expires popup not displayed
+###	And the user closes sensor warmup alert
+###	And user closes the app
+###END
+SCENARIO: Verify Change Your App Notification Settings popup on home screen.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20956", "description":"Verify Change Your App Notification Settings popup on home screen.", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '5MW_20853_1' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '100020955'
+	And the user closes sensor warmup alert
+	And user launch settings and disable notifications
+	When user opens app
+	Then user verifies change setting popup on Home screen
+	Then user verifies 'Mobile Device Alerts Off' banner on Home screen
+	And user launch settings and enable notifications
+	When user opens app
+	Then user verifies 'Mobile Device Alerts Off' banner on Home screen not displayed
+	And user disable notifications
+	When user opens app
+	Then user verifies change setting popup on Home screen
+	And user closes the app
+END
+
+SCENARIO: Verify Change Your App Notification Settings popup on home screen.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20957", "description":"Verify Change Your App Notification Settings popup on home screen.", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '5MW_20853_1' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '100020955'
+	And the user closes sensor warmup alert
+	And user launch settings and disable notifications
+	When user opens app
+	Then user verifies change setting popup on Home screen
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user verifies change setting popup on Home screen
+	Then user clicks back button on alert
+	And user clicks on Alerts
+	Then user verifies change setting popup on Home screen
+	Then user puts app in background
+	Then user open current app
+	Then user verifies change setting popup on Alert screen after opening app
+	And user launch settings and enable notifications
+	When user opens app
+	Then user verifies 'Mobile Device Alerts Off' banner on Home screen not displayed
+	And user disable notifications
+	When user opens app
+	Then user verifies change setting popup on Home screen
+	And user closes the app
+END
+
+SCENARIO: Verify Low Alert notification for timezone
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17035", "description":"Verify Low Alert notification for timezone", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	Given User change timezone to 'PST'
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '5MW_20853_1' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111017035'
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user verifies 'Low Glucose Alert' popup on home screen
+	Given User change timezone to 'EST'
+	Then user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user verifies 'Low Glucose Alert' popup on home screen
+	And user closes the app
+END
+SCENARIO: Verify Low Alert notification for timezone
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17036", "description":"Verify High Alert notification for timezone", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	Given User change timezone to 'PST'
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '5MW_20853_1' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111017036'
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	Given User change timezone to 'EST'
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	And user closes the app
+END
+
+SCENARIO: Verification of No Readings Alert during Signal Loss Killing the app
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17184", "description":"Verification of High Alert during Signal Loss Killing the app", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on No Reading Alert and 'on' No Reading alert toggle
+	And user stuffs the emulator 'emulator1' with data '5MW_17184' on machine '${emulator.systemip}'
+	When user clicks on Pair sensor Button
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '100017184'
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'No Readings Alert' push notification
+	And user verifies 'No Readings Alert' popup on home screen
+	And user wait and closes app
+	When user open notifications
+	Then user verifies 'No Readings Alert' push notification
+	And user closes the app
+END
+
+SCENARIO: The user should view First Use Tips when accessing the Home page for the first time in the application.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15468", "description":"The user should view First Use Tips when accessing the Home page for the first time in the application.", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user stuffs the emulator 'emulator1' with data '15261' on machine '${emulator.systemip}'
+	When user clicks on Pair sensor Button
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111111111'
+	And user verifies in range glucose readings on home screen
+	And user verifies first use tooltips on homescreen
+	And user unistall the app and reinstall
+	When user selects country '${countryname}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	Then user enters newly created details to Login
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user verifies that no tooltip is present on homescreen
+	And user closes the app
+END
+
+SCENARIO: Verification of Enabling/Disabling Low Alert based on Custom Settings.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17267", "description":"Verification of Enabling/Disabling Low Alert based on Custom Settings.", "groups":["CGM"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '17267' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111117267'
+	And the user closes sensor warmup alert
+	And user verifies first use tooltips on homescreen
+	When user clicks on more menu
+	And user clicks on Alerts
+	When user enables the alert schedule and clicks on schedule name
+	Then user clicks on 'Start time' and update Picker values
+	Then user clicks on 'Week picker' and update Picker values
+	Then user clicks on 'Stop time' and update picker values
+	And user saves custome alert setting
+	And user disables custome alert setting
+	Then user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user verifies 'Low Glucose Alert' popup on home screen
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '17267' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111117267'
+	And the user closes sensor warmup alert
+	And user verifies first use tooltips on homescreen
+	When user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on low Alert and sets Notify me below picker to '65' mgdl
+	When user enables the alert schedule and clicks on schedule name
+	Then user clicks on 'Start time' and update Picker values
+	Then user clicks on 'Week picker' and update Picker values
+	Then user clicks on 'Stop time' and update picker values
+	And user saves custome alert setting
+	And user disables custome alert setting
+	And user verify gets redirected to Home page
+	And user verifies Low glucose alert not displayed
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on Low Alert and 'ON' low alert toggle
+	And user verifies 'Low Glucose Alert' popup on home screen
+	And user closes the app
+	
+END
+
+SCENARIO: Verification of High Alert Realarm in Background
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-16706", "description":"Verification of High Alert Realarm in Background", "groups":["CGM"], "Module":"Sensor Pairing","author":["Pradnya"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.sensor_user1'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '16706' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111116706'
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	When user opens app
+	Then user open notifications
+	And user verifies 'High Glucose Alert' popup on home screen without ack
+	And  user waits for 'High Glucose Alert' notification for '5' mins
+	Then user open notifications
+	When user opens app
+	And user verifies 'High Glucose Alert' popup on home screen without ack
+	And  user waits for 'High Glucose Alert' notification for '5' mins
+	When user opens app
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And  user waits for 'High Glucose Alert' notification for '5' mins
+	And user closes the app
+END
+
+#SCENARIO: Verify Missed Condition Notification for High Alert and Custom High disable
+#META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20929", "description":"Verify Missed Condition Notification for High Alert and Custom High disable", "groups":["CGM"], "Module":"Sensor Pairing","author":["Vaibhav"]}
+#Given user resets application
+#When user opens app
+#Then user selects country '${country.name}' from country list
+#And user gets redirected to 'LOG-IN OWN' Page
+#And user enters login details using 'Login.Sensor_UserDetail6'
+#And user clicks on login button
+#And user completes Safety Onboarding and skips Sensor pair
+#Then user gets redirected to Home page
+#And user clicks on more menu
+#And user clicks on Alerts
+#And user clicks on High Alert and 'ON' High alert toggle
+#And user clicks back button on alert
+#When user enables the alert schedule and clicks on schedule name
+#And user clicks on 'Start time' and update Picker values to '9:00 AM'
+#And user clicks on 'Stop time' and update picker values to '12:00 PM'
+#And user clicks on 'Low' Alert schedule and 'OFF' alert toggle
+#And user clicks back button on alert
+#And user clicks on save button
+#And user clicks back button on alert
+#And user clicks on Home tab
+#When user clicks on Pair sensor Button
+
+
+
+##SCENARIO: Verify app functionality for Sensor shell life less than expected.
+##META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20955", "description":"Verify app functionality for Sensor shell life less than expected.", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+##	Given user resets application
+##	When user opens app
+##	Then user selects country '${country.name}' from country list
+##	And user gets redirected to 'LOG-IN OWN' Page
+##	And user enters login details using 'Login.Sensor_UserDetail6'
+##	And user clicks on login button
+##	And user completes Safety Onboarding
+##	#And user stuffs the emulator '682402338' with data '5MW_20853_1'
+##	And user selects 'LEFTARM' location of body to apply sensor and click on next
+##	And user enters the passkey '123123' for sensor id '111020955'
+##	And user verifies sensor expires popup without close
+##	And the user closes sensor expires popup
+##	And the user closes sensor warmup alert
+##	Given user resets application
+##	When user opens app
+##	Then user selects country '${country.name}' from country list
+##	And user gets redirected to 'LOG-IN OWN' Page
+##	And user enters login details using 'Login.Sensor_UserDetail6'
+##	And user clicks on login button
+##	And user completes Safety Onboarding
+##	#And user stuffs the emulator '682402338' with data '5MW_20853_1'
+##	And user selects 'LEFTARM' location of body to apply sensor and click on next
+##	And user enters the passkey '123123' for sensor id '111020955'
+##	And user verifies sensor expires popup without close
+##	Then user open notifications
+##	Then user verifies 'Sensor Warmup Complete' push notification
+##	And user verifies sensor expires popup not displayed
+##	Given user resets application
+##	When user opens app
+##	Then user selects country '${country.name}' from country list
+##	And user gets redirected to 'LOG-IN OWN' Page
+##	And user enters login details using 'Login.Sensor_UserDetail6'
+##	And user clicks on login button
+##	And user completes Safety Onboarding
+##	#	#And user stuffs the emulator '682402338' with data '5MW_20853_1'
+##	And user selects 'LEFTARM' location of body to apply sensor and click on next
+##	And user enters the passkey '123123' for sensor id '100020955'
+##	And user verifies sensor expires popup not displayed
+##	And the user closes sensor warmup alert
+##	And user closes the app
+##END
+SCENARIO: Verify Change Your App Notification Settings popup on home screen.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20956", "description":"Verify Change Your App Notification Settings popup on home screen.", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '5MW_20853_1' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '100020955'
+	And the user closes sensor warmup alert
+	And user launch settings and disable notifications
+	When user opens app
+	Then user verifies change setting popup on Home screen
+	Then user verifies 'Mobile Device Alerts Off' banner on Home screen
+	And user launch settings and enable notifications
+	When user opens app
+	Then user verifies 'Mobile Device Alerts Off' banner on Home screen not displayed
+	And user disable notifications
+	When user opens app
+	Then user verifies change setting popup on Home screen
+	And user closes the app
+END
+
+SCENARIO: Verify Change Your App Notification Settings popup on home screen.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20957", "description":"Verify Change Your App Notification Settings popup on home screen.", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '5MW_20853_1' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '100020955'
+	And the user closes sensor warmup alert
+	And user launch settings and disable notifications
+	When user opens app
+	Then user verifies change setting popup on Home screen
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user verifies change setting popup on Home screen
+	Then user clicks back button on alert
+	And user clicks on Alerts
+	Then user verifies change setting popup on Home screen
+	Then user puts app in background
+	Then user open current app
+	Then user verifies change setting popup on Alert screen after opening app
+	And user launch settings and enable notifications
+	When user opens app
+	Then user verifies 'Mobile Device Alerts Off' banner on Home screen not displayed
+	And user disable notifications
+	When user opens app
+	Then user verifies change setting popup on Home screen
+	And user closes the app
+END
+
+SCENARIO: Verify Low Alert notification for timezone
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17035", "description":"Verify Low Alert notification for timezone", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	Given User change timezone to 'PST'
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '5MW_20853_1' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111017035'
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user verifies 'Low Glucose Alert' popup on home screen
+	Given User change timezone to 'EST'
+	Then user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user verifies 'Low Glucose Alert' popup on home screen
+	And user closes the app
+END
+SCENARIO: Verify Low Alert notification for timezone
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17036", "description":"Verify High Alert notification for timezone", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	Given User change timezone to 'PST'
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '5MW_20853_1' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111017036'
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	Given User change timezone to 'EST'
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	And user closes the app
+END
+
+SCENARIO: Verification of No Readings Alert during Signal Loss Killing the app
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17184", "description":"Verification of High Alert during Signal Loss Killing the app", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on No Reading Alert and 'on' No Reading alert toggle
+	And user stuffs the emulator 'emulator1' with data '5MW_17184' on machine '${emulator.systemip}'
+	When user clicks on Pair sensor Button
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '100017184'
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'No Readings Alert' push notification
+	And user verifies 'No Readings Alert' popup on home screen
+	And user wait and closes app
+	When user open notifications
+	Then user verifies 'No Readings Alert' push notification
+	And user closes the app
+END
+
+SCENARIO: The user should view First Use Tips when accessing the Home page for the first time in the application.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15468", "description":"The user should view First Use Tips when accessing the Home page for the first time in the application.", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user stuffs the emulator 'emulator1' with data '15261' on machine '${emulator.systemip}'
+	When user clicks on Pair sensor Button
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111111111'
+	And user verifies in range glucose readings on home screen
+	And user verifies first use tooltips on homescreen
+	And user unistall the app and reinstall
+	When user selects country '${countryname}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	Then user enters newly created details to Login
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user verifies that no tooltip is present on homescreen
+	And user closes the app
+END
+
+
+SCENARIO: Verification of Enabling/Disabling Low Alert based on Custom Settings.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17267", "description":"Verification of Enabling/Disabling Low Alert based on Custom Settings.", "groups":["CGM"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '17267' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111117267'
+	And the user closes sensor warmup alert
+	And user verifies first use tooltips on homescreen
+	When user clicks on more menu
+	And user clicks on Alerts
+	When user enables the alert schedule and clicks on schedule name
+	Then user clicks on 'Start time' and update Picker values
+	Then user clicks on 'Week picker' and update Picker values
+	Then user clicks on 'Stop time' and update picker values
+	And user saves custome alert setting
+	And user disables custome alert setting
+	Then user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user verifies 'Low Glucose Alert' popup on home screen
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '17267' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111117267'
+	And the user closes sensor warmup alert
+	And user verifies first use tooltips on homescreen
+	When user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on low Alert and sets Notify me below picker to '65' mgdl
+	When user enables the alert schedule and clicks on schedule name
+	Then user clicks on 'Start time' and update Picker values
+	Then user clicks on 'Week picker' and update Picker values
+	Then user clicks on 'Stop time' and update picker values
+	And user saves custome alert setting
+	And user disables custome alert setting
+	And user verify gets redirected to Home page
+	And user verifies Low glucose alert not displayed
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on Low Alert and 'ON' low alert toggle
+	And user verifies 'Low Glucose Alert' popup on home screen
+	And user closes the app
+	
+END
+
+SCENARIO: Verification of High Alert Realarm in Background
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-16706", "description":"Verification of High Alert Realarm in Background", "groups":["CGM"], "Module":"Sensor Pairing","author":["Pradnya"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.sensor_user1'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '16706' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111116706'
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	When user opens app
+	Then user open notifications
+	And user verifies 'High Glucose Alert' popup on home screen without ack
+	And  user waits for 'High Glucose Alert' notification for '5' mins
+	Then user open notifications
+	When user opens app
+	And user verifies 'High Glucose Alert' popup on home screen without ack
+	And  user waits for 'High Glucose Alert' notification for '5' mins
+	When user opens app
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And  user waits for 'High Glucose Alert' notification for '5' mins
+	And user closes the app
+END
+
+SCENARIO: Verify Missed Condition Notification for High Alert and Custom High disable
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20929", "description":"Verify Missed Condition Notification for High Alert and Custom High disable", "groups":["CGM"], "Module":"Sensor Pairing","author":["Vaibhav"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and 'ON' High alert toggle
+	And user clicks back button on alert
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9:00 AM'
+	And user clicks on 'Stop time' and update picker values to '12:00 PM'
+	And user clicks on 'High' Alert schedule and 'ON' alert toggle
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '20928' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111020928'
+	And user keep app in background
+	#And user wait till sensor warm up completes 
+	When Scroll down device notification bar
+	Then user verifies 'High Glucose Alert' push notification
+	#And user wait for '10' minutes
+	When Scroll down device notification bar
+	And verify Missed Condition push notification is not displayed
+	And user closes the app
+END
+
+SCENARIO: Verify Missed Condition Notification for Low Alert and Custom Low disable
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20936", "description":"Verify Missed Condition Notification for Low Alert and Custom Low disable", "groups":["CGM"], "Module":"Sensor Pairing","author":["Vaibhav"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on Low Alert and 'ON' low alert toggle
+	And user set picker value to '95' mgdl
+	And user clicks back button on alert
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9:00 AM'
+	And user clicks on 'Stop time' and update picker values to '12:00 PM'
+	And user clicks on 'Low' Alert schedule and 'OFF' alert toggle
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '20928' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111020928'
+	And user keep app in background
+	#And user wait till sensor warm up completes 
+	When Scroll down device notification bar
+	Then user verifies 'High Glucose Alert' push notification
+	#And user wait for '10' minutes
+	When Scroll down device notification bar
+	And verify Missed Condition push notification is not displayed
+	And user closes the app
+END
+
+SCENARIO: Verify Missed Condition Notification for Low Alert and Custom Low disable
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20936", "description":"Verify Missed Condition Notification for Low Alert and Custom Low disable", "groups":["CGM"], "Module":"Sensor Pairing","author":["Vaibhav"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on Low Alert and 'ON' low alert toggle
+	And user set picker value to '95' mgdl
+	And user clicks back button on alert
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9:00 AM'
+	And user clicks on 'Stop time' and update picker values to '12:00 PM'
+	And user clicks on 'Low' Alert schedule and 'OFF' alert toggle
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '20928' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111020936'
+	And user keep app in background
+	#And user wait till sensor warm up completes 
+	When Scroll down device notification bar
+	Then user verifies 'Low Glucose Alert' push notification
+	#And user wait for '10' minutes
+	When Scroll down device notification bar
+	And verify Missed Condition push notification is not displayed
+	And user closes the app
+END
+
+SCENARIO: Verify Searching for Sensor and Connecting for Sensor operation.
+META-DATA: {"testCaseId":"","manualTestCaseId":"TC-17280","description":"Verify Searching for Sensor and Connecting for Sensor operation.","groups":["CGM"],"Module":"Sensor Pairing","author":["Pradnya"]}
+	Given user resets application
+	When user opens app
+	Then bluetooth is turned off
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user clicks on pair sensor button
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user clicks on cancel button
+	And user enters the passkey '123456' for sensor id '111117280'
+	Then user clicks on tryagain button
+	And user closes the app
+END
+
+SCENARIO: Verification of High Alert Realarm in Background
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-16706", "description":"Verification of High Alert Realarm in Background", "groups":["CGM"], "Module":"Sensor Pairing","author":["Pradnya"]}
+	Given user resets app
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.sensor_user1'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '15261' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111116706'
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	When user opens app
+	Then user open notifications
+	And user verifies 'High Glucose Alert' popup on home screen without ack
+	And  user waits for 'High Glucose Alert' notification for '5' mins
+	Then user open notifications
+	When user opens app
+	And user verifies 'High Glucose Alert' popup on home screen without ack
+	And  user waits for 'High Glucose Alert' notification for '5' mins
+	When user opens app
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And  user waits for 'High Glucose Alert' notification for '5' mins
+	And user closes the app
+END
+
+SCENARIO: Verify Time Sensitive popup on Home screen and Alerts screen for iOS15
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20837", "description":"Verify Time Sensitive popup on Home screen and Alerts screen for iOS 15", "groups":["CGM11"], "Module":"Sensor Pairing","author":["Minal"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail11'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '15261' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111120837'
+	And the user closes sensor warmup alert
+	And user minimize the app and navigate to Device settings and click on Time Sensitive Notifications
+	And user opens app
+	Then user verifies Change your settings popup on homescreen
+	And user tap on Not Now option and verifies Change your settings popup and Red Alert Banner
+	And user Tap on Mobile Device Alerts Off banner and verifies Change your settings popup
+	When user selects more menu icon and then Alert screen
+	Then User verifies Change your settings popup
+	When user Tap on information i icon on Alerts screen
+	Then User verifies Mobile Device Settings screen
+	When user tap on Go to mobile settings link and verifies mobile settings screen
+	Then user open current app
+	Then User verifies Change your settings popup
+	When user tap on Not Now option and verifies that user remains on Mobile Device Settings screen
+	And user navigates to Home screen
+	And user minimize the app and navigate to Device settings and click on Time Sensitive Notifications
+	And user opens app
+	Then user verifies Change Your Settings popup and Mobile Device Alerts Off banner not displaying on home screen
+	And user closes the app
+END
+
+SCENARIO: Verification of No Readings, Urgent Low, Urgent Low Soon, Low, High, Rise Rate and Fall Rate conditions requirements (edge cases) - NR_Alert_Ack_and_UL_Alarm_Entry_Criteria.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-19210", "description":" Verification of No Readings, Urgent Low, Urgent Low Soon, Low, High, Rise Rate and Fall Rate conditions requirements (edge cases) - NR_Alert_Ack_and_UL_Alarm_Entry_Criteria.", "groups":["CGM"], "Module":"Sensor Pairing","author":["Minal"]}
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '19210' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111119210'
+	And  user waits for 'No Readings Alert' notification for '15' mins
+	Then user verifies 'No Readings Alert' push notification
+	And user verifies 'No Readings Alert' popup on home screen
+	And  user waits for 'Urgent Low Glucose Alarm' notification for '20' mins
+	Then user verifies 'Urgent Low Glucose Alarm' push notification
+	And user verifies 'Urgent Low Glucose Alarm' popup on home screen
+	And user closes the app
+END
+
+
+SCENARIO: Verification of Reset Alert for High Alert (Regular and Custom) Sensor is Paired.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17309", "description":"Verification of Reset Alert for High Alert (Regular and Custom) while Sensor is Paired.", "groups":["CGM"], "Module":"Sensor Pairing","author":["Abhinav"]}
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and sets Notify me Above picker to '190' mgdl
+	And user clicks back button on alert
+	Then user clicks on High Alert and sets Repeat picker to 'Fifteen'
+	And user clicks back button on alert
+	And user clicks back button on alert
+	And user click on home icon
+	And user clicks on pair sensor option
+	And user stuffs the emulator 'emulator1' with data 'TC-17309_Part-1' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '915915' for sensor id '100017309'
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	And  user navigate to alert screen and verify reset alert setting button
+	And user reset alert setting and verify app should reset all the alerts setting configuration
+	And user clicks back button on alert
+	And user click on home icon
+	And user verifies after fifteen minutes no Alert triggered
+	Given user resets application
+	Then User set time to '9:45 PM'
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9:00 PM'
+	And user clicks on 'Stop time' and update picker values to '6:00 AM'
+	And user clicks on 'High' Alert schedule and 'ON' alert toggle
+	And user clicks back button on alert
+	And user set 'High' Alert and Notify Me Above '190'
+	And user clicks back button on alert
+	Then user clicks on custom 'High' Alert and sets Repeat picker to 'Fifteen'
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user click on Home icon
+	And user clicks on pair sensor option
+	And user stuffs the emulator 'emulator1' with data 'TC-17309_Part-2' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '865865' for sensor id '111117309'
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	And user navigate to alert screen and verify reset alert setting button
+	And user reset alert setting and verify app should reset all the alerts setting configuration
+	And user clicks back button on alert
+	And user click on home icon
+	And user verifies after fifteen minutes no Alert triggered
+	And user closes the app
+END
+
+SCENARIO: Verify Missed Condition Notification for Base to Custom High-I
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20930", "description":"Verify Missed Condition Notification for Base to Custom High-I", "groups":["CGM"], "Module":"Sensor Pairing","author":["Vaibhav"]}
+	Given user resets application
+	Then User set time to '8:42 AM'
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail11'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and sets Notify me Above picker to '200' mgdl
+	And user clicks back button on alert
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9:00 AM'
+	And user clicks on 'Stop time' and update picker values to '12:00 PM'
+	And user clicks on 'High' Alert schedule and 'ON' alert toggle
+	And user clicks back button on alert
+	And user set 'High' Alert and Notify Me Above '220'
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '20928' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111020930'
+	And user keep app in background
+	#And user wait till sensor warm up completes 
+	When Scroll down device notification bar
+	Then user verifies 'High Glucose Alert' push notification without open
+	#And user wait for '10' minutes
+	When Scroll down device notification bar
+	Then user verifies 'Missed Alert' push notification without open
+	And user set time to Setautomatic
+	And user closes the app
+END
+
+
+SCENARIO: Verify that NR alert displays after app goes on Search Mode for Low Health Condition
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-18641", "description":"Verify that NR alert displays after app goes on Search Mode for Low Health Condition", "groups":["CGM"], "Module":"Sensor Pairing","author":["Rushikesh"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on Low Alert and 'ON' low alert toggle
+	And user set picker value to '80' mgdl
+	And user clicks back button on alert
+	Then user clicks on Low Alert and sets Repeat picker to 'Never'
+	And user clicks back button on alert
+	Then user clicks on No Reading Alert and 'on' No Reading alert toggle
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on Signal loss Alert and 'on' Signal loss alert toggle
+	And user update the signal loss value '0' hrs '20' min
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '18641' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '456456' for sensor id '111118641'
+	And user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user open notifications
+	Then user verifies 'No Readings Alert' push notification
+	And user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user open notifications
+	Then user verifies 'No Readings Alert' push notification
+	And user closes the app
+END
+
+
+SCENARIO: Verification of Triggering of High Alert based on Custom Settings.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17281", "description":"Verification of Triggering of High Alert based on Custom Settings.", "groups":["CGM"], "Module":"Sensor Pairing","author":["Abhinav"]}
+	Given user resets app
+	When user opens app
+	And user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.user3'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	When user clicks on more menu
+	And user clicks on Alerts
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9.00 PM'
+	And user clicks on 'Stop time' and update picker values to '6.00 AM'
+	Then user clicks on 'Week picker All' and update Picker values
+	And user clicks on Custom High Alert and sets Repeat picker to 'Fifteen' and sets Notify me Above picker to '175' mgdl
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '17281' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111117281'
+	#And user keep app in background 
+	Then user open notifications
+	Then user verifies High glucose alert not displayed
+	Given user resets app
+	When user opens app
+	And user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.user2'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	When user clicks on more menu
+	And user clicks on Alerts
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9.00 PM'
+	And user clicks on 'Stop time' and update picker values to '6.00 AM'
+	Then user clicks on 'Week picker All' and update Picker values
+	And user clicks on Custom High Alert and sets Repeat picker to 'Fifteen' and sets Notify me Above picker to '175' mgdl
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '17281' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '456456' for sensor id '111217281'
+	#And user keep app in background 
+	Then user open notifications
+	And user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	And user waits for 'High Glucose Alert' notification for '15' mins
+	And user verifies 'High Glucose Alert' push notification
+	And user closes the app
+END
+
+
+SCENARIO: Verify Missed Condition Notification for Base to Custom High-II
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20931", "description":"Verify Missed Condition Notification for Base to Custom High-II", "groups":["CGM"], "Module":"Sensor Pairing","author":["Vaibhav"]}
+	Given user resets application
+	Then User set time to '8:40 AM'
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail12'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and sets Notify me Above picker to '220' mgdl
+	And user clicks back button on alert
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9:00 AM'
+	And user clicks on 'Stop time' and update picker values to '12:00 PM'
+	And user clicks on 'High' Alert schedule and 'ON' alert toggle
+	And user clicks back button on alert
+	And user set 'High' Alert and Notify Me Above '200'
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '20928' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111020931'
+	And user keep app in background
+	#And user wait till sensor warm up completes 
+	When Scroll down device notification bar
+	Then user verifies 'High Glucose Alert' push notification without open
+	#And user wait for '10' minutes
+	When Scroll down device notification bar
+	Then user verifies 'Missed Alert' push notification without open
+	And user set time to Setautomatic
+	And user closes the app
+END
+
+
+SCENARIO: To Verify that notification alert based on the last valid reading for No Reading
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-18843", "description":"To Verify that notification alert based on the last valid reading for No Reading", "groups":["CGM"], "Module":"Sensor Pairing","author":["Minal"]}
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '19210' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111118843'
+	And user verifies 'No Readings Alert' popup on home screen
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '19210' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '231231' for sensor id '111218843'
+	And user verifies 'No Readings Alert' popup on home screen
+	And user verifies in range glucose readings on home screen
+	And user closes the app
+END
+
+
+SCENARIO: Verification of notification alert based on the last valid reading for Urgent Low
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-18837", "description":"Verification of notification alert based on the last valid reading for Urgent Low", "groups":["CGM"], "Module":"Sensor Pairing","author":["Minal"]}
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '19210' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111118837'
+	And the user closes sensor warmup alert
+	And user verifies 'Low Glucose Alert' popup on home screen
+	And user verifies 'Urgent Low Glucose Alarm' popup on home screen
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '18837' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '321321' for sensor id '111318837'
+	And the user closes sensor warmup alert
+	And user verifies 'Urgent Low Glucose Alarm' popup on home screen
+	And user closes the app
+END
+
+
+SCENARIO: Verify Data loss with health condition in re-alarm mode - LA_with_NR_No_Ack_of_LA_and_Ack_NR
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-18751", "description":"Verify Data loss with health condition in re-alarm mode - LA_with_NR_No_Ack_of_LA_and_Ack_NR", "groups":["CGM"], "Module":"Sensor Pairing","author":["Minal"]}
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '19210' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111118751'
+	When user open notifications
+	And user verifies 'Low Glucose Alert' push notification
+	When user open notifications
+	And user verifies 'Low Glucose Alert' push notification
+	When user open notifications
+	And user verifies 'Low Glucose Alert' push notification
+	When user open notifications
+	And user verifies 'No Readings Alert' push notification
+	When user open notifications
+	And user verifies 'Low Glucose Alert' push notification
+	When user open notifications
+	And user verifies 'No Readings Alert' push notification
+	When user open notifications
+	And user verifies 'Low Glucose Alert' push notification
+	When user open notifications
+	And user wait for '3' minutes
+	And user verifies 'No Readings Alert' push notification
+	And user verifies 'No Readings Alert' popup on home screen
+	When user open notifications
+	And user verifies Low glucose Alert not displayed
+	And user verifies No Readings Alerts is not displayed
+	And  user waits for 'Low Glucose Alert' notification for '5' mins
+	And  user waits for 'No Readings Alert' notification for '5' mins
+	And user closes the app
+END
+
+SCENARIO: Apply Sensor screen from safety Onboarding for 0-5 years old patient
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20863", "description":"Apply Sensor screen from safety Onboarding for 0-5 years old patient", "groups":["CGMNEW"], "Module":"Sensor Pairing","author":["Shubham"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user enters login details using 'Login.Dependent2Year'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user taps on skip button
+	And user verify on the home screen how to apply the home screen
+	And user verify informative text
+	And user clicks on pair sensor button and user verify informative text
+	And user pair sensor the application
+	And user clicks on the cancel button
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user enters login details using 'Login.Dependent2Year'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user taps on skip button
+	When user clicks on more menu
+	And user clicks on My Devices
+	And user clicks on pair sensor button and user verify informative text
+	And user pair sensor the application
+	And user clicks on the cancel button
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user enters login details using 'Login.Dependent2Year'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user taps on skip button
+	When user clicks on more menu
+	And user clicks on Help option
+	And user verify sensor application screen in help menu
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user enters login details using 'Login.Dependent2Year'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	#	And user stuffs the emulator '682389050' with data '1MW_20930'
+	And user pair sensor the application
+	And user enters the passkey '123123' for sensor id '111020930'
+	When user clicks on more menu
+	And user clicks on My Devices
+	And user click on unpair sensor button and verify unpair sensor screen
+	And user click on home icon
+	And user taps on pair sensor button
+	And user clicks on pair sensor button and user verify informative text
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user enters login details using 'Login.Dependent2Year'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '1MW_20930' on machine '${emulator.systemip}'
+	And user pair sensor the application
+	And user enters the passkey '123123' for sensor id '111020930'
+	When user clicks on more menu
+	And user clicks on My Devices
+	Then user clicks on stop sensor button
+	Then user verifies stop sensor screen and stop sensor
+	And user taps on back button
+	And user click on home icon
+	And user clicks on pair sensor button and user verify informative text
+	And user closes the app
+END
+
+SCENARIO: Verify user is able to compare data for previous and current periods
+META-DATA: {"description": "Verify user is able to compare data for previous and current periods","author":"Shubham","testCaseId":"TC-21487","groups":["CGM"]}
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.averageuser'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+	Then user clicks on signup button
+	And user requests the cgmreading for 200 days
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	Then user enters newly created details to Login
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user clicks on progress tab and verifies the My progress screen
+	And user click on the compair switch toggle
+	And user verify CGM Readings
+	Then user selects 14 days
+	And user verify CGM and GMI Readings
+	Then user selects 30 days
+	And user verify CGM and GMI Readings
+	And user selects 60 days
+	And user verify CGM and GMI Readings
+	And user selects 90 days
+	And user verify CGM and GMI Readings
+	And user verify all readings in minutes and hour
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.averageuser'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+	Then user clicks on signup button
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	Then user enters newly created details to Login
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user clicks on progress tab and verifies the My progress screen
+	And user verify not enough data text
+	And user closes the app
+END
+
+SCENARIO: Verify Missed Condition Notification for Custom to Base High-II
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20933", "description":"Verify Missed Condition Notification for Custom to Base High-II", "groups":["CGM"], "Module":"Sensor Pairing","author":["Vaibhav"]}
+	Given user resets application
+	Then User set time to '5:40 AM'
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail12'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and sets Notify me Above picker to '190' mgdl
+	And user clicks back button on alert
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9:00 PM'
+	And user clicks on 'Stop time' and update picker values to '6:00 AM'
+	And user clicks on 'High' Alert schedule and 'ON' alert toggle
+	And user clicks back button on alert
+	And user set 'High' Alert and Notify Me Above '210'
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '20933' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111020933'
+	And user keep app in background
+	#And user wait till sensor warm up completes 
+	When Scroll down device notification bar
+	Then user verifies 'High Glucose Alert' push notification without open
+	#And user wait for '10' minutes
+	When Scroll down device notification bar
+	Then user verifies 'Missed Alert' push notification without open
+	And user set time to Setautomatic
+	And user closes the app
+END
+
+SCENARIO: Verification of High Alert Notify Me Above based on Custom Settings.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17282", "description":"Verification of High Alert Notify Me Above based on Custom Settings.", "groups":["CGM"], "Module":"Sensor Pairing","author":["Pradnya"]}
+	Given user resets app
+	When user opens app
+	And user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.user3'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	When user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and sets Notify me Above picker to '175' mgdl
+	And user clicks back button on alert
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9.00 PM'
+	And user clicks on 'Stop time' and update picker values to '6.00 AM'
+	Then user clicks on 'Week picker All' and update Picker values
+	And user clicks on Custom High Alert and sets Repeat picker to 'Fifteen' and sets Notify me Above picker to '200' mgdl
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '17282' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111117282'
+	#And user keep app in background 
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification without open
+	When user opens app
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	When user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and sets Notify me Above picker to '300' mgdl
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user waits for 'High Glucose Alert' notification for '15' mins
+	Given user resets app
+	When user opens app
+	And user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.user2'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	When user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and sets Notify me Above picker to '175' mgdl
+	And user clicks back button on alert
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9.00 PM'
+	And user clicks on 'Stop time' and update picker values to '6.00 AM'
+	Then user clicks on 'Week picker All' and update Picker values
+	And user clicks on Custom High Alert and sets Repeat picker to 'Fifteen' and sets Notify me Above picker to '200' mgdl
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '17282' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '456456' for sensor id '111217282'
+	#And user keep app in background 
+	Then user open notifications
+	And user verifies 'High Glucose Alert' push notification
+	When user opens app
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	And user waits for 'High Glucose Alert' notification for '2' mins
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	When user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and sets Notify me Above picker to '210' mgdl
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user waits for 'High Glucose Alert' notification for '15' mins
+	And user closes the app
+END
+
+SCENARIO: Verification of Enabling/Disabling High Alert based on Custom Settings.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17283", "description":"Verification of Enabling/Disabling High Alert based on Custom Settings.", "groups":["CGM"], "Module":"Sensor Pairing","author":["Pradnya"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and sets Notify me Above picker to '175' mgdl
+	And user clicks back button on alert
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9:00 PM'
+	And user clicks on 'Stop time' and update picker values to '6:00 AM'
+	Then user clicks on 'Week picker All' and update Picker values
+	And user clicks on Custom High Alert toggle
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '17283' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111117283'
+	And user keep app in background
+	#And user wait till sensor warm up completes 
+	When Scroll down device notification bar
+	Then user verifies 'High Glucose Alert' push notification without open
+	#And user wait for '10' minutes
+	When Scroll down device notification bar
+	And user verifies 'High Glucose Alert' push notification
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and sets Notify me Above picker to '175' mgdl
+	And user clicks back button on alert
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9:00 PM'
+	And user clicks on 'Stop time' and update picker values to '6:00 AM'
+	Then user clicks on 'Week picker All' and update Picker values
+	And user clicks on Custom High Alert toggle
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '17283' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '456456' for sensor id '111217283'
+	When Scroll down device notification bar
+	Then user verifies High glucose alert not displayed
+	And user wait for '2' minutes
+	When user opens app
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and 'ON' High alert toggle
+	And user clicks back button on alert
+	And user verify High alert should be '200'
+	And user clicks back button on alert
+	And user clicks on Home tab
+	And user verifies 'High Glucose Alert' popup on home screen
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and sets Notify me Above picker to '175' mgdl
+	And user clicks back button on alert
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9:00 PM'
+	And user clicks on 'Stop time' and update picker values to '6:00 AM'
+	Then user clicks on 'Week picker All' and update Picker values
+	And user clicks on Custom High Alert and sets Repeat picker to 'Fifteen' and sets Notify me Above picker to '200' mgdl
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '17283' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '789789' for sensor id '111317283'
+	When Scroll down device notification bar
+	#And user verifies 'High Glucose Alert' push notification
+	Then user verifies 'High Glucose Alert' push notification without open
+	When user opens app
+	And user verifies 'High Glucose Alert' popup on home screen
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and 'OFF' High alert toggle
+	And user clicks back button on alert
+	And user verify High alert should be 'OFF'
+	When Scroll down device notification bar
+	And user waits for 'High Glucose Alert' notification for '15' mins
+	And user waits for 'High Glucose Alert' notification for '2' mins
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and 'ON' High alert toggle
+	And user clicks back button on alert
+	And user waits for 'High Glucose Alert' notification for '5' mins
+	And user closes the app
+END
+
+
+
+
+# BDD merge
+SCENARIO: Verify current CGM reading on Home screen
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15261", "description":"Verify current CGM reading on Home screen.", "groups":["CGM"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '15261' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111111111'
+	AND the user closes sensor warmup alert
+	Then user verifies 'Low Glucose Alert' popup on home screen
+	And user verifies in range glucose readings on home screen
+	And user verifies 'High Glucose Alert' popup on home screen
+	And user closes the app
+END
+
+SCENARIO: Verification of No Readings, Urgent Low, Urgent Low Soon, Low and High conditions requirements (edge cases) - UL_Repeat_and_NR_Alert_Trigerred.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-18860", "description":"Verification of No Readings, Urgent Low, Urgent Low Soon, Low and High conditions requirements (edge cases) - UL_Repeat_and_NR_Alert_Trigerred.", "groups":["CGM"], "Module":"Sensor Pairing","author":["Abhinav"]}
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user clicks on pair sensor option
+	And user stuffs the emulator 'emulator1' with data '18860' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '173173' for sensor id '100018860'
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'Urgent Low Glucose Alarm' push notification
+	And user verifies 'Urgent Low Glucose Alarm' popup on home screen
+	Then user open notifications
+	And  user waits for 'No Readings Alert' notification for '30' mins
+	Then user verifies 'No Readings Alert' push notification
+	And user verifies 'No Readings Alert' popup on home screen
+	Then user open notifications
+	And  user waits for 'Urgent Low Glucose Alarm' notification for '35' mins
+	Then user verifies 'Urgent Low Glucose Alarm' push notification
+	And user closes the app
+END
+
+SCENARIO: Verification of No Readings, Urgent Low, Urgent Low Soon, Low and High conditions requirements (edge cases) - LA_Repeat_and_NR_Alert_NOT_Trigg_and_Triggered.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-18871", "description":"Verification of No Readings, Urgent Low, Urgent Low Soon, Low and High conditions requirements (edge cases) -LA_Repeat_and_NR_Alert_NOT_Trigg_and_Triggered.", "groups":["CGM"], "Module":"Sensor Pairing","author":["Abhinav"]}
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on Low Alert and sets Repeat picker to 'Fifteen'
+	And user clicks back button on alert
+	And user clicks back button on alert
+	And user click on home icon
+	And user clicks on pair sensor option
+	And user stuffs the emulator 'emulator1' with data '18871' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '173173' for sensor id '100018871'
+	And the user closes sensor warmup alert
+	Then user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user verifies 'Low Glucose Alert' popup on home screen
+	Then user open notifications
+	And  user waits for 'Low Glucose Alert' notification for '20' mins
+	Then user verifies 'Low Glucose Alert' push notification
+	And user verifies 'Low Glucose Alert' popup on home screen
+	Then user open notifications
+	And  user waits for 'No Readings Alert' notification for '5' mins
+	Then user verifies 'No Readings Alert' push notification
+	And user verifies 'No Readings Alert' popup on home screen
+	Then user open notifications
+	And user verifies after fifteen minutes no Low Alert triggered
+	And user closes the app
+END
+
+
+SCENARIO: Verify current CGM reading on Home screen
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15261", "description":"Verify current CGM reading on Home screen.", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '15261' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111111111'
+	AND the user closes sensor warmup alert
+	Then user verifies 'Low Glucose Alert' popup on home screen
+	And user verifies in range glucose readings on home screen
+	And user verifies 'High Glucose Alert' popup on home screen
+	And user closes the app
+END
+
+SCENARIO: Verification of Threshold update for Inactive Schedule High Alert (Regular and Custom)
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-18882", "description":"Verification of Threshold update for Inactive Schedule High Alert (Regular and Custom)", "groups":["CGM"], "Module":"Sensor Pairing","author":["Minal"]}
+
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9:00 PM'
+	And user clicks on 'Stop time' and update picker values to '6:00 AM'
+	And user clicks on Custom High Alert and sets Repeat picker to 'Fifteen' and sets Notify me Above picker to '200' mgdl
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111118882'
+	And the user closes sensor warmup alert
+	And user verifies in range glucose readings on home screen
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and sets Notify me Above picker to '190' mgdl
+	And user clicks back button on alert
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user open notifications
+	And user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	And user closes the app
+END
+
+SCENARIO: Verification of High Alert Days of Week based on Custom Settings.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17284", "description":"Verification of High Alert Days of Week based on Custom Settings.", "groups":["CGM"], "Module":"Sensor Pairing","author":["Pradnya"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and sets Notify me Above picker to '175' mgdl
+	And user clicks back button on alert
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9:00 PM'
+	And user clicks on 'Stop time' and update picker values to '6:00 AM'
+	Then user clicks on 'Week picker' and update Picker values
+	And user clicks on Custom High Alert and sets Repeat picker to 'Fifteen' and sets Notify me Above picker to '200' mgdl
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	#And user stuffs the emulator '682446292' with data '20928'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111117284'
+	And user keep app in background
+	#And user wait till sensor warm up completes 
+	Then user open notifications
+	Then user verifies High glucose alert not displayed
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and sets Notify me Above picker to '175' mgdl
+	And user clicks back button on alert
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9:00 PM'
+	And user clicks on 'Stop time' and update picker values to '6:00 AM'
+	Then user clicks on 'Week picker' and update Picker values
+	And user clicks on Custom High Alert and sets Repeat picker to 'Fifteen' and sets Notify me Above picker to '200' mgdl
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	#And user stuffs the emulator '682446292' with data '20928'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '456456' for sensor id '111217284'
+	Then user open notifications
+	And user verifies 'High Glucose Alert' push notification
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and sets Notify me Above picker to '175' mgdl
+	And user clicks back button on alert
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9:00 PM'
+	And user clicks on 'Stop time' and update picker values to '6:00 AM'
+	Then user clicks on 'Week picker' and update Picker values
+	And user clicks on Custom High Alert and sets Repeat picker to 'Fifteen' and sets Notify me Above picker to '200' mgdl
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	#And user stuffs the emulator '682446292' with data '20928'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '789789' for sensor id '111317284'
+	Then user open notifications
+	And user verifies 'High Glucose Alert' push notification
+	And user closes the app
+END
+
+
+SCENARIO: Verification of High Alert Midnight Realarm based on Custom Settings
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17285", "description":"Verification of High Alert Midnight Realarm based on Custom Settings", "groups":["CGM"], "Module":"Sensor Pairing","author":["Pradnya"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	#And user clicks on High Alert and sets Notify me Above picker to '175' mgdl and sets Repeat picker to 'Never'
+	And user clicks back button on alert
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9:00 PM'
+	And user clicks on 'Stop time' and update picker values to '6:00 AM'
+	Then user clicks on 'Week picker' and update Picker values
+	And user clicks on Custom High Alert and sets Repeat picker to 'Never' and sets Notify me Above picker to '200' mgdl
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	#And user stuffs the emulator '682446292' with data '20928'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111117285'
+	And user keep app in background
+	#And user wait till sensor warm up completes 
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification without open
+	When user opens app
+	Then user open notifications
+	And user verifies 'High Glucose Alert' push notification
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on High Alert and sets Notify me Above picker to '175' mgdl
+	And user clicks back button on alert
+	When user enables the alert schedule and clicks on schedule name
+	And user clicks on 'Start time' and update Picker values to '9:00 PM'
+	And user clicks on 'Stop time' and update picker values to '6:00 AM'
+	Then user clicks on 'Week picker' and update Picker values
+	And user clicks on Custom High Alert and sets Repeat picker to 'Never' and sets Notify me Above picker to '200' mgdl
+	And user clicks back button on alert
+	And user clicks on save button
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	#And user stuffs the emulator '682446292' with data '20928'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '456456' for sensor id '111217285'
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen without ack
+	And  user waits for 'High Glucose Alert' notification for '5' mins
+	When user opens app
+	Then user open notifications
+	Then user verifies 'High Glucose Alert' push notification
+	And user verifies 'High Glucose Alert' popup on home screen
+	And user waits for 'High Glucose Alert' notification for '5' mins
+	Then user verifies High glucose alert not displayed
+	And user closes the app
+END
+
+SCENARIO: Verify current CGM reading on Home screen
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15261", "description":"Verify current CGM reading on Home screen.", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '15261' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111111111'
+	AND the user closes sensor warmup alert
+	Then user verifies 'Low Glucose Alert' popup on home screen
+	And user verifies in range glucose readings on home screen
+	And user verifies 'High Glucose Alert' popup on home screen
+	And user closes the app
+END
+
+SCENARIO: Verification of High Alert Midnight Realarm based on Custom Settings
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17269", "description":"Verification of High Alert Midnight Realarm based on Custom Settings", "groups":["CGM1"], "Module":"Sensor Pairing","author":["Priya"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	
+	#	And user clicks on Low Alert and sets Repeat picker to 'Never' and sets Notify me below picker to '65' mgdl
+	#	And user clicks back button on alert
+	#	When user enables the alert schedule and clicks on schedule name
+	#	And user clicks on 'Start time' and update Picker values to '9:00 PM'
+	#	And user clicks on 'Stop time' and update picker values to '6:00 AM'
+	#	Then user clicks on 'Week picker' and update Picker values
+	#	And user clicks on Custom Low Alert and sets Repeat picker to 'Never' and sets Notify me Above picker to '80' mgdl
+	#	And user clicks back button on alert
+	#	And user clicks on save button
+	
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	#And user stuffs the emulator '682402338' with data '17269'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111117269'
+	Then user open notifications
+	Then user verifies 'Low Glucose Alert' push notification without open
+	When user opens app
+	Then user open notifications
+	And user verifies 'Low Glucose Alert' push notification
+	Then user verifies 'Low Glucose Alert' popup on home screen
+	
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user selects opt-in as 'I Agree' in sign up page
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks on Alerts
+	
+	#	And user clicks on Low Alert and sets Repeat picker to 'Never' and sets Notify me below picker to '65' mgdl
+	#	And user clicks back button on alert
+	#	When user enables the alert schedule and clicks on schedule name
+	#	And user clicks on 'Start time' and update Picker values to '9:00 PM'
+	#	And user clicks on 'Stop time' and update picker values to '6:00 AM'
+	#	Then user clicks on 'Week picker' and update Picker values
+	#	And user clicks on Custom Low Alert and sets Repeat picker to 'Never' and sets Notify me Above picker to '80' mgdl
+	#	And user clicks back button on alert
+	#	And user clicks on save button
+	
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	#And user stuffs the emulator '682402338' with data '172691_2'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '456456' for sensor id '222217269'
+	Then user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user verifies 'Low Glucose Alert' popup on home screen
+	Then user open notifications
+	And  user waits for 'Low Glucose Alert' notification for '5' mins
+	Then user verifies Low glucose alert not displayed
+	And user closes the app
+END
+#
+SCENARIO: Verify current CGM reading on Home screen
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15261", "description":"Verify current CGM reading on Home screen.", "groups":["CGM","SE_2020"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user stuffs the emulator 'emulator1' with data '15261' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111111111'
+	AND the user closes sensor warmup alert
+	Then user verifies 'Low Glucose Alert' popup on home screen
+	And user verifies in range glucose readings on home screen
+	And user verifies 'High Glucose Alert' popup on home screen
+	And user closes the app
+END
+
+SCENARIO: Verify Loading Spinner to load data.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-18756", "description":"Verify Loading Spinner to load data..", "groups":["CGM"], "Module":"Sensor Pairing","author":["Rushikesh"]}
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.averageuser'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+	Then user clicks on signup button
+	When user requests the cgmreading for past '90' for low glucose event
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	Then user enters newly created details to Login
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user clicks on more menu
+	And user clicks on share
+	And user clicks on low glucose event on share screen
+	And user clicks on 'Email' on low glucose event screen
+	And user verify loading spinner and low glucose event details
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.averageuser'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+	Then user clicks on signup button
+	And user requests the cgmreading for '90' days In range CGM Data
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	Then user enters newly created details to Login
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user clicks on more menu
+	And user clicks on share
+	When user clicks on CSV option
+	And user clicks on Email option on CSV screen
+	And user verify CSV details
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.averageuser'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+	Then user clicks on signup button
+	When user requests the cgmreading for AGP report
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	Then user enters newly created details to Login
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user clicks on more menu
+	And user clicks on share
+	And user clicks on Agp option on share screen
+	And user clicks on Email option on AGP screen
+	And user verify loading spinner and agp details
+	And user closes the app
+END
+
+SCENARIO: Verify user is able to see data for the current period that is displayed on the My Progress screen
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-21486", "description":"Verify user is able to see data for the current period that is displayed on the My Progress screen", "groups":["CGM"], "Module":"Sensor Pairing","author":["Rushikesh"]}
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.averageuser'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+	Then user clicks on signup button
+	And user requests the cgmreading for '90' days In range CGM Data
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	Then user enters newly created details to Login
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user clicks on My Progress
+	And user verifies the by default selected with 7 days
+	And user verify glucose average value
+	And user clicks on more menu
+	And user clicks on Settings
+	When user clicks on User settings button
+	Then user verify target range by default as '70-180 mg/dL'
+	And user change the target range as '100-180 mg/dL'
+	And user clicks setting screen back button
+	And user clicks on My Progress
+	And user clicks on more menu
+	And user clicks on Settings
+	When user clicks on User settings button
+	And user change the target range as '60�90 mg/dL'
+	And user clicks setting screen back button
+	And user clicks on My Progress
+	And user clicks on more menu
+	And user clicks on Settings
+	When user clicks on User settings button
+	And user change the target range as '65�190 mg/dL'
+	And user clicks setting screen back button
+	And user clicks on My Progress
+	And user verify Ranges Doughnut chart
+	And user verify GMI fields
+	And user clicks on GMI info icon and verify slideUp screen
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.averageuser'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+	Then user clicks on signup button
+	And user requests the cgmreading for '7' days with low, Inrange and high reading
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	Then user enters newly created details to Login
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user clicks on more menu
+	And user clicks on Settings
+	When user clicks on User settings button
+	Then user verify target range by default as '70-180 mg/dL'
+	And user clicks setting screen back button
+	And user clicks on My Progress
+	And user verify the percent and average time in range per day
+	And user clicks on more menu
+	And user clicks on Settings
+	When user clicks on User settings button
+	And user change the target range as '100�190 mg/dL'
+	And user clicks setting screen back button
+	And user clicks on My Progress
+	And user verify the percent time in range
+	And user closes the app
+END
+
+SCENARIO: Verify that Low Alert doesn�t displays after app goes on Search Mode
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-18642", "description":"Verify that Low Alert doesn�t displays after app goes on Search Mode", "groups":["CGM"], "Module":"Sensor Pairing","author":["Rushikesh"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	And user clicks on Low Alert and 'ON' low alert toggle
+	And user clicks back button on alert
+	And user clicks on low Alert and sets Notify me below picker to '80' mgdl
+	And user clicks back button on alert
+	Then user clicks on Low Alert and sets Repeat picker to 'Never'
+	And user clicks back button on alert
+	Then user clicks on No Reading Alert and 'on' No Reading alert toggle
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on Signal loss Alert and 'on' Signal loss alert toggle
+	And user update the signal loss value '0' hrs '20' min
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '456456' for sensor id '111118642'
+	And user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user open notifications
+	Then user verifies 'No Readings Alert' push notification
+	And user open notifications
+	Then user verifies 'Low Glucose Alert' push notification
+	And user open notifications
+	Then user verifies 'No Readings Alert' push notification
+	And user verifies 'No Readings Alert' popup on home screen
+	Then user verify 'No Readings Alert' banner on home screen
+	And user closes the app
+END
+
+SCENARIO: Verify that NR alert displays after app goes on Search Mode for High Health Condition
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-18644", "description":"Verify that NR alert displays after app goes on Search Mode for High Health Condition", "groups":["CGM"], "Module":"Sensor Pairing","author":["Rushikesh"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on High Alert and 'ON' high alert toggle
+	And user clicks back button on alert
+	Then user clicks on High Alert and sets Repeat picker to 'Never'
+	And user clicks back button on alert
+	And user clicks on High Alert and sets Notify me Above picker to '200' mgdl
+	And user clicks back button on alert
+	Then user clicks on No Reading Alert and 'on' No Reading alert toggle
+	When user clicks on more menu
+	And user clicks on Alerts
+	Then user clicks on Signal loss Alert and 'on' Signal loss alert toggle
+	And user update the signal loss value '0' hrs '20' min
+	And user clicks back button on alert
+	And user clicks on Home tab
+	When user clicks on Pair sensor Button
+	And user stuffs the emulator 'emulator1' with data '5WM_18644' on machine '${emulator.systemip}'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '678678' for sensor id '111118644'
+	And user open notifications
+	And user verifies 'High Glucose Alert' push notification
+	And user open notifications
+	And user verifies 'High Glucose Alert' push notification
+	And user open notifications
+	And user verifies 'High Glucose Alert' push notification
+	And user open notifications
+	Then user verifies 'No Readings Alert' push notification
+	And user open notifications
+	And user verifies 'High Glucose Alert' push notification
+	And user open notifications
+	Then user verifies 'No Readings Alert' push notification
+	And user closes the app
+END
+
+SCENARIO: Verification of Device Connection
+META-DATA: {"description": "Verification of Device Connection","author":"Shubham","testCaseId":"TC-19580","groups":["CGM"]}
+	Given user resets app
+	When user opens the application
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.averageuser'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+	Then user clicks on signup button
+	And user requests the cgmreading for days
+	Given user resets app
+	When user opens the application
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	Then user enters newly created details to Login
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	When Turn off internet
+	And user clicks on eventlog tab
+	And user clicks Add an Event
+	And user verifies the Events
+	And user clicks on X icon from add an event screen
+	Then user clicks on progress tab and verifies selected day
+	Then user selects 14 days
+	And user clicks on 'AGP Report' and verify app not load the AGP report
+	And user click on home icon
+	And user verify homepage
+	When user clicks on more menu
+	And user clicks on Settings
+	Then user gets redirected to setting Page
+	And user clicks on back button
+	And user clicks on Alerts
+	Then user verifies Alert screen
+	And user clicks on back button
+	Then user verify reminder screens
+	And user clicks on back button
+	And user clicks on My Devices
+	When user redirects to My Devices screen
+	And user clicks on back button
+	And user clicks on Account
+	Then user verifies Opt-in selection account page
+	And user clicks on back button
+	And user clicks on Help option
+	Then user verify help page options
+	And user clicks on back button
+	And user select Contact Us
+	Then user verify Contact Us page
+	And user clicks on back button
+	And user closes the app
+END
+
+SCENARIO: Verify user with adult and guardian account can log in to the application
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15531", "description":"Verify user with adult and guardian account can log in to the application", "groups":["CGM"], "Module":"Sensor Pairing","author":["Shubham"]}
+	Given user resets app
+	And user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	Then user enters login details using 'Login.dependentOTRuser1'
+	And user verify login button and error message
+	And user closes the app
+END
+
+SCENARIO: Apply Sensor screen and 'How to apply the sensor' link from home screen & My Device screen
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20861", "description":"Apply Sensor screen and 'How to apply the sensor' link from home screen & My Device screen", "groups":["CGM2"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user verify on the home screen how to apply the home screen
+	And user verify Instructions on How to apply the sensor screen
+	And user verify the apply sensor screen
+	And user back to apply sensor screen
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP DEPENDENT' Page
+	When Guardian enters signup details using 'signupuser.guardian'
+	And user clicks on continue button
+	And Guardian enters dependent details and 'dependent.dob'
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user verify on the home screen how to apply the home screen
+	And user verify Instructions on How to apply the sensor screen
+	And user verify the apply sensor screen
+	And user back to apply sensor screen
+	And user closes the app
+END
+
+SCENARIO: Apply Sensor screen from safety Onboarding for 6-17 years old patient.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20862", "description":"Apply Sensor screen and 'How to apply the sensor' link from home screen & My Device screen", "groups":["CGM"], "Module":"Sensor Pairing","author":["Shubham"]}
+	Given user resets app
+	Given user resets app
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP DEPENDENT' Page
+	When Guardian enters signup details using 'signupuser.guardian'
+	And user clicks on continue button
+	Then Guardian selects dependent gender as 'MALE' and diabetes type as 'TYPE 1'
+	And Guardian enters dependent details and 'dependent.dob'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user verify on the home screen how to apply the home screen
+	And user verify Instructions on How to apply the sensor screen
+	And user verify right and left Abdomen
+	And user verify right and left upper arm
+	And user verify the Start Pairing Sensor screen
+	And user verify on the home screen how to apply the home screen
+	And user verify Instructions on How to apply the sensor screen
+	And user verify Instructions on the See Helpful Tips screen
+	And user clicks on the skip button and verify home screen
+	And user closes the app
+END
+
+SCENARIO: Apply Sensor screen from safety Onboarding for 6-17 years old patient
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20860", "description":"Apply Sensor screen from safety Onboarding for 6-17 years old patient", "groups":["CGM"], "Module":"Sensor Pairing","author":["Shubham"]}
+	Given user resets app
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user verify the apply sensor screen
+	And user verify right and left Abdomen
+	And user verify right and left upper arm
+	And user verify the Start Pairing Sensor screen
+	And user closes the app
+
+	END
+
+
+
+
+	
+	SCENARIO: Verify the user is able to select options to view reports on My Progress screen
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15529", "description":"Verify the user is able to select options to view reports on My Progress screen", "groups":["CGM"], "Module":"Sensor Pairing","author":["Rushikesh"]}
+Given user resets application
+And user opens app 
+When user selects country '${country.name}' from country list 
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.averageuser'
+And user clicks on continue button 
+And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+Then user clicks on signup button 
+When user requests the cgmreading for AGP report
+Given user resets application
+And user opens app
+When user selects country '${country.name}' from country list
+And user gets redirected to 'LOG-IN OWN' Page
+Then user enters newly created details to Login 
+And user clicks on login button
+And user completes Safety Onboarding and skips Sensor pair
+And user clicks on My Progress
+And user verifies the by default selected with 7 days
+Then user verifies Ambulatory Glucose Profile section on My Progress screen
+And user clicks on i icon of AGP and verify AGP Info on slideup
+Given user resets application
+And user opens app 
+When user selects country '${country.name}' from country list 
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.averageuser'
+And user clicks on continue button 
+And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+Then user clicks on signup button 
+When user requests the cgmreading for past '10' days for AGP report
+Given user resets application
+And user opens app
+When user selects country '${country.name}' from country list
+And user gets redirected to 'LOG-IN OWN' Page
+Then user enters newly created details to Login 
+And user clicks on login button
+And user completes Safety Onboarding and skips Sensor pair
+And user clicks on My Progress
+And user verifies the by default selected with 7 days
+And user verifies daily glucose profile section on my progress screen
+And user verifies view full AGP report section on my progress screen
+And user clicks on more menu
+And user clicks on share
+And user clicks on Agp option on share screen
+And user clicks on Email option on AGP screen
+And user verify email section on AGP screen
+And user verify PDF report attached to mail
+And user closes the app
+
+END
+
+
+
+
+
+
+
+
+SCENARIO: Verify the user is able to select options to view reports on My Progress screen
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15529", "description":"Verify the user is able to select options to view reports on My Progress screen", "groups":["CGM"], "Module":"Sensor Pairing","author":["Rushikesh"]}
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.averageuser'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+	Then user clicks on signup button
+	When user requests the cgmreading for AGP report
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	Then user enters newly created details to Login
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user clicks on My Progress
+	And user verifies the by default selected with 7 days
+	Then user verifies Ambulatory Glucose Profile section on My Progress screen
+	And user clicks on i icon of AGP and verify AGP Info on slideup
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.averageuser'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+	Then user clicks on signup button
+	When user requests the cgmreading for past '10' days for AGP report
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	Then user enters newly created details to Login
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user clicks on My Progress
+	And user verifies the by default selected with 7 days
+	And user verifies daily glucose profile section on my progress screen
+	And user verifies view full AGP report section on my progress screen
+	And user clicks on more menu
+	And user clicks on share
+	And user clicks on Agp option on share screen
+	And user clicks on Email option on AGP screen
+	And user verify email section on AGP screen
+	And user verify PDF report attached to mail
+	And user closes the app
+END
+
+SCENARIO: Verify adult user can recover password through Forgot Password link
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15386", "description":"Verify adult user can recover password through Forgot Password link", "groups":["WEB"], "Module":"Non-Sensor Pairing","author":["Yogesh"]}
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When User enters signup details using 'signup.user1' for adult account
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user click on forgot password link
+	And user enter required details and click on send button
+	And user launches the Chrome browser and 'adultUser' reset password
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enter email and password 'Login.adultNewPassword' on login page
+	And user click on login button and verify notice screen
+	And user closes the app
+END
+
+SCENARIO: Verfiy user can login into app after recovering password through Forgot Password link
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-16284", "description":"Verfiy user can login into app after recovering password through Forgot Password link", "groups":["WEB"], "Module":"Non-Sensor Pairing","author":["Yogesh"]}
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When User enters signup details using 'signup.user1' for adult account
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP DEPENDENT' Page
+	And Guardian enters signup details using 'signupuser.guardian' for dependent account
+	And user clicks on continue button
+	Then Guardian selects dependent gender as 'MALE' and diabetes type as 'TYPE 1'
+	And Guardian enters dependent detail for six to seventeen year old
+	Then user clicks on signup button
+	And user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user click on forgot password link
+	And user enter required details and click on send button
+	And user launches the Chrome browser and 'adultUser' reset password
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enter email and password 'Login.adultNewPassword' on login page
+	And user click on login button and verify notice screen
+	And user resets application
+	And user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user enter email and password 'Login.adultNewPassword' on login page
+	And user click on login button and verify error message
+	And user clear the password field and enter password as 'Login.dependentPasswordOne'
+	And user click on login button and verify notice screen
+	And user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user click on forgot password link
+	And user enter required details and click on send button
+	And user launches the Chrome browser and 'dependentUser' reset password
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user enter email and password 'Login.dependentNewPassword' on login page
+	And user click on login button and verify notice screen
+	And user resets application
+	And user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enter email and password 'Login.dependentNewPassword' on login page
+	And user click on login button and verify error message
+	And user clear the password field and enter password as 'Login.adultNewPassword'
+	And user click on login button and verify notice screen
+	And user closes the app
+	END
+	
+SCENARIO: Verify Missed Condition Notification for Urgent Low Alarm and High Alert
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20922", "description":"Verify Missed Condition Notification for Urgent Low Alarm and High Alert", "groups":["CGM"], "Module":"Sensor Pairing","author":["Pradnya"]}
+
+
+Given user resets application
+When user opens app
+Then user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user selects opt-in as 'I Agree' in sign up page
+
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+When user clicks on Pair sensor Button
+And user stuffs the emulator '682446292' with data '20922'
+And user selects 'LEFTARM' location of body to apply sensor and click on next
+And user enters the passkey '123123' for sensor id '111120922'
+When Scroll down device notification bar
+And user verifies 'Urgent Low Glucose Alarm' push notification
+#And user wait for '16' minutes
+When Scroll down device notification bar
+Then user verifies 'Missed Alarm' push notification 
+When Scroll down device notification bar
+Then user verifies 'Low Glucose Alert' push notification
+And user closes the app
+END
+	
+
+
+SCENARIO: Verification of Low Glucose Events via Share as Email Option for all Time Period
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-19341", "description":"Verification of Low Glucose Events via Share as Email Option for all Time Period", "groups":["CGM"], "Module":"Sensor Pairing","author":["Rushikesh"]}
+
+Given user resets application
+When user opens app
+When user selects country '${country.name}' from country list 
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.averageuser'
+And user clicks on continue button 
+And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+Then user clicks on signup button
+When user requests the cgmreading for past '90' for low glucose event
+Given user resets application
+When user opens app
+When user selects country '${country.name}' from country list
+And user gets redirected to 'LOG-IN OWN' Page                     
+Then user enters newly created details to Login 
+And user clicks on login button
+And user completes Safety Onboarding and skips Sensor pair
+And user clicks on more menu
+And user clicks on share
+And user clicks on low glucose event on share screen
+And user select time period as '7' days
+And user clicks on 'Email' on low glucose event screen
+And user verify email section on low glucose event screen
+And user verify PDF report attached to mail
+And user send an email
+And user clicks on low glucose event on share screen
+And user select time period as '14' days
+And user clicks on 'Email' on low glucose event screen
+And user verify email section on low glucose event screen
+And user verify PDF report attached to mail
+And user send an email
+And user clicks on low glucose event on share screen
+And user select time period as '30' days
+And user clicks on 'Email' on low glucose event screen
+And user verify email section on low glucose event screen
+And user verify PDF report attached to mail
+And user send an email
+And user clicks on low glucose event on share screen
+And user select time period as '60' days
+And user clicks on 'Email' on low glucose event screen
+And user verify email section on low glucose event screen
+And user verify PDF report attached to mail
+And user send an email
+And user clicks on low glucose event on share screen
+And user select time period as '90' days
+And user clicks on 'Email' on low glucose event screen
+And user verify email section on low glucose event screen
+And user verify PDF report attached to mail
+And user send an email
+And user turn off wifi and open the application
+And user clicks on more menu
+And user clicks on share
+And user clicks on low glucose event on share screen
+And user select time period as '7' days
+And user clicks on 'Email' on low glucose event screen
+And user verify requests unsuccessful popup
+And user turn on wifi and open the application
+And user clicks on more menu
+And user clicks on share
+And user clicks on low glucose event on share screen
+And user select time period as '7' days
+And user clicks on 'Email' on low glucose event screen
+And user clicks on delete draft and navigate to low glucose event screen
+
+And user closes the app
+
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.averageuser'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+	Then user clicks on signup button
+	When user requests the cgmreading for past '90' for low glucose event
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	Then user enters newly created details to Login
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user clicks on more menu
+	And user clicks on share
+	And user clicks on low glucose event on share screen
+	And user select time period as '7' days
+	And user clicks on 'Email' on low glucose event screen
+	And user verify email section on low glucose event screen
+	And user verify PDF report attached to mail
+	And user send an email
+	And user clicks on low glucose event on share screen
+	And user select time period as '14' days
+	And user clicks on 'Email' on low glucose event screen
+	And user verify email section on low glucose event screen
+	And user verify PDF report attached to mail
+	And user send an email
+	And user clicks on low glucose event on share screen
+	And user select time period as '30' days
+	And user clicks on 'Email' on low glucose event screen
+	And user verify email section on low glucose event screen
+	And user verify PDF report attached to mail
+	And user send an email
+	And user clicks on low glucose event on share screen
+	And user select time period as '60' days
+	And user clicks on 'Email' on low glucose event screen
+	And user verify email section on low glucose event screen
+	And user verify PDF report attached to mail
+	And user send an email
+	And user clicks on low glucose event on share screen
+	And user select time period as '90' days
+	And user clicks on 'Email' on low glucose event screen
+	And user verify email section on low glucose event screen
+	And user verify PDF report attached to mail
+	And user send an email
+	And user turn off wifi and open the application
+	And user clicks on more menu
+	And user clicks on share
+	And user clicks on low glucose event on share screen
+	And user select time period as '7' days
+	And user clicks on 'Email' on low glucose event screen
+	And user verify requests unsuccessful popup
+	And user turn on wifi and open the application
+	And user clicks on more menu
+	And user clicks on share
+	And user clicks on low glucose event on share screen
+	And user select time period as '7' days
+	And user clicks on 'Email' on low glucose event screen
+	And user clicks on delete draft and navigate to low glucose event screen
+	And user closes the app
+END
+
+
+
+SCENARIO: Verify Missed Condition Notification for High Alert and Urgent Low Alarm
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20919", "description":"Verify Missed Condition Notification for High Alert and Urgent Low Alarm", "groups":["CGM"], "Module":"Sensor Pairing","author":["Akshata"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on Pair sensor Button
+#	And user stuffs the emulator '682446292' with data '20919'
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123123' for sensor id '111020919'
+	And user keep app in background
+	When Scroll down device notification bar
+	And user verifies 'High Glucose Alert' push notification
+	#And user wait for '16' minutes
+	When Scroll down device notification bar
+	Then user verifies 'Missed Alert' push notification without open
+	And user keep app in background
+	When Scroll down device notification bar
+	Then user verifies 'Urgent Low Glucose Alarm' push notification
+	And user closes the app
+END
+	
+SCENARIO: Verify app gets connect to clinic part-1
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-16700", "description":"Verify app gets connect to clinic part-1", "groups":["CGM"], "Module":"app connected to clinic","author":["Sachin"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.patient20clinic'
+	And user clicks on login button
+	Then user completes Safety Onboarding and skips Sensor pair
+	Then user gets redirected to Home page
+	And user clicks on more menu
+	And user clicks Connections
+	And user verify that patient is connected to 20 different clinics
+	And user verify clinic displays in alphabetical format
+	And user verifies connections screen
+	And user tap on add clinic button
+	And user verify popup message with button
+	And user tap on OK button
+	And user closes the app
+
+END
+
+
+SCENARIO: Verify Missed Condition Notification for Urgent Low Alarm and Low Alert
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20923", "description":"Verify Missed Condition Notification for Urgent Low Alarm and Low Alert", "groups":["CGM"], "Module":"Sensor Pairing","author":["Pradnya"]}
+Given user resets application
+When user opens app
+Then user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user selects opt-in as 'I Agree' in sign up page
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+When user clicks on Pair sensor Button
+And user stuffs the emulator '682446292' with data '20923'
+And user selects 'LEFTARM' location of body to apply sensor and click on next
+And user enters the passkey '123123' for sensor id '111120923'
+When Scroll down device notification bar
+And user verifies 'Urgent Low Glucose Alarm' push notification
+When Scroll down device notification bar
+Then user verifies 'Missed Alarm' push notification without open
+When Scroll down device notification bar
+Then user verifies 'High Glucose Alert' push notification
+And user closes the app
+END
+
+SCENARIO: Verification of Low Glucose Events via Share as Print option for all Time Period
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-19342", "description":"Verification of Low Glucose Events via Share as Print option for all Time Period", "groups":["CGM"], "Module":"Sensor Pairing","author":["Rushikesh"]}
+
+Given user resets application
+When user opens app
+When user selects country '${country.name}' from country list 
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.averageuser'
+And user clicks on continue button 
+And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+Then user clicks on signup button
+When user requests the cgmreading for past '90' for low glucose event
+Given user resets application
+When user opens app
+When user selects country '${country.name}' from country list
+And user gets redirected to 'LOG-IN OWN' Page                     
+Then user enters newly created details to Login 
+And user clicks on login button
+And user completes Safety Onboarding and skips Sensor pair
+And user clicks on more menu
+And user clicks on share
+And user clicks on low glucose event on share screen
+And user select time period as '7' days
+And user clicks on 'Print' on low glucose event screen            
+And user verify print section on low glucose event screen
+And user clicks on cancel button and navigate to low glucose event screen
+And user clicks on low glucose event on share screen
+And user select time period as '14' days
+And user clicks on 'Print' on low glucose event screen            
+And user verify print section on low glucose event screen
+And user clicks on cancel button and navigate to low glucose event screen
+And user clicks on low glucose event on share screen
+And user select time period as '30' days
+And user clicks on 'Print' on low glucose event screen            
+And user verify print section on low glucose event screen
+And user clicks on cancel button and navigate to low glucose event screen
+And user clicks on low glucose event on share screen
+And user select time period as '60' days
+And user clicks on 'Print' on low glucose event screen           
+And user verify print section on low glucose event screen
+And user clicks on cancel button and navigate to low glucose event screen
+And user clicks on low glucose event on share screen
+And user select time period as '90' days
+And user clicks on 'Print' on low glucose event screen            
+And user verify print section on low glucose event screen
+And user clicks on cancel button and navigate to low glucose event screen
+And user turn off wifi and open the application
+And user clicks on more menu
+And user clicks on share
+And user clicks on low glucose event on share screen
+And user select time period as '7' days
+And user clicks on 'Print' on low glucose event screen
+And user verify requests unsuccessful popup
+And user turn on wifi and open the application
+And user clicks on more menu
+And user clicks on share
+And user clicks on low glucose event on share screen
+And user select time period as '7' days
+And user clicks on 'Print' on low glucose event screen
+And user clicks on cancel button and navigate to low glucose event screen
+And user clicks on back button navigate to share screen
+And user closes the app
+END
+
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.averageuser'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+	Then user clicks on signup button
+	When user requests the cgmreading for past '90' for low glucose event
+	Given user resets application
+	When user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	Then user enters newly created details to Login
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user clicks on more menu
+	And user clicks on share
+	And user clicks on low glucose event on share screen
+	And user select time period as '7' days
+	And user clicks on 'Print' on low glucose event screen
+	And user verify print section on low glucose event screen
+	And user clicks on cancel button and navigate to low glucose event screen
+	And user clicks on low glucose event on share screen
+	And user select time period as '14' days
+	And user clicks on 'Print' on low glucose event screen
+	And user verify print section on low glucose event screen
+	And user clicks on cancel button and navigate to low glucose event screen
+	And user clicks on low glucose event on share screen
+	And user select time period as '30' days
+	And user clicks on 'Print' on low glucose event screen
+	And user verify print section on low glucose event screen
+	And user clicks on cancel button and navigate to low glucose event screen
+	And user clicks on low glucose event on share screen
+	And user select time period as '60' days
+	And user clicks on 'Print' on low glucose event screen
+	And user verify print section on low glucose event screen
+	And user clicks on cancel button and navigate to low glucose event screen
+	And user clicks on low glucose event on share screen
+	And user select time period as '90' days
+	And user clicks on 'Print' on low glucose event screen
+	And user verify print section on low glucose event screen
+	And user clicks on cancel button and navigate to low glucose event screen
+	And user turn off wifi and open the application
+	And user clicks on more menu
+	And user clicks on share
+	And user clicks on low glucose event on share screen
+	And user select time period as '7' days
+	And user clicks on 'Print' on low glucose event screen
+	And user verify requests unsuccessful popup
+	And user turn on wifi and open the application
+	And user clicks on more menu
+	And user clicks on share
+	And user clicks on low glucose event on share screen
+	And user select time period as '7' days
+	And user clicks on 'Print' on low glucose event screen
+	And user clicks on cancel button and navigate to low glucose event screen
+	And user clicks on back button navigate to share screen
+	And user closes the app
+END
+
+SCENARIO: Apply Sensor screen from safety Onboarding for 0-5 years old patient
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20863", "description":"Apply Sensor screen from safety Onboarding for 0-5 years old patient", "groups":["CGMNEW"], "Module":"Sensor Pairing","author":["Shubham"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user enters login details using 'Login.Dependent2Year'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user taps on skip button
+	And user verify on the home screen how to apply the home screen
+	And user verify informative text
+	And user clicks on pair sensor button and user verify informative text
+	And user pair sensor the application
+	And user clicks on the cancel button
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user enters login details using 'Login.Dependent2Year'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user taps on skip button
+	When user clicks on more menu
+	And user clicks on My Devices
+	And user clicks on pair sensor button and user verify informative text
+	And user pair sensor the application
+	And user clicks on the cancel button
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user enters login details using 'Login.Dependent2Year'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	And user taps on skip button
+	When user clicks on more menu
+	And user clicks on Help option
+	And user verify sensor application screen in help menu
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user enters login details using 'Login.Dependent2Year'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	#	And user stuffs the emulator 'emulator8' with data '1MW_20930' on machine '${emulator.systemip}'
+	And user pair sensor the application
+	And user enters the passkey '123123' for sensor id '111020930'
+	When user clicks on more menu
+	And user clicks on My Devices
+	And user click on unpair sensor button and verify unpair sensor screen
+	And user click on home icon
+	And user taps on pair sensor button
+	And user clicks on pair sensor button and user verify informative text
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user enters login details using 'Login.Dependent2Year'
+	And user clicks on login button
+	And user completes Safety Onboarding
+	#	And user stuffs the emulator 'emulator8' with data '1MW_20930' on machine '${emulator.systemip}'
+	And user pair sensor the application
+	And user enters the passkey '123123' for sensor id '111020930'
+	When user clicks on more menu
+	And user clicks on My Devices
+	Then user clicks on stop sensor button
+	Then user verifies stop sensor screen and stop sensor
+	And user taps on back button
+	And user click on home icon
+	And user clicks on pair sensor button and user verify informative text
+	And user closes the app
+END
+
+SCENARIO: Verification of Urgent Low Alarm Repeat.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-17086", "description":"Verification of Urgent Low Alarm Repeat.", "groups":["CGM"], "Module":"Sensor Pairing","author":["Shubham"]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	And user verifies Urgent Low Glucose Alarm on setting screen
+	And user navigate Back to Home screen from alert screen
+	And user stuffs the emulator 'emulator1' with data 'sub-17086_part1' on machine '${emulator.systemip}'
+	When user clicks on Pair sensor Button
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '456789' for sensor id '111117086'
+	Then user open notifications
+	Then user verifies 'Urgent Low Glucose Alarm' push notification
+	And user verifies 'Urgent Low Glucose Alarm' popup and acknowledge popup on home screen
+	And  user waits for 'Urgent Low Glucose Alarm' notification for '30' mins
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Alerts
+	And user verifies Urgent Low Glucose Alarm on setting screen
+	And user navigate Back to Home screen from alert screen
+	And user stuffs the emulator 'emulator1' with data 'sub-17086_part2' on machine '${emulator.systemip}'
+	When user clicks on Pair sensor Button
+	And user selects 'LEFTARM' location of body to apply sensor and click on next
+	And user enters the passkey '123456' for sensor id '111017086'
+	Then user open notifications
+	Then user verifies 'Urgent Low Glucose Alarm' push notification
+	And user verifies 'Urgent Low Glucose Alarm' popup and acknowledge popup on home screen
+	Then user open notifications
+	Then user verifies Urgent Low glucose Alarm not displayed
+	And user closes the app
+END
+
+
+SCENARIO: Verify Missed condition then custom start for High-II
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-21458", "description":"Verify Missed condition then custom start for High-II", "groups":["CGM"], "Module":"Sensor Pairing","author":["Shubham"]}
+
+Given user resets application
+Then User set time to '8:30 AM'
+When user opens app
+Then user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+Then user gets redirected to Home page
+And user clicks on more menu
+And user clicks on Alerts
+And user enables Treat as Critical on alert screen
+When user enables the alert schedule and clicks on schedule name
+And user clicks on 'Start time' and update Picker values to '9:00 PM'
+And user clicks on 'Stop time' and update picker values to '6:00 AM'
+And user enables Treat as Critical on alert screen
+And user clicks on 'High' Alert schedule and 'ON' alert toggle
+And user clicks back button
+And user set 'High' Alert and Notify Me Above '220'
+And user clicks back button
+And user clicks on High Alert and sets Notify me Above picker to '200' mgdl
+And user clicks back button on alert
+When user enables the alert schedule and clicks on schedule name
+And user clicks on 'Start time' and update Picker values to '9:00 AM'
+And user clicks on 'Stop time' and update picker values to '12:00 PM'
+And user set 'High' Alert and Notify Me Above '220'
+And user clicks back button on alert
+And user clicks on save button
+And user clicks back button on alert
+And user clicks on Home tab
+When user clicks on Pair sensor Button
+And user stuffs the emulator 'emulator3' with data '21467' on machine '${emulator.systemip}'	
+And user selects 'LEFTARM' location of body to apply sensor and click on next
+And user enters the passkey '123123' for sensor id '111121467'
+And user keep app in background 
+When Scroll down device notification bar
+Then user verifies 'High Glucose Alert' push notification
+#And user wait for '11' minutes
+When Scroll down device notification bar
+Then user verifies 'Missed Alert DND' push notification
+#Then User disables Do Not Disturb setting
+And user stuffs the emulator 'emulator1' with data 'sub-21458' on machine '${emulator.systemip}'
+And user selects 'LEFTARM' location of body to apply sensor and click on next
+And user enters the passkey '456789' for sensor id '111121458'
+And the user closes sensor warmup alert
+And user keep app in background 
+When Scroll down device notification bar
+Then user verifies 'High Glucose Alert' push notification without open
+When Scroll down device notification bar
+Then user verifies 'Missed Alert' push notification without open
+When Scroll down device notification bar
+Then user verifies 'High Glucose Alert' push notification without open
+And user set time to Setautomatic
+And user closes the app
+END
+
+SCENARIO: Verification of Low Glucose Events via Share as Email Option for all Time Period
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-19341", "description":"Verification of Low Glucose Events via Share as Email Option for all Time Period", "groups":["CGM75"], "Module":"Sensor Pairing","author":["Rushikesh"]}
+Given user resets application
+When user opens app
+When user selects country '${country.name}' from country list 
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.averageuser'
+And user clicks on continue button 
+And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+Then user clicks on signup button
+When user requests the cgmreading for past '90' for low glucose event
+Given user resets application
+When user opens app
+When user selects country '${country.name}' from country list
+And user gets redirected to 'LOG-IN OWN' Page                     
+Then user enters newly created details to Login 
+And user clicks on login button
+And user completes Safety Onboarding and skips Sensor pair
+And user clicks on more menu
+And user clicks on share
+And user clicks on low glucose event on share screen
+And user select time period as '7' days
+And user clicks on 'Email' on low glucose event screen
+And user verify email section on low glucose event screen
+And user verify PDF report attached to mail
+And user send an email
+And user clicks on low glucose event on share screen
+And user select time period as '14' days
+And user clicks on 'Email' on low glucose event screen
+And user verify email section on low glucose event screen
+And user verify PDF report attached to mail
+And user send an email
+And user clicks on low glucose event on share screen
+And user select time period as '30' days
+And user clicks on 'Email' on low glucose event screen
+And user verify email section on low glucose event screen
+And user verify PDF report attached to mail
+And user send an email
+And user clicks on low glucose event on share screen
+And user select time period as '60' days
+And user clicks on 'Email' on low glucose event screen
+And user verify email section on low glucose event screen
+And user verify PDF report attached to mail
+And user send an email
+And user clicks on low glucose event on share screen
+And user select time period as '90' days
+And user clicks on 'Email' on low glucose event screen
+And user verify email section on low glucose event screen
+And user verify PDF report attached to mail
+And user send an email
+And user turn off wifi and open the application
+And user clicks on more menu
+And user clicks on share
+And user clicks on low glucose event on share screen
+And user select time period as '7' days
+And user clicks on 'Email' on low glucose event screen
+And user verify requests unsuccessful popup
+And user turn on wifi and open the application
+And user clicks on more menu
+And user clicks on share
+And user clicks on low glucose event on share screen
+And user select time period as '7' days
+And user clicks on 'Email' on low glucose event screen
+And user clicks on delete draft and navigate to low glucose event screen
+And user closes the app
+END
+
+
+
+
+SCENARIO: Verification of Low Glucose Events via Share as Print option for all Time Period
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-19342", "description":"Verification of Low Glucose Events via Share as Print option for all Time Period", "groups":["CGM"], "Module":"Sensor Pairing","author":["Rushikesh"]}
+Given user resets application
+When user opens app
+When user selects country '${country.name}' from country list 
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.averageuser'
+And user clicks on continue button 
+And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+Then user clicks on signup button
+When user requests the cgmreading for past '90' for low glucose event
+Given user resets application
+When user opens app
+When user selects country '${country.name}' from country list
+And user gets redirected to 'LOG-IN OWN' Page                     
+Then user enters newly created details to Login 
+And user clicks on login button
+And user completes Safety Onboarding and skips Sensor pair
+And user clicks on more menu
+And user clicks on share
+And user clicks on low glucose event on share screen
+And user select time period as '7' days
+And user clicks on 'Print' on low glucose event screen            
+And user verify print section on low glucose event screen
+And user clicks on cancel button and navigate to low glucose event screen
+And user clicks on low glucose event on share screen
+And user select time period as '14' days
+And user clicks on 'Print' on low glucose event screen            
+And user verify print section on low glucose event screen
+And user clicks on cancel button and navigate to low glucose event screen
+And user clicks on low glucose event on share screen
+And user select time period as '30' days
+And user clicks on 'Print' on low glucose event screen            
+And user verify print section on low glucose event screen
+And user clicks on cancel button and navigate to low glucose event screen
+And user clicks on low glucose event on share screen
+And user select time period as '60' days
+And user clicks on 'Print' on low glucose event screen           
+And user verify print section on low glucose event screen
+And user clicks on cancel button and navigate to low glucose event screen
+And user clicks on low glucose event on share screen
+And user select time period as '90' days
+And user clicks on 'Print' on low glucose event screen            
+And user verify print section on low glucose event screen
+And user clicks on cancel button and navigate to low glucose event screen
+And user turn off wifi and open the application
+And user clicks on more menu
+And user clicks on share
+And user clicks on low glucose event on share screen
+And user select time period as '7' days
+And user clicks on 'Print' on low glucose event screen
+And user verify requests unsuccessful popup
+And user turn on wifi and open the application
+And user clicks on more menu
+And user clicks on share
+And user clicks on low glucose event on share screen
+And user select time period as '7' days
+And user clicks on 'Print' on low glucose event screen
+And user clicks on cancel button and navigate to low glucose event screen
+And user clicks on back button navigate to share screen
+And user closes the app
+END
+
+SCENARIO: Verify Missed Condition Notification for Low Alert and Urgent Low Alarm
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20921", "description":"Verify Missed Condition Notification for Low Alert and Urgent Low Alarm", "groups":["CGM12"], "Module":"Sensor Pairing","author":["Pradnya"]}
+Given user resets application
+
+When user opens app
+Then user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user selects opt-in as 'I Agree' in sign up page
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+When user clicks on Pair sensor Button
+And user stuffs the emulator '682446292' with data '20921'
+And user selects 'LEFTARM' location of body to apply sensor and click on next
+And user enters the passkey '123123' for sensor id '111120921'
+When Scroll down device notification bar
+And user verifies 'Low Glucose Alert' push notification
+And user wait for '16' minutes
+When Scroll down device notification bar
+Then user verifies 'Missed Alert' push notification without open
+Then user verifies 'Urgent Low' push notification
+And user closes the app
+END
+
+SCENARIO: Verify Missed condition then custom start for High-I
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-21457", "description":"Verify Missed condition then custom start for High-I", "groups":["CGM"], "Module":"Sensor Pairing","author":["Shubham"]}
+Given user resets application
+Then User set time to '8:30 AM'
+When user opens app
+Then user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+Then user gets redirected to Home page
+And user clicks on more menu
+And user clicks on Alerts
+And user clicks on High Alert and sets Notify me Above picker to '200' mgdl
+And user clicks back button on alert
+When user enables the alert schedule and clicks on schedule name
+And user clicks on 'Start time' and update Picker values to '9:00 AM'
+And user clicks on 'Stop time' and update picker values to '12:00 PM'
+And user set 'High' Alert and Notify Me Above '220'
+And user clicks back button on alert
+And user clicks on save button
+And user clicks back button on alert
+And user clicks on Home tab
+When user clicks on Pair sensor Button
+And user stuffs the emulator 'emulator1' with data '21457' on machine '${emulator.systemip}'
+And user selects 'LEFTARM' location of body to apply sensor and click on next
+And user enters the passkey '123123' for sensor id '111021457'
+And the user closes sensor warmup alert
+And user keep app in background 
+When Scroll down device notification bar
+Then user verifies 'High Glucose Alert' push notification without open
+When Scroll down device notification bar
+Then user verifies 'Missed Alert' push notification without open
+When Scroll down device notification bar
+Then user verifies 'Missed Alert' push notification without open
+And user set time to Setautomatic
+And user closes the app
+END
+
+SCENARIO: Verify Missed Condition Notification for Base to Custom High-I along with DND + Treat as Critical/Alarm
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-21467", "description":"Verify Missed Condition Notification for Base to Custom High-I along with DND + Treat as Critical/Alarm", "groups":["CGM"], "Module":"Sensor Pairing","author":["Rushikesh"]}
+Given user resets application
+Then User set time to '8:35 PM'
+Then User enables Do Not Disturb setting
+When user opens app
+Then user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+Then user gets redirected to Home page
+And user clicks on more menu
+And user clicks on Alerts
+And user clicks on High Alert and sets Notify me Above picker to '200' mgdl
+And user clicks back button on alert
+And user enables Treat as Critical on alert screen
+When user enables the alert schedule and clicks on schedule name
+And user clicks on 'Start time' and update Picker values to '9:00 PM'
+And user clicks on 'Stop time' and update picker values to '6:00 AM'
+And user clicks on 'High' Alert schedule and 'ON' alert toggle
+And user clicks back button
+And user set 'High' Alert and Notify Me Above '220'
+And user clicks back button
+And user enabled treat as critical toggle from schedule screen
+And user clicks on save button
+And user clicks back button on alert
+And user clicks on Home tab
+When user clicks on Pair sensor Button
+And user stuffs the emulator 'emulator5' with data 'sub_21467' on machine '${emulator.systemip}'	
+And user selects 'LEFTARM' location of body to apply sensor and click on next
+And user enters the passkey '123456' for sensor id '111121467'
+Then user open notifications 
+Then user verifies 'High Glucose Alert' push notification
+Then user open notifications
+Then user verifies 'Missed Alert DND' push notification without open
+And User disables Do Not Disturb setting
+And user closes the app
+END
+
+SCENARIO: Verify Missed Condition Notification for High Alert and DND along with Treat As Critical/Alarm enable
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20924", "description":"Verify Missed Condition Notification for High Alert and DND along with Treat As Critical/Alarm enable", "groups":["CGM12"], "Module":"Sensor Pairing","author":["Pradnya"]}
+Given user resets application
+Then User enables Do Not Disturb setting
+When user opens app
+Then user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user selects opt-in as 'I Agree' in sign up page
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+Then user gets redirected to Home page
+And user clicks on more menu
+And user clicks on Alerts
+And user enables Treat as Critical on alert screen
+And user clicks back button on alert
+And user clicks on Home tab
+When user clicks on Pair sensor Button
+And user stuffs the emulator 'emulator2' with data '20924' on machine '${emulator.systemip}'
+And user selects 'LEFTARM' location of body to apply sensor and click on next
+And user enters the passkey '123123' for sensor id '111120924'
+When Scroll down device notification bar
+And user verifies 'High Glucose Alert' push notification
+#And user wait for '16' minutes
+When Scroll down device notification bar
+Then user verifies 'Missed Alert DND' push notification 
+Then User disables Do Not Disturb setting
+And user closes the app
+END
+
+SCENARIO: Verify Missed Condition Notification for Custom to Base High-I along with DND + Treat as Critical/Alarm
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-21469", "description":"Verify Missed Condition Notification for Custom to Base High-I along with DND + Treat as Critical/Alarm", "groups":["CGM"], "Module":"Sensor Pairing","author":["Akshata"]}
+Given user resets application
+Then User set time to '5:33 AM'
+Then User enables Do Not Disturb setting
+When user opens app
+Then user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+Then user gets redirected to Home page
+And user clicks on more menu
+And user clicks on Alerts
+And user clicks on High Alert and sets Notify me Above picker to '210' mgdl
+And user clicks back button
+And user enables Treat as Critical on alert screen
+When user enables the alert schedule and clicks on schedule name
+And user clicks on 'Start time' and update Picker values to '9:00 PM'
+And user clicks on 'Stop time' and update picker values to '6:00 AM'
+And user enabled treat as critical toggle from schedule screen
+And user set 'High' Alert and Notify Me Above '190'
+And user clicks back button
+And user clicks on save button
+And user clicks back button on alert
+And user clicks on Home tab
+When user clicks on Pair sensor Button
+And user stuffs the emulator 'emulator5' with data '21469' on machine '${emulator.systemip}'
+And user selects 'LEFTARM' location of body to apply sensor and click on next
+And user enters the passkey '123123' for sensor id '111121469'
+Then user open notifications
+Then user verifies 'High Glucose Alert' push notification
+Then user open notifications
+Then user verifies 'Missed Alert DND' push notification without open
+And User disables Do Not Disturb setting
+And user closes the app
+END
+
+SCENARIO: Verfiy after dependent emancipation, user can create dependent account using emancipated users username.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-16702", "description":"Verfiy after dependent emancipation, user can create dependent account using emancipated users username.", "groups":["WEB01"], "Module":"Non-Sensor Pairing","author":["Yogesh"]}
+	Given user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When User enters signup details using 'signup.user1' for adult account
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user resets application
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP DEPENDENT' Page
+	And Guardian enters signup details using 'signupuser.guardian' for dependent account
+	And user clicks on continue button
+	Then Guardian selects dependent gender as 'MALE' and diabetes type as 'TYPE 1'
+	And Guardian enters dependent detail for six to seventeen year old
+	Then user clicks on signup button
+	And user resets application
+	And user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user enter email and password 'Login.adultNewPassword' on login page
+	And user click on login button and verify notice screen
+	And user taps on Back button
+END

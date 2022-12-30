@@ -1,0 +1,21 @@
+Nfkios.devicesettings.calender.txt = {\"locator\":\"xpath=//*[contains(@value,\\\", \\\")]\"}
+Nfkios.devicesettings.time.txt = {\"locator\":\"xpath=//UIATableView[1]/UIATableCell[4]/UIAStaticText[2]\"}
+Nfkios.devicesettings.search.txt = {\"locator\":\"xpath=//UIASearchBar[1]|//*[@label=\\\"Search\\\"]|//XCUIElementTypeOther[1]/XCUIElementTypeSearchField[1]\"}
+Nfkios.devicesettings.searched.option.txt = {\"locator\":\"xpath=//UIATableCell[1]/UIAStaticText[1]|//XCUIElementTypeCell[1]/XCUIElementTypeStaticText[1]\"}
+Nfkios.devicesettings.switches = {\"locator\":\"xpath=//XCUIElementTypeSwitch[@label=\\\"Set Automatically\\\"]\"}
+Nfkios.devicesettings.allowCriticalAlert={\"locator\":\"xpath=//XCUIElementTypeSwitch[@label=\\\"Allow Critical Alerts\\\"]\"}
+NFKios.setting.Appnotification= {\"locator\":\"xpath=//*[@name=\\\"NOTIFICATIONS\\\"]\",\"desc\":\"NOTIFICATIONS\"}
+NFKios.devicesettings.GeneralScreenBTN= {"locator":"xpath=//*[@value='General']|//*[@label='General']","desc":"General"}
+Nfkios.devicesettings.DeviceManagementBTN={"locator":"xpath=//*[@name='Device Management']|//*[@label='VPN & Device Management']","desc":"device management button"}
+Nfkios.devicesettings.allowLifeScanTrustAlertLabel={"locator":"xpath=//*[starts-with(@label,"Trust") and contains(@label,"LifeScan, Inc.")]"}
+Nfkios.devicesettings.allowTrustAlert={"locator":"xpath=//*[@label="Trust"]"}
+NFKios.devicesettings.DateTimeBTN= {"locator":"xpath=//*[contains(@name,'Date & Time')]","desc":"Date and Time"}
+NFKios.devicesettings.SetAutomaticallyBTN= {"locator":"xpath=//XCUIElementTypeSwitch[@label='Set Automatically']","desc":"set Automatically"}
+NFKios.devicesettings.TimeZoneBTN= {"locator":"xpath=//*[contains(@name,'Time Zone')]","desc":"Time Zone"}
+#NFKios.devicesettings.GeneralScreenBTN= {"locator":"xpath=//XCUIElementTypeSwitch[@label='Set Automatically']","desc":"General"}
+NFKios.devicesettings.time1={"locator":"xpath=//XCUIElementTypeCell[4]/XCUIElementTypeStaticText[2]","desc":"Time1"}
+NFKios.devicesettings.time2={"locator":"xpath=//XCUIElementTypeCell[5]/XCUIElementTypeButton[1]","desc":"Time2"}
+NFKios.devicesettings.Hours={"locator":"xpath=//XCUIElementTypePicker[1]/XCUIElementTypePickerWheel[1]","desc":"Hour"}
+NFKios.devicesettings.minute={"locator":"xpath=//XCUIElementTypePicker[1]/XCUIElementTypePickerWheel[2]","desc":"Minute"}
+NFKios.devicesettings.daytime={"locator":"xpath=//XCUIElementTypePicker[1]/XCUIElementTypePickerWheel[3]","desc":"DayTime"}
+NFKios.deviceSettings.setting.button= {"locator":"xpath=//XCUIElementTypeButton[@label='Settings']","desc":"set Automatically"}

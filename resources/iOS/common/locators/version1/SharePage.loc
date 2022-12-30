@@ -1,0 +1,86 @@
+NFKios.sharePage.share.lbl = {\"locator\":\"xpath=//*[@label=\\\"Share\\\"]\",\"desc\":\"Share label\"}
+NFKios.sharePage.addFollower.btn = {\"locator\":\"xpath=//*[@label=\\\"Add Follower\\\"]\",\"desc\":\"Share label\"}
+NFKios.sharePage.static.label = {\"locator\":[\"xpath=//*[contains(@label,'%s')]\",\"xpath=//*[contains(text(),'%s')]\"],\"desc\":\"Static label\"}
+NFKios.sharePage.invite.btn = {\"locator\":\"xpath=//*[@name=\\\"ManageFollowersOnboardingInvitePageView.inviteButton\\\"]\",\"desc\":\"Share label\"}
+NFKios.sharePage.shareData.lbl = {\"locator\":\"xpath=//*[@name=\\\"ManageFollowersOnboardingSharePageView.titleLabel\\\"]\",\"desc\":\"Share ShareData label\"}
+NFKios.sharePage.inviteFollowers.lbl = {\"locator\":\"xpath=//*[@name=\\\"ManageFollowersOnboardingInvitePageView.titleLabel\\\"]\",\"desc\":\"Share InviteFollowers label\"}
+NFKios.sharePage.addFollower.lbl = {\"locator\":\"xpath=//*[@label=\\\"Add Follower\\\"]\",\"desc\":\"Share label\"}
+NFKios.sharePage.name.lbl = {\"locator\":\"xpath=//*[@name=\\\"AddFollowerViewController.nameFieldCell\\\"]\",\"desc\":\"Add follower name field\"}
+NFKios.sharePage.emailaddress.lbl = {\"locator\":\"xpath=//*[@name=\\\"AddFollowerViewController.emailFieldCell\\\"]\",\"desc\":\"Add follower email field\"}
+NFKios.sharePage.next.btn = {\"locator\":\"xpath=//*[@name=\\\"ManageFollowersOnboardingTutorialViewController.nextButton\\\"]|//*[@name=\\\"AddFollowerViewController.nextButton\\\"]|//*[contains(@label,\\\"Next\\\")]\",\"desc\":\"Next button on Share data\"}
+NFKios.sharePage.setFollower.lbl = {\"locator\":\"xpath=//*[@label=\\\"Set Up Follower\\\"]\",\"desc\":\"Share label\"}
+NFKios.sharePage.heading.lbl = {\"locator\":\"xpath=//*[@label=\\\"Share\\\"]\",\"desc\":\"Share label\"}
+NFKios.sharePage.urgentLow.btn = {\"locator\":\"xpath=//*[@name=\\\"SetupFollowerViewController.urgentLowCell\\\"]\",\"desc\":\"Urgent Low button\"}
+NFKios.sharePage.noData.btn = {\"locator\":\"xpath=//*[@name=\\\"SetupFollowerViewController.noDataCell\\\"]\",\"desc\":\"No Data button\"}
+NFKios.sharePage.low.btn = {\"locator\":\"xpath=//*[@name=\\\"SetupFollowerViewController.lowCell\\\"]\",\"desc\":\"Low  button\"}
+NFKios.sharePage.high.btn = {\"locator\":\"xpath=//*[@name=\\\"SetupFollowerViewController.highCell\\\"]\",\"desc\":\"High button\"}
+NFKios.Sharepage.static.lbl = {\"locator\":\"xpath=//*[contains(@text,\\\"%s\\\")]|//*[contains(@label,\\\"%s\\\")]\",\"desc\":\"Static text lable\"}
+NFKios.sharePage.setupFollower.invite.btn = {\"locator\":\"xpath=//*[@name=\\\"SetupFollowerViewController.inviteButton\\\"]\",\"desc\":\"Invite button\"}
+NFKios.sharePage.follower.name.lbl = {\"locator\":\"xpath=//*[@name=\\\"ShareFollowersCell.nameLabel\\\"]\",\"desc\":\"\"}
+NFKios.sharePage.heading.lbl = {\"locator\":\"xpath=//*[@name=\\\"\\\"]\",\"desc\":\"\"}
+NFKios.sharePage.trendgraph.switch.btn = {\"locator\":\"xpath=//*[@name=\\\"SetupFollowerViewController.trendGraphCell\\\"]//*[@name=\\\"InputFieldCell.switchButton\\\"]\",\"desc\":\"Trend Graph\"}
+NFKios.sharePage.sensorexpirationdate.switch.btn = {\"locator\":\"xpath=//*[@name=\\\"SetupFollowerViewController.sensorExpirationDateCell\\\"]//*[@name=\\\"InputFieldCell.switchButton\\\"]\",\"desc\":\"Sensor Expiration Date\"}
+NFKios.sharePage.hightoggle.readingbelow.lbl = {\"locator\":\"xpath=//*[@name=\\\"SetupFollowerViewController.highReadingBelowValueLabel\\\"]\",\"desc\":\"Low reading below value\"}
+NFKios.sharePage.highmorethan.lbl = {\"locator\":\"xpath=//*[@name=\\\"SetupFollowerViewController.highForLongThanValueLabel\\\"]\",\"desc\":\"For more than value\"}
+NFKios.sharePage.nodatatoggle.readingbelow.lbl = {\"locator\":\"xpath=//*[@name=\\\"SetupFollowerViewController.noDataToggleCell\\\"]\",\"desc\":\"Low reading below value\"}
+NFKios.sharePage.nodatamorethan.lbl = {\"locator\":\"xpath=//*[@name=\\\"SetupFollowerViewController.noDataForLongThanValueLabel\\\"]\",\"desc\":\"For more than value\"}
+NFKios.sharePage.lowtoggle.readingbelow.lbl = {\"locator\":\"xpath=//*[@name=\\\"SetupFollowerViewController.lowReadingBelowValueLabel\\\"]\",\"desc\":\"Low reading below value\"}
+NFKios.sharePage.lowmorethan.lbl = {\"locator\":\"xpath=//*[@name=\\\"SetupFollowerViewController.lowForLongThanValueLabel\\\"]\",\"desc\":\"For more than value\"}
+NFKios.sharePage.low.back.btn= {\"locator\":\"xpath=//*[@name=\\\"ShareLowGlucoseEventsViewController.backButton\\\"]\",\"desc\":\"\"}
+NFKios.sharePage.low.timeframe.txt= {\"locator\":\"xpath=//*[@name=\\\"ShareLowGlucoseEventsViewController.timeframeLabel\\\"]\",\"desc\":\"\"}
+NFKios.sharePage.low.timeframe.val= {\"locator\":\"xpath=//*[@name=\\\"ShareLowGlucoseEventsViewController.timeframeValueLabel\\\"]\",\"desc\":\"\"}
+NFKios.sharePage.low.email.btn= {\"locator\":\"xpath=//*[@name=\\\"ShareLowGlucoseEventsViewController.emailButton\\\"]\",\"desc\":\"\"}
+NFKios.sharePage.low.print.btn= {\"locator\":\"xpath=//*[@name=\\\"ShareLowGlucoseEventsViewController.printButton\\\"]\",\"desc\":\"\"}
+NFKios.sharePage.low.openin.btn= {\"locator\":\"xpath=//*[@name=\\\"ShareLowGlucoseEventsViewController.openInButton\\\"]\",\"desc\":\"\"}
+NFKios.sharePage.text.message.lbl= {\"locator\":\"xpath=//*[@name=\\\"messageBodyField\\\"]\",\"desc\":\"Text msg box\"}
+NFKios.sharePage.text.to.txt= {\"locator\":\"xpath=//*[@name=\\\"To:\\\"]\",\"desc\":\"To field\"}
+NFKios.sharePage.text.addContact.btn= {\"locator\":\"xpath=//*[@name=\\\"ComposeRecipientAddButton\\\"]\",\"desc\":\"Contact btn\"}
+NFKios.sharePage.email.cancel.btn= {\"locator\":\"xpath=//*[@name=\\\"Mail.cancelSendButton\\\"]\",\"desc\":\"Cancel btn on Email\"}
+NFKios.sharePage.email.to.txt= {\"locator\":\"xpath=//*[@name=\\\"tofield\\\"]\",\"desc\":\"to field of email\"}
+NFKios.sharePage.email.bcc.txt= {\"locator\":\"xpath=//*[@name=\\\"Cc/Bcc:\\\"]\",\"desc\":\"Cc/Bcc: of email\"}
+NFKios.sharePage.email.subject.txt= {\"locator\":\"xpath=//*[@name=\\\"Mail.subjectField\\\"]\",\"desc\":\"Mail.subjectField of email\"}
+NFKios.sharePage.email.mailbody.txt= {\"locator\":\"xpath=//*[@name=\\\"Message Body\\\"]\",\"desc\":\"Message Body of email\"}
+NFKios.sharePage.email.send.btn= {\"locator\":\"xpath=//*[@name=\\\"Mail.sendButton\\\"]\",\"desc\":\"Mail.sendButton of email\"}
+NFKios.sharePage.status.invite.btn ={\"locator\":\"xpath=//*[@name=\\\"ShareFollowersCell.shipLabel\\\"]|//*[@label=\\\"Invited\\\"]\",\"desc\":\"Status Invited button\"}
+NFKios.sharePage.follower.remove.btn ={\"locator\":\"xpath=//*[@name=\\\"FollowerSettingsViewController.pauseSharingTitleLabel\\\"]\",\"desc\":\"Remove button\"}
+NFKios.sharePage.follower.resend.btn ={\"locator\":\"xpath=//*[@name=\\\"FollowerSettingsViewController.removeFollowerTitleLabel\\\"]\",\"desc\":\"Resend button\"}
+NFKios.ok.btn= {\"locator\":\"xpath=//*[@label=\\\"OK\\\"]|//*[@name=\\\"OK\\\"]\",\"desc\":\"Request unsuccesul OK btn\"}
+NFKios.sharePage.status.invite.btnlist ={\"locator\":\"xpath=//*[@name=\\\"ShareFollowersCell.shipLabel\\\"]|//*[@label=\\\"Invited\\\"]\",\"desc\":\"Status Invited button List\"}
+NFKios.sharePage.removepopup.btn = {\"locator\":\"xpath=//*[@label=\\\"Remove\\\"]\",\"desc\":\"Remove label\"}
+NFKios.sharePage.shareingToggle.btn={\"locator\":\"xpath=//*[@name=\\\"Sharing\\\"]\",\"desc\":\"sharing toggle button\"}
+NFKios.sharePage.followerName.btn={\"locator\":\"xpath=//*[@name=\\\"ShareFollowersCell.nameLabel\\\"]\",\"desc\":\"Follower name\"}
+NFKios.sharePage.followerName.expired.txt = {\"locator\":\"xpath=//*[@label=\\\"Expired\\\"]\",\"desc\":\"Expired follower name\"}
+NFKios.sharePage.resendInvitation.link = {\"locator\":\"xpath=//*[@label=\\\"Resend Invitation\\\"]\",\"desc\":\"Resend invitation link\"}
+NFKios.sharePage.cancel.btn = {\"locator\":\"xpath=//*[@label=\\\"Cancel\\\"]\",\"desc\":\"Cancel\"}
+NFKios.sharePage.removeFollower.btn={\"locator\":\"xpath=//*[@label=\\\"Remove Follower\\\"]\",\"desc\":\"Remove follower button\"}
+
+NFKios.sharePage.removePopUp.btn = {\"locator\":\"xpath=//*[@label=\\\"Remove\\\"]\",\"desc\":\"Remove label\"}
+NFKios.sharePage.next.btn = {\"locator\":\"xpath=//*[@name=\\\"ManageFollowersOnboardingTutorialViewController.nextButton\\\"]|//*[@name=\\\"AddFollowerViewController.nextButton\\\"]|//*[contains(@label,\\\"Next\\\")]\",\"desc\":\"Next button on Share data\"}
+NFKios.sharePage.ShareDataNext.btn={\"locator\":\"xpath=//*[@name=\\\"ManageFollowersOnboardingTutorialViewController.nextButton\\\"]\",\"desc\":\"next button on share your data screen\"}
+NFKios.sharePage.name.lbl = {\"locator\":\"xpath=//*[@label=\\\"Name\\\"]\",\"desc\":\"Add follower name field\"}
+NFKios.sharePage.inviteFollowerNext.btn = {\"locator\":\"xpath=//*[@label=\\\"Next\\\"]\",\"desc\":\"next button of invitefollower\"}
+NFKios.sharePage.setupFollowerInvite.btn={\"locator\":\"xpath=//*[@label=\\\"Invite\\\"]\",\"desc\":\"Invite button on set up follower screen\"}
+NFKios.sharePage.followerName.btn={\"locator\":\"xpath=//*[@name=\\\"ShareFollowersCell.nameLabel\\\"]\",\"desc\":\"Follower name\"}
+NFKios.sharePage.removeFollower.btn={\"locator\":\"xpath=//*[@label=\\\"Remove Follower\\\"]\",\"desc\":\"Remove follower button\"}
+NFKios.sharePage.cancel.btn = {\"locator\":\"xpath=//*[@label=\\\"Cancel\\\"]\",\"desc\":\"Cancel\"}
+NFKios.sharePage.shareingToggle.btn={\"locator\":\"xpath=//*[@name=\\\"Sharing\\\"]\",\"desc\":\"sharing toggle button\"}
+NFKios.sharePage.addfollower.back.btn = {\"locator\":\"xpath=//*[@label=\\\"Back\\\"]\",\"desc\":\"back button\"}
+NFKios.sharePage.ok.btn = {\"locator\":\"xpath=//*[@label=\\\"OK\\\"]\",\"desc\":\"Ok button\"}
+NFKios.sharePage.ResendInvitation.link = {\"locator\":\"xpath=//*[@label=\\\"Resend Invitation\\\"]\",\"desc\":\"Resend invitation link\"}
+NFKios.sharePage.agp.email.loadingSpinner={\"locator\":\"xpath=//*[@name=\\\"In progress\\\"]\",\"desc\":\"share page agp email loading spinner\"}
+NFKios.sharePage.CSV.email.btn= {\"locator\":\"xpath=//*[@identifier=\\\"ShareCSVViewController.emailActionButton\\\"]\",\"desc\":\"email button on CSV screen\"}
+NFKios.sharePage.AGP.email.btn= {\"locator\":\"xpath=//*[@identifier=\\\"ShareAGPViewController.emailButton\\\"]\",\"desc\":\"email button on AGP screen\"}
+NFKios.sharePage.email.to.field= {\"locator\":\"xpath=//*[@identifier=\\\"Mail.toField\\\"]\",\"desc\":\"to field of email\"}
+NFKios.sharePage.email.ccBcc.field= {\"locator\":\"xpath=//*[@identifier=\\\"Mail.ccBccMultiField\\\"]\",\"desc\":\"Cc/Bcc: of email\"}
+NFKios.sharePage.email.pdf = {\"locator\":\"xpath=//*[contains(@name,'OneTouch.pdf')]\",\"desc\":\"pdf\"}
+NFKios.sharePage.AGP.email.btn= {\"locator\":\"xpath=//*[@identifier=\\\"ShareAGPViewController.emailButton\\\"]\",\"desc\":\"email button on AGP screen\"}
+NFKios.sharePage.timePeriod.7day.btn={\"locator\":\"xpath=//*[@name=\\\"7 Days\\\"]\",\"desc\":\"timePeriod 7 day button\"}
+NFKios.sharePage.timePeriod.14day.btn={\"locator\":\"xpath=//*[@name=\\\"14 Days\\\"]\",\"desc\":\"timePeriod 14 day button\"}
+NFKios.sharePage.timePeriod.30day.btn={\"locator\":\"xpath=//*[@name=\\\"30 Days\\\"]\",\"desc\":\"timePeriod 30 day button\"}
+NFKios.sharePage.timePeriod.60day.btn={\"locator\":\"xpath=//*[@name=\\\"60 Days\\\"]\",\"desc\":\"timePeriod 60 day button\"}
+NFKios.sharePage.timePeriod.90day.btn={\"locator\":\"xpath=//*[@name=\\\"90 Days\\\"]\",\"desc\":\"timePeriod 90 day button\"}
+NFKios.sharePage.requestUnsuccessful.popUp={\"locator\":\"xpath=//*[contains(@name,'Request Unsuccessful')]\",\"desc\":\"request unsuccessful popup\"}
+NFKios.sharePage.deleteDraft.button={\"locator\":\"xpath=//*[contains(@name,'Delete Draft')]\",\"desc\":\"delete draft button\"}
+NFKios.sharePage.LGE.email.message={\"locator\":\"xpath=//*[contains(@text,'Here are my Low Glucose Events for the time period')]\",\"desc\":\"helpfulTips btn\"}
+NFKios.sharePage.LGE.printSection.print.btn={\"locator\":\"xpath=//*[@name=\\\"Print\\\"]\",\"desc\":\"low glucose event print screen print button\"}
+NFKios.sharePage.lowGlucoseEvent.printSection.reportImage={\"locator\":\"xpath=//XCUIElementTypeImage\",\"desc\":\"LGE print section report image\"}

@@ -1,0 +1,162 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="NFK1.0" parallel="tests" thread-count="6">
+
+	<parameter name="platformName" value="ios"></parameter>
+	<parameter name="channel" value="iOS"></parameter>
+	<parameter name="language.name" value="en-us"></parameter>
+	<parameter name="country.name" value="United States"></parameter>
+	<parameter name="gdpr_country.name"
+		value="United Kingdom and Ireland"></parameter>
+	<parameter name="uomcg_country.name" value="Deutschland"></parameter>
+	<parameter name="uomcv_country.name" value="Việt Nam"></parameter>
+	<parameter name="env.resources"
+		value="resources;resources/${channel}/common;resources/${channel}/${language.name};resources/testData"></parameter>
+
+	<parameter name="env.baseurl"
+		value="https://jnjdiabetes.perfectomobile.com/nexperience/perfectomobile/wd/hub/fast"></parameter>
+	<parameter name="selenium.server"
+		value="https://jnjdiabetes.perfectomobile.com/nexperience/perfectomobile/wd/hub/fast"></parameter>
+	<parameter name="emulator.systemip" value="172.18.9.7"></parameter>
+
+	<listeners>
+		<listener
+			class-name="com.NFK.version1.listener.TestNGListener"></listener>
+		<listener
+			class-name="com.NFK.version1.listener.ReportiumListener"></listener>
+	</listeners>
+
+<test name="iOS - SE_3rdgen" enabled="true">
+		<parameter name="scenario.file.loc"
+			value="scenarios\version1\iOS\NFKv1_iOS3.bdd"></parameter>
+		<parameter name="appium.additional.capabilities"
+			value="{'deviceName':'00008110-001408C80187801E',	
+			'securityToken':'eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5NTQzZGY4NS1iZjRjLTRlOGQtOTkxNy05YzY3NjE2MjRhZWMifQ.eyJpYXQiOjE2MjY3NzUwOTAsImp0aSI6IjQ4MTgxNjY0LWVjYTctNGFjYy1hNDQ1LTg3MGQ0ODNlOTE3ZCIsImlzcyI6Imh0dHBzOi8vYXV0aC5wZXJmZWN0b21vYmlsZS5jb20vYXV0aC9yZWFsbXMvam5qZGlhYmV0ZXMtcGVyZmVjdG9tb2JpbGUtY29tIiwiYXVkIjoiaHR0cHM6Ly9hdXRoLnBlcmZlY3RvbW9iaWxlLmNvbS9hdXRoL3JlYWxtcy9qbmpkaWFiZXRlcy1wZXJmZWN0b21vYmlsZS1jb20iLCJzdWIiOiIzMGZjNTFkNy1mYWI1LTRkY2UtOTQyYy05ZmFkNWM0MDAwMWEiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoib2ZmbGluZS10b2tlbi1nZW5lcmF0b3IiLCJub25jZSI6IjcyYWFjYWZiLTQyNGEtNDE2Ni04ZjdhLTIwOTE2MDM4OTU1MCIsInNlc3Npb25fc3RhdGUiOiI4MTExYTMzYS0zYTcyLTQ0OGMtYmYzMi01ZjRmYzFkOGVlNDkiLCJzY29wZSI6Im9wZW5pZCBvZmZsaW5lX2FjY2VzcyJ9.L5pROBPLMcSwaMv2u_ybWxdxsy7v4FkRiz5mMzgpwpI',
+            'browser_name':'','bundleId':'com.lifescan.norfolk.continuous.enterprise',
+			'javascriptEnabled':true,'newCommandTimeout':'120',
+			'platformName':'ios','automationName':'XCUITest','autoLaunch':false,'fullreset':true,
+			app':'PUBLIC:NorfolkContinuous_4August_25244.ipa',
+			'driver.class':'io.appium.java_client.ios.IOSDriver',
+  			'scriptName':'SE_3rdgen'}"></parameter>
+		<groups>
+			<run>
+				<include name="CGM" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.qmetry.qaf.automation.step.client.text.BDDTestFactory"></class>
+		</classes>
+	 </test>
+	<test name="iOS - SE_2020" enabled="true">
+		<parameter name="scenario.file.loc"
+			value="scenarios\version1\iOS\NFKv1_iOS3.bdd"></parameter>
+		<parameter name="appium.additional.capabilities"
+			value="{'deviceName':'00008030-001154D60CFB802E',	
+			'securityToken':'eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5NTQzZGY4NS1iZjRjLTRlOGQtOTkxNy05YzY3NjE2MjRhZWMifQ.eyJpYXQiOjE2MjY3NzUwOTAsImp0aSI6IjQ4MTgxNjY0LWVjYTctNGFjYy1hNDQ1LTg3MGQ0ODNlOTE3ZCIsImlzcyI6Imh0dHBzOi8vYXV0aC5wZXJmZWN0b21vYmlsZS5jb20vYXV0aC9yZWFsbXMvam5qZGlhYmV0ZXMtcGVyZmVjdG9tb2JpbGUtY29tIiwiYXVkIjoiaHR0cHM6Ly9hdXRoLnBlcmZlY3RvbW9iaWxlLmNvbS9hdXRoL3JlYWxtcy9qbmpkaWFiZXRlcy1wZXJmZWN0b21vYmlsZS1jb20iLCJzdWIiOiIzMGZjNTFkNy1mYWI1LTRkY2UtOTQyYy05ZmFkNWM0MDAwMWEiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoib2ZmbGluZS10b2tlbi1nZW5lcmF0b3IiLCJub25jZSI6IjcyYWFjYWZiLTQyNGEtNDE2Ni04ZjdhLTIwOTE2MDM4OTU1MCIsInNlc3Npb25fc3RhdGUiOiI4MTExYTMzYS0zYTcyLTQ0OGMtYmYzMi01ZjRmYzFkOGVlNDkiLCJzY29wZSI6Im9wZW5pZCBvZmZsaW5lX2FjY2VzcyJ9.L5pROBPLMcSwaMv2u_ybWxdxsy7v4FkRiz5mMzgpwpI',
+            'browser_name':'','bundleId':'com.lifescan.norfolk.continuous.enterprise',
+			'javascriptEnabled':true,'newCommandTimeout':'120',
+			'platformName':'ios','automationName':'XCUITest','autoLaunch':false,'fullreset':true,
+			app':'PUBLIC:NorfolkContinuous_4August_25244.ipa',
+			'driver.class':'io.appium.java_client.ios.IOSDriver',
+  			'scriptName':'SE_2020'}"></parameter>
+		<groups>
+			<run>
+				<include name="CGM" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.qmetry.qaf.automation.step.client.text.BDDTestFactory"></class>
+		</classes>
+	</test>
+	<test name="iOS -XS-Max" enabled="true">
+		<parameter name="scenario.file.loc"
+			value="scenarios\version1\iOS\NFKv1_iOS3.bdd"></parameter>
+		<parameter name="appium.additional.capabilities"
+			value="{'deviceName':'00008020-00125DA03A21002E',	
+			'securityToken':'eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5NTQzZGY4NS1iZjRjLTRlOGQtOTkxNy05YzY3NjE2MjRhZWMifQ.eyJpYXQiOjE2MjY3NzUwOTAsImp0aSI6IjQ4MTgxNjY0LWVjYTctNGFjYy1hNDQ1LTg3MGQ0ODNlOTE3ZCIsImlzcyI6Imh0dHBzOi8vYXV0aC5wZXJmZWN0b21vYmlsZS5jb20vYXV0aC9yZWFsbXMvam5qZGlhYmV0ZXMtcGVyZmVjdG9tb2JpbGUtY29tIiwiYXVkIjoiaHR0cHM6Ly9hdXRoLnBlcmZlY3RvbW9iaWxlLmNvbS9hdXRoL3JlYWxtcy9qbmpkaWFiZXRlcy1wZXJmZWN0b21vYmlsZS1jb20iLCJzdWIiOiIzMGZjNTFkNy1mYWI1LTRkY2UtOTQyYy05ZmFkNWM0MDAwMWEiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoib2ZmbGluZS10b2tlbi1nZW5lcmF0b3IiLCJub25jZSI6IjcyYWFjYWZiLTQyNGEtNDE2Ni04ZjdhLTIwOTE2MDM4OTU1MCIsInNlc3Npb25fc3RhdGUiOiI4MTExYTMzYS0zYTcyLTQ0OGMtYmYzMi01ZjRmYzFkOGVlNDkiLCJzY29wZSI6Im9wZW5pZCBvZmZsaW5lX2FjY2VzcyJ9.L5pROBPLMcSwaMv2u_ybWxdxsy7v4FkRiz5mMzgpwpI',
+            'browser_name':'','bundleId':'com.lifescan.norfolk.continuous.enterprise',
+			'javascriptEnabled':true,'newCommandTimeout':'120',
+			'platformName':'ios','automationName':'XCUITest','autoLaunch':false,'fullreset':true,
+			app':'PUBLIC:NorfolkContinuous_4August_25244.ipa',
+			'driver.class':'io.appium.java_client.ios.IOSDriver',
+  			'scriptName':'XS-Max'}"></parameter>
+		<groups>
+			<run>
+				<include name="CGM" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.qmetry.qaf.automation.step.client.text.BDDTestFactory"></class>
+		</classes>
+	</test>
+	<test name="iOS -7-Plus" enabled="true">
+		<parameter name="scenario.file.loc"
+			value="scenarios\version1\iOS\NFKv1_iOS3.bdd"></parameter>
+		<parameter name="appium.additional.capabilities"
+			value="{'deviceName':'3FBB9F3D2C7D7808BB5B1F6719097FA038D8B5AA',	
+			'securityToken':'eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5NTQzZGY4NS1iZjRjLTRlOGQtOTkxNy05YzY3NjE2MjRhZWMifQ.eyJpYXQiOjE2MjY3NzUwOTAsImp0aSI6IjQ4MTgxNjY0LWVjYTctNGFjYy1hNDQ1LTg3MGQ0ODNlOTE3ZCIsImlzcyI6Imh0dHBzOi8vYXV0aC5wZXJmZWN0b21vYmlsZS5jb20vYXV0aC9yZWFsbXMvam5qZGlhYmV0ZXMtcGVyZmVjdG9tb2JpbGUtY29tIiwiYXVkIjoiaHR0cHM6Ly9hdXRoLnBlcmZlY3RvbW9iaWxlLmNvbS9hdXRoL3JlYWxtcy9qbmpkaWFiZXRlcy1wZXJmZWN0b21vYmlsZS1jb20iLCJzdWIiOiIzMGZjNTFkNy1mYWI1LTRkY2UtOTQyYy05ZmFkNWM0MDAwMWEiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoib2ZmbGluZS10b2tlbi1nZW5lcmF0b3IiLCJub25jZSI6IjcyYWFjYWZiLTQyNGEtNDE2Ni04ZjdhLTIwOTE2MDM4OTU1MCIsInNlc3Npb25fc3RhdGUiOiI4MTExYTMzYS0zYTcyLTQ0OGMtYmYzMi01ZjRmYzFkOGVlNDkiLCJzY29wZSI6Im9wZW5pZCBvZmZsaW5lX2FjY2VzcyJ9.L5pROBPLMcSwaMv2u_ybWxdxsy7v4FkRiz5mMzgpwpI',
+            'browser_name':'','bundleId':'com.lifescan.norfolk.continuous.enterprise',
+			'javascriptEnabled':true,'newCommandTimeout':'120',
+			'platformName':'ios','automationName':'XCUITest','autoLaunch':false,'fullreset':true,
+			app':'PUBLIC:NorfolkContinuous_4August_25244.ipa',
+			'driver.class':'io.appium.java_client.ios.IOSDriver',
+  			'scriptName':'7-Plus'}"></parameter>
+		<groups>
+			<run>
+				<include name="CGM" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.qmetry.qaf.automation.step.client.text.BDDTestFactory"></class>
+		</classes>
+	</test>
+	<test name="iOS - iPhone11" enabled="true">
+		<parameter name="scenario.file.loc"
+			value="scenarios\version1\iOS\NFKv1_iOS_CGM.bdd"></parameter>
+		<parameter name="appium.additional.capabilities"
+			value="{'deviceName':'00008030-001424222E00802E',	
+			'securityToken':'eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5NTQzZGY4NS1iZjRjLTRlOGQtOTkxNy05YzY3NjE2MjRhZWMifQ.eyJpYXQiOjE2MjY3NzUwOTAsImp0aSI6IjQ4MTgxNjY0LWVjYTctNGFjYy1hNDQ1LTg3MGQ0ODNlOTE3ZCIsImlzcyI6Imh0dHBzOi8vYXV0aC5wZXJmZWN0b21vYmlsZS5jb20vYXV0aC9yZWFsbXMvam5qZGlhYmV0ZXMtcGVyZmVjdG9tb2JpbGUtY29tIiwiYXVkIjoiaHR0cHM6Ly9hdXRoLnBlcmZlY3RvbW9iaWxlLmNvbS9hdXRoL3JlYWxtcy9qbmpkaWFiZXRlcy1wZXJmZWN0b21vYmlsZS1jb20iLCJzdWIiOiIzMGZjNTFkNy1mYWI1LTRkY2UtOTQyYy05ZmFkNWM0MDAwMWEiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoib2ZmbGluZS10b2tlbi1nZW5lcmF0b3IiLCJub25jZSI6IjcyYWFjYWZiLTQyNGEtNDE2Ni04ZjdhLTIwOTE2MDM4OTU1MCIsInNlc3Npb25fc3RhdGUiOiI4MTExYTMzYS0zYTcyLTQ0OGMtYmYzMi01ZjRmYzFkOGVlNDkiLCJzY29wZSI6Im9wZW5pZCBvZmZsaW5lX2FjY2VzcyJ9.L5pROBPLMcSwaMv2u_ybWxdxsy7v4FkRiz5mMzgpwpI',
+            'browser_name':'','bundleId':'com.lifescan.norfolk.continuous.enterprise',
+			'javascriptEnabled':true,'newCommandTimeout':'120',
+			'platformName':'ios','automationName':'XCUITest','autoLaunch':false,'fullreset':true,
+			'app':'PUBLIC:NorfolkContinuous_4August_25244.ipa',
+			'driver.class':'io.appium.java_client.ios.IOSDriver',
+  			'scriptName':'iPhone11'}"></parameter>
+		<groups>
+			<run>
+				<include name="CGM" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.qmetry.qaf.automation.step.client.text.BDDTestFactory"></class>
+		</classes>
+	</test>
+
+	<test name="iOS - iphone13" enabled="true">
+		<parameter name="scenario.file.loc"
+			value="scenarios\version1\iOS\NFKv1_iOS_CGM2.bdd"></parameter>
+		<parameter name="appium.additional.capabilities"
+			value="{'deviceName':'00008110-000058323E52801E',	
+			'securityToken':'eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5NTQzZGY4NS1iZjRjLTRlOGQtOTkxNy05YzY3NjE2MjRhZWMifQ.eyJpYXQiOjE2MjY3NzUwOTAsImp0aSI6IjQ4MTgxNjY0LWVjYTctNGFjYy1hNDQ1LTg3MGQ0ODNlOTE3ZCIsImlzcyI6Imh0dHBzOi8vYXV0aC5wZXJmZWN0b21vYmlsZS5jb20vYXV0aC9yZWFsbXMvam5qZGlhYmV0ZXMtcGVyZmVjdG9tb2JpbGUtY29tIiwiYXVkIjoiaHR0cHM6Ly9hdXRoLnBlcmZlY3RvbW9iaWxlLmNvbS9hdXRoL3JlYWxtcy9qbmpkaWFiZXRlcy1wZXJmZWN0b21vYmlsZS1jb20iLCJzdWIiOiIzMGZjNTFkNy1mYWI1LTRkY2UtOTQyYy05ZmFkNWM0MDAwMWEiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoib2ZmbGluZS10b2tlbi1nZW5lcmF0b3IiLCJub25jZSI6IjcyYWFjYWZiLTQyNGEtNDE2Ni04ZjdhLTIwOTE2MDM4OTU1MCIsInNlc3Npb25fc3RhdGUiOiI4MTExYTMzYS0zYTcyLTQ0OGMtYmYzMi01ZjRmYzFkOGVlNDkiLCJzY29wZSI6Im9wZW5pZCBvZmZsaW5lX2FjY2VzcyJ9.L5pROBPLMcSwaMv2u_ybWxdxsy7v4FkRiz5mMzgpwpI',
+            'browser_name':'','bundleId':'com.lifescan.norfolk.continuous.enterprise',
+			'javascriptEnabled':true,'newCommandTimeout':'120',
+			'platformName':'ios','automationName':'XCUITest','autoLaunch':false,'fullreset':true,
+			'app':'PUBLIC:NorfolkContinuous_4August_25244.ipa',
+			'driver.class':'io.appium.java_client.ios.IOSDriver',
+  			'scriptName':'iphone13'}"></parameter>
+		<groups>
+			<run>
+				<include name="CGM" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.qmetry.qaf.automation.step.client.text.BDDTestFactory"></class>
+		</classes>
+	</test>
+
+</suite>

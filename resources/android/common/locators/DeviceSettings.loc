@@ -1,0 +1,30 @@
+NFK.Devicesettingpage.device.btn={\"locator\":\"xpath=//*[contains(@text,'Notifications')]\",\"desc\":\"settings notification btn\"}
+NFK.Devicesettingpage.device.appnotification.btn={\"locator\":\"xpath=//*[contains(@text,'App settings')]\",\"desc\":\"settings app notification btn\"}
+NFK.Devicesettingpage.statictext.lbl = {\"locator\":\"xpath=//*[contains(@text,\\\"%s\\\")]\",\"desc\":\"Static text lable\"}
+NFK.Devicesettingpage.noti1.btn={\"locator\":\"xpath=//*[@content-desc,'Urgent Low Glucose Alarm']\",\"desc\":\"notification Switch button of Urgent Low Glucose Alarm\"}
+NFK.Devicesettingpage.noti2.btn={\"locator\":\"xpath=//*[@content-desc,'Urgent Low Glucose Soon Alert']\",\"desc\":\"notification Switch button of Urgent Low Glucose Soon Alert\"}
+NFK.Devicesettingpage.noti3.btn={\"locator\":\"xpath=//*[@content-desc,'Urgent Low Glucose Soon Alert, Schedule']\",\"desc\":\"notification Switch button of Urgent Low Glucose Soon Alert, Schedule\"}
+NFK.Devicesettingpage.noti4.btn={\"locator\":\"xpath=//*[@content-desc,'Low Glucose Alert']\",\"desc\":\"notification Switch button of Low Glucose Alert\"}
+NFK.Devicesettingpage.noti5.btn={\"locator\":\"xpath=//*[@content-desc,'Low Glucose Alert, Schedule']\",\"desc\":\"notification Switch button of Low Glucose Alert, Schedule\"}
+NFK.Devicesettingpage.noti6.btn={\"locator\":\"xpath=//*[@content-desc,'High Glucose Alert']\",\"desc\":\"notification Switch button of  High Glucose Alert\"}
+NFK.Devicesettingpage.noti7.btn={\"locator\":\"xpath=//*[@content-desc,'High Glucose Alert, Schedule']\",\"desc\":\"notification Switch button of High Glucose Alert, Schedule\"}
+NFK.Devicesettingpage.noti8.btn={\"locator\":\"xpath=//*[@content-desc,'Fall Rate Alert']\",\"desc\":\"notification Switch button of fall rate alert\"}
+NFK.Devicesettingpage.noti9.btn={\"locator\":\"xpath=//*[@content-desc,'Fall Rate Alert, Schedule']\",\"desc\":\"notification Switch button of Fall Rate Alert, Schedule\"}
+NFK.Devicesettingpage.noti10.btn={\"locator\":\"xpath=//*[@content-desc,'Rise Rate Alert']\",\"desc\":\"notification Switch button of Rise Rate Alert\"}
+NFK.Devicesettingpage.noti11.btn={\"locator\":\"xpath=//*[@content-desc,'Rise Rate Alert, Schedule']\",\"desc\":\"notification Switch button of Rise Rate Alert, Schedule\"}
+NFK.Devicesettingpage.noti12.btn={\"locator\":\"xpath=//*[@content-desc,'Sensor Failed Alarm']\",\"desc\":\"notification Switch button of Sensor Failed Alarm\"}
+NFK.Devicesettingpage.noti13.btn={\"locator\":\"xpath=//*[@content-desc,'No Readings Alert']\",\"desc\":\"notification Switch button of No Readings Alert\"}
+NFK.Devicesettingpage.noti14.btn={\"locator\":\"xpath=//*[@content-desc,'Signal Loss Alert']\",\"desc\":\"notification Switch button of Signal Loss Alert\"}
+NFK.Devicesettingpage.noti15.btn={\"locator\":\"xpath=//*[@content-desc,'Sensor Expiring']\",\"desc\":\"notification Switch button of Sensor Expiring\"}
+NFK.Devicesettingpage.noti16.btn={\"locator\":\"xpath=//*[@content-desc,'Sensor Expired']\",\"desc\":\"notification Switch button of Sensor Expired\"}
+NFK.Devicesettingpage.noti17.btn={\"locator\":\"xpath=//*[@content-desc,'App Closed Unexpectedly']\",\"desc\":\"notification Switch button of App Closed Unexpectedly\"}
+NFK.Devicesettingpage.noti18.btn={\"locator\":\"xpath=//*[@content-desc,'No Storage']\",\"desc\":\"notification Switch button of No Storage\"}
+NFK.Devicesettingpage.noti19.btn={\"locator\":\"xpath=//*[@content-desc,'Low Storage']\",\"desc\":\"notification Switch button of Low Storage\"}
+NFK.Devicesettingpage.appandnoti.btn={\"locator\":\"xpath=//*[contains(@text,'Apps & notifications')]\",\"desc\":\"settings app notification btn\"}
+NFK.Devicesettingpage.noti20.btn={\"locator\":\"xpath=//*[@content-desc,'Sensor Pair Status']\",\"desc\":\"notification Switch button of Sensor Pair Status\"}
+NFK.Devicesettingpage.noti21.btn={\"locator\":\"xpath=//*[@content-desc,'OneTouch 24/7 CGM App is Open']\",\"desc\":\"notification Switch button of OneTouch 24/7 CGM App is Open\"}
+NFK.Devicesettingpage.noti22.btn={\"locator\":\"xpath=//*[@content-desc,'Sensor Settings Update']\",\"desc\":\"notification Switch button of Sensor Settings Update\"}
+NFK.Devicesettingpage.noti23.btn={\"locator\":\"xpath=//*[@content-desc,'Reminder']\",\"desc\":\"notification Switch button of Reminder\"}
+NFK.Devicesettingpage.noti24.btn={\"locator\":\"xpath=//*[@content-desc,'App Use Suspended Alert']\",\"desc\":\"notification Switch button of App Use Suspended Alert\"}
+NFK.Devicesettingpage.noti25.btn={\"locator\":\"xpath=//*[@content-desc,'Bluetooth® Off Alert']\",\"desc\":\"notification Switch button of Bluetooth® Off Alert\"}
+NFK.Devicesettingpage.noti26.btn={\"locator\":\"xpath=//*[@content-desc,'Missed Notification']\",\"desc\":\"notification Switch button of Missed Notification\"}

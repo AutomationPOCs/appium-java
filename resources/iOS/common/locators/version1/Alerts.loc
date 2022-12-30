@@ -1,0 +1,119 @@
+NFKios.alertspage.alarm.txt= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsViewController.alarmsSettingsDescriptionLabel\\\"]\",\"desc\":\"informative text for alarm\"}
+NFKios.alertspage.urgent.low.alarm.lbl= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsViewController.urgentLowAlarmField\\\"]\",\"desc\":\"urgent low alarmm label\"}
+NFKios.alertspage.urgent.low.soon.alarm.lbl= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsViewController.urgentLowSoonAlarmField\\\"]\",\"desc\":\"urgent low soon alarm label\"}
+NFKios.alertspage.urgent.low.alarm.title= {\"locator\":\"xpath=//*[@name=\\\"Urgent Low Alarm\\\"]\",\"desc\":\"urgent low alarmm title\"}
+NFKios.alertspage.notify.me.below.txt= {\"locator\":\"xpath=//*[@name=\\\"MyAlertsUrgentLowViewController.notifyMeBelowField\\\"]\",\"desc\":\"Notify label on Urgent low\"}
+NFKios.alertspage.repeat.txt= {\"locator\":\"xpath=//*[@name=\\\"MyAlertsUrgentLowViewController.repeatField\\\"]\",\"desc\":\"Repeat label on Urgent low\"}
+NFKios.alertspage.urgent.low.alarm.back.btn.urgent.low= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsUrgentLowViewController.backButton\\\"]\",\"desc\":\"Back button on urgent low alarm page\"} 
+NFKios.alertspage.urgent.low.alarm.repeat.hint.txt= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsUrgentLowViewController.repeatHintLabel\\\"]\",\"desc\":\"Informative text regarding repeat\"} 
+NFKios.alertspage.urgent.low.alarm.sound.lbl= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsUrgentLowViewController.soundField\\\"]\",\"desc\":\"sound label with urgent low by default select\"} 
+NFKios.alertspage.urgent.low.alarm.vibration.lbl= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsUrgentLowViewController.vibrationField\\\"]\",\"desc\":\"vibration label with urgent low by default select\"} 
+NFKios.alertspage.urgent.low.alarm.urgent.low.hint.lbl= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsUrgentLowViewController.urgentLowHintLabel\\\"]\",\"desc\":\"urgent low hint informative text\"} 
+NFKios.alertspage.urgent.low.alarm.sound.title= {\"locator\":\"xpath=//*[@name=\\\"Sound\\\"]\",\"desc\":\"sound title\"} 
+NFKios.alertspage.urgent.low.alarm.vibration.title= {\"locator\":\"xpath=//*[@name=\\\"Vibration\\\"]\",\"desc\":\"vibration title\"} 
+NFKios.alertspage.urgent.low.alarm.back.btn.urgent.low.soon= {\"locator\":\"xpath=//*[@name=\\\"MyAlertsUrgentLowSoonViewController.backButton\\\"]\",\"desc\":\"urgent low soon screen back button\"} 
+NFKios.alertspage.back.btn= {\"locator\":\"xpath=//*[@name=\\\"MyAlertsPickerViewController.backButton\\\"]|//*[@label=\\\"Back\\\"]\",\"desc\":\" back button for sound and vibration screen\"} 
+NFKios.alertspage.urgent.low.soon.alarm.title= {\"locator\":\"xpath=//*[@name=\\\"Urgent Low Soon Alert\\\"]\",\"desc\":\" urgent low soon alert title\"} 
+NFKios.alertspage.urgent.low.soon.alarm.repreat= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsUrgentLowSoonViewController.repeatField\\\"]\",\"desc\":\" urgent low soon alarm repeat field\"}
+NFKios.alertspage.urgent.low.soon.alarm.sound.lbl= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsUrgentLowSoonViewController.soundField\\\"]\",\"desc\":\"sound label with urgent low soon by default select\"} 
+NFKios.alertspage.urgent.low.soon.alarm.vibration.lbl= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsUrgentLowSoonViewController.vibrationField\\\"]\",\"desc\":\"sound label with urgent low soon by default select\"} 
+NFKios.alertspage.urgent.low.soon.alarm.repeat.hint.txt= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsUrgentLowSoonViewController.urgentLowSoonHintLabel\\\"]\",\"desc\":\"Informative text regarding urgent low soon repeat\"} 
+NFKios.alertspage.urgent.low.alarm.urgent.low.select= {\"locator\":\"xpath=//*[@name=\\\"MyAlertsPickerViewController.tableView"]/XCUIElementTypeCell[2]\\\"]\",\"desc\":\"Informative text regarding urgent low soon repeat\"} 
+NFKios.alertspage.urgentlow.back.btn= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsUrgentLowViewController.backButton\\\"]\",\"desc\":\"Back button\"} 
+NFKios.alertspage.urgentlowsoon.back.btn= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsUrgentLowSoonViewController.backButton\\\"]\",\"desc\":\"Back button\"} 
+NFKios.alertspage.urgentlow.elements.soundvibration= {\"locator\":\"xpath=//*[@type=\\\"XCUIElementTypeStaticText\\\"]\",\"desc\":\"Get all the Elements from Sound and Vibration\"} 
+NFKios.alertspage.urgentlow.checkmark= {\"locator\":\"xpath=//*[@name=\\\"large_check\\\"]\",\"desc\":\"Check mark on elemnt\"}
+NFKios.alertspage.lowalert.txt= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsViewController.lowField\\\"]\",\"desc\":\"Low Alert text\"}
+NFKios.alertspage.lowalert.field= {\"locator\":\"xpath=//*[@identifier=\\\"InputFieldCell.titleLabel\\\"]\",\"desc\":\"Low Alert\"}
+NFKios.alertspage.switch.btn= {\"locator\":\"xpath=//*[@identifier=\\\"InputFieldCell.switchButton\\\"]\",\"desc\":\"Switch button\"}
+NFKios.alertspage.alertsc.switch.btn= {\"locator\":\"xpath=//*[@name=\\\"MyAlertsViewController.alertScheduledField\\\"]//*[@name=\\\"InputFieldCell.switchButton\\\"]\",\"desc\":\"Toggle buttons on Alert\"}
+NFKios.alertspage.lowalert.repeatfield= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsLowViewController.repeatField\\\"]\",\"desc\":\"Repeat field\"}
+NFKios.alertspage.lowalert.soundfield= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsLowViewController.soundField\\\"]\",\"desc\":\"Sound field low alert\"}
+NFKios.alertspage.lowalert.hint.txt= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsLowViewController.lowHintLabel\\\"]\",\"desc\":\"Text on alert\"}
+NFKios.alertspage.lowalert.back.btn= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsLowViewController.backButton\\\"]\",\"desc\":\"Back button\"}
+NFKios.alertspage.lowalert.notify.mebelow.btn= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsLowViewController.notifyMeBelowField\\\"]\",\"desc\":\"Notify Me Below\"}
+NFKios.alertspage.picker.btn= {\"locator\":\"xpath=//XCUIElementTypePickerWheel[1]\",\"desc\":\"Value picker\"}
+NFKios.alertspage.picker.min.btn= {\"locator\":\"xpath=//XCUIElementTypePickerWheel[3]\",\"desc\":\"Minute picker\"}
+NFKios.alertspage.picker.done.btn= {\"locator\":\"xpath=//*[@name=\\\"Done\\\"]\",\"desc\":\"Done button\"}
+NFKios.alertspage.picker.cancel.btn= {\"locator\":\"xpath=//*[@name=\\\"Cancel\\\"]\",\"desc\":\"Done button\"}
+NFKios.alertspage.highalert.txt= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsViewController.highField\\\"]\",\"desc\":\"High Alert text\"}
+NFKios.alertspage.highalert.notify.meabove.btn= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsHighViewController.notifyMeAboveField\\\"]\",\"desc\":\"Notify Me Above\"}
+NFKios.alertspage.highalert.repeatfield= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsHighViewController.repeatField\\\"]\",\"desc\":\"Repeat field\"}
+NFKios.alertspage.highalert.soundfield= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsHighViewController.soundField\\\"]\",\"desc\":\"Sound field high alert\"}
+NFKios.alertspage.highalert.hint.txt= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsHighViewController.highHintLabel\\\"]\",\"desc\":\"Text on alert\"}
+NFKios.alertspage.highalert.back.btn= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsHighViewController.backButton\\\"]\",\"desc\":\"Back button\"}
+NFKios.alertspage.fallratealert.txt= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsViewController.fallRateField\\\"]\",\"desc\":\"Fall rate Alert text\"}
+NFKios.alertspage.fallratealert.notify.atbelow.btn= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsFallRateViewController.notifyMeBelowField\\\"]\",\"desc\":\"Notify Me At below text\"}
+NFKios.alertspage.fallratealert.soundfield= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsFallRateViewController.soundField\\\"]\",\"desc\":\"Sound field fall rate\"}
+NFKios.alertspage.fallratealert.hint.txt= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsFallRateViewController.fallRateHintLabel\\\"]\",\"desc\":\"Text on alert\"}
+NFKios.alertspage.fallratealert.back.btn= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsFallRateViewController.backButton\\\"]\",\"desc\":\"Back button\"}
+NFKios.alertspage.riseratealert.txt= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsViewController.riseRateField\\\"]\",\"desc\":\"Fall rate Alert text\"}
+NFKios.alertspage.riseratealert.notify.atabove.btn= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsRiseRateViewController.notifyMeAbove\\\"]\",\"desc\":\"Notify Me At above text\"}
+NFKios.alertspage.riseratealert.soundfield= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsRiseRateViewController.soundField\\\"]\",\"desc\":\"Sound field of rise rate\"}
+NFKios.alertspage.riseratealert.hint.txt= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsRiseRateViewController.riseRateDescriptionLabel\\\"]\",\"desc\":\"Text on alert\"}
+NFKios.alertspage.riseratealert.back.btn= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsRiseRateViewController.backButton\\\"]\",\"desc\":\"Back button of rise rate\"}
+NFKios.alertspage.signalloss.back.btn= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsSignalLossViewController.backButton\\\"]\",\"desc\":\"Back button\"}
+NFKios.alertspage.signalloss.txt= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsViewController.signalLossField\\\"]\",\"desc\":\"Signal loss text on Alert screen\"}
+NFKios.alertspage.signalloss.formorethan= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsSignalLossViewController.forMoreThanField\\\"]\",\"desc\":\"For More Than\"}
+NFKios.alertspage.signalloss.soundfield= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsSignalLossViewController.soundField\\\"]\",\"desc\":\"Sound field of signal loss\"}
+NFKios.alertspage.signalloss.hint.txt= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsSignalLossViewController.signalLossDescriptionLabel\\\"]\",\"desc\":\"Signal loss\"}
+NFKios.alertspage.noreading.back.btn= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsNoReadingsViewController.backButton\\\"]\",\"desc\":\"Back button\"}
+NFKios.alertspage.noreading.txt = {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsViewController.noReadingsField\\\"]\",\"desc\":\"No readings on Alert screen\"}
+NFKios.alertspage.noreading.soundfield= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsNoReadingsViewController.soundField\\\"]\",\"desc\":\"Sound field\"}
+NFKios.alertspage.noreading.hint.txt= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsNoReadingsViewController.noReadingsHintLabel\\\"]\",\"desc\":\"Signal loss\"}
+NFKios.alertspage.schedule.name.field= {\"locator\":\"xpath=//*[@identifier=\\\"MyAlertsViewController.scheduleNameField\\\"]\",\"desc\":\"Schedule name field\"}
+NFKios.alertspage.reset.btn ={\"locator\":\"xpath=//*[@name=\\\"MyAlertsViewController.resetAlertButton\\\"]\",\"desc\":\"Reset Button on Alert screen\"}
+NFKios.alertspage.resetpop.reset.btn ={\"locator\":\"xpath=//*[@name=\\\"Reset\\\"]\",\"desc\":\"Reset Alert Setting btn on Popup\"}
+NFKios.alertspage.info.btn = {\"locator\":\"xpath=//*[@label=\\\"info notification header icon\\\"]\",\"desc\":\"info notification header icon\"}
+NFKios.alertspage.devicesettingalert.heading={\"locator\":\"xpath=//*[@identifier=\\\"InfoViewController.headerLabel\\\"]\",\"desc\":\"Mobile device settings\"}
+NFKios.alertspage.devicesettingalert.title={\"locator\":\"xpath=//*[@identifier=\\\"AppNotificationSettingsInfoViewController.titleLabel\\\"]\",\"desc\":\"App Notification Settings\"}
+NFKios.alertspage.devicesettingalert.subTitle={\"locator\":\"xpath=//*[@identifier=\\\"AppNotificationSettingsInfoViewController.subTitleLabel\\\"]\",\"desc\":\"App Notification Settings subtitle\"}
+NFKios.alertspage.devicesettingalert.descriptionLabel={\"locator\":\"xpath=//*[@identifier=\\\"AppNotificationSettingsInfoViewController.descriptionLabel\\\"]\",\"desc\":\"App Notification Settings description\"}
+NFKios.alertspage.devicesettingalert.criticalAlertsLabel={\"locator\":\"xpath=//*[@identifier=\\\"AppNotificationSettingsInfoViewController.criticalAlertsLabel\\\"]\",\"desc\":\"App Notification Settings criticalAlertsLabel\"}
+NFKios.alertspage.devicesettingalert.allowNotificationsLabel={\"locator\":\"xpath=//*[@identifier=\\\"AppNotificationSettingsInfoViewController.allowNotificationsLabel\\\"]\",\"desc\":\"App Notification Settings allowNotificationsLabel\"}
+NFKios.alertspage.devicesettingalert.soundsLabel={\"locator\":\"xpath=//*[@identifier=\\\"AppNotificationSettingsInfoViewController.soundsLabel\\\"]\",\"desc\":\"App Notification Settings allowNotificationsLabel\"}
+NFKios.alertspage.devicesettingalert.mobilesettinglink={\"locator\":\"xpath=//*[@name=\\\"Go to mobile settings >\\\"]\",\"desc\":\"Go to mobile settings >\"}
+NFKios.alertspage.setting.title = {\"locator\":\"xpath=//*[@label=\\\"OneTouch 24/7 CGM\\\"]\",\"desc\":\"Setting title\"}
+NFKios.alertspage.setting.bluetooth = {\"locator\":\"xpath=//*[@label=\\\"Bluetooth\\\"]\",\"desc\":\"Bluetooth\"}
+NFKios.alertspage.setting.popup.title= {\"locator\":\"xpath=//*[@name=\\\"Change Your Settings\\\"]\",\"desc\":\"Settings title\"}
+NFKios.alertspage.setting.notnow.btn= {\"locator\":\"xpath=//*[@name=\\\"Not Now\\\"]\",\"desc\":\"Not now btn\"}
+NFKios.alertspage.setting.setting.btn= {\"locator\":\"xpath=//*[@name=\\\"Settings\\\"]\",\"desc\":\"Settings btn\"}
+NFKios.alertspage.critical.toggle.btn= {\"locator\":\"xpath=//*[@name=\\\"MyAlertsViewController.soundField\\\"]//*[@name=\\\"InputFieldCell.switchButton\\\"]\",\"desc\":\"Signal loss\"}
+NFKios.alertspage.Back.btn={\"locator\":\"xpath=//*[@label=\\\"Back\\\"]\",\"desc\":\"Back button\"}
+NFKios.Alertspage.NotifyBelowvalue.Btn={\"locator\":\"xpath=//XCUIElementTypePickerWheel[1]\",\"desc\":\"notify me below picker\"}
+NFKios.alertspage.NotifyBelowvalue.done.btn= {\"locator\":\"xpath=//*[@name=\\\"PickerAccessoryView.doneButton\\\"]\",\"desc\":\"Notify me below Done button\"}
+NFKios.Alertspage.NotifyAbovevalue.Btn={\"locator\":\"xpath=//XCUIElementTypePickerWheel[1]\",\"desc\":\"notify me Above picker\"}
+NFKios.alertspage.NotifyAbovevalue.done.btn={\"locator\":\"xpath=//*[@name=\\\"PickerAccessoryView.doneButton\\\"]\",\"desc\":\"Notify me Above Done button\"}
+NFKios.alertspage.banner.label={\"locator\":\"xpath=//*[@name=\\\"BannerViewController.messageLabel\\\"]\",\"desc\":\"banner label\"}
+NFKios.alertspage.banner.label={\"locator\":\"xpath=//*[@name=\\\"BannerViewController.messageLabel\\\"]\",\"desc\":\"banner label\"}
+NFKios.alertspage.customAlert.save.btn={\"locator\":\"xpath=//*[@name=\\\"UserAlertScheduleViewController.saveButton\\\"]\",\"desc\":\"Custom alert save button\"}
+NFKios.alertspage.Home.btn={\"locator\":\"xpath=//*[@identifier=\\\"MainTabBarViewController.homeButton\\\"]|//*[@label=\\\"Home\\\"]\",\"desc\":\"Home button\"}
+NFKios.alertspage.popup.text= {\"locator\":\"xpath=//*[contains(@name,'Do you want to reset alert settings')]\",\"desc\":\"alertpage popup text\"}
+NFKios.alertspage.schedule.HighAlert= {\"locator\":\"xpath=//*[@identifier=\\\"UserAlertScheduleViewController.highField\\\"]\",\"desc\":\"High Alert Custom Schedule\"}
+NFKios.alertspage.schedule.LowAlert= {\"locator\":\"xpath=//*[@identifier=\\\"UserAlertScheduleViewController.lowField\\\"]\",\"desc\":\"Low Alert Custom Schedule\"}
+
+NFKios.alertspage.MobileDeviceAlertsOff.Banner.txt = {\"locator\":\"xpath=//*[@label=\\\"Mobile Device Alerts Off\\\"]\",\"desc\":\"Mobile Device Alerts Off\"}
+NFKios.alertspage.ChangeYourSettingsPopup.lbl ={\"locator\":\"xpath=//*[contains(@name,'Change Your Settings')]\",\"desc\":\"Change Your Settings\"}
+NFKios.alertspage.ChangeYourSettingsPopup.txt ={\"locator\":\"xpath=//*[contains(@name,'Adjust your mobile device settings to help')]\",\"desc\":\"Adjust your mobile device settings to help text\"}
+NFKios.alertspage.ChangeYourSettingsPopup.NotNow.Btn ={\"locator\":\"xpath=//*[contains(@name,'Not Now')]\",\"desc\":\"Not Now\"}
+NFKios.alertspage.ChangeYourSettingsPopup.Settings.Btn ={\"locator\":\"xpath=//*[contains(@name,'Settings')]\",\"desc\":\"Settings\"}
+NFKios.alertspage.Informationicon.Mobiledevicesettings.lbl= {\"locator\":\"xpath=//*[@label=\\\"Mobile Device Settings\\\"]\",\"desc\":\"Mobile Device Settings\"}
+NFKios.alertspage.Informationicon.Mobiledevicesettings.txt= {\"locator\":\"xpath=//*[@label=\\\"App Notification Settings\\\"]\",\"desc\":\"Mobile Device Settings\"}     
+NFKios.alertspage.Informationicon.Mobiledevicesettings.Keepyouaware.txt={\"locator\":\"xpath=//*[contains(@label,'Alerts keep you aware of important changes')]\",\"desc\":\"Alerts keep you aware of important changes text\"}
+NFKios.alertspage.Informationicon.Mobiledevicesettings.Toreceivealertsmakesure.txt={\"locator\":\"xpath=//*[contains(@label,'To receive alerts, make sure these settings are on:')]\",\"desc\":\"To receive alerts, make sure these settings are on: text\"}
+NFKios.alertspage.Informationicon.Mobiledevicesettings.Criticalalerts.btn=  {\"locator\":\"xpath=//*[@label=\\\"Critical Alerts\\\"]\",\"desc\":\"Critical Alerts\"}
+NFKios.alertspage.Informationicon.Mobiledevicesettings.Timesensitive.btn ={\"locator\":\"xpath=//*[@label=\\\"Time Sensitive\\\"]\",\"desc\":\"i icon -info notification header icon\"}
+NFKios.alertspage.Informationicon.Mobiledevicesettings.Allownotifications.btn ={\"locator\":\"xpath=//*[@label=\\\"Allow Notifications\\\"]\",\"desc\":\"Time Sensitive\"}
+NFKios.alertspage.Informationicon.Mobiledevicesettings.Sounds.btn={\"locator\":\"xpath=//*[@label=\\\"Sounds\\\"]\",\"desc\":\"Sounds\"}
+NFKios.alertspage.Informationicon.Mobiledevicesettings.Gotomobilesettings.link={\"locator\":\"xpath=//*[@name=\\\"Go to mobile settings >\\\"]\",\"desc\":\"Go to mobile settings link\"}
+NFKios.alertspage.Informationicon.Mobiledevicesettings.Focusmode.txt=  {\"locator\":\"xpath=//*[@label=\\\"Focus Mode\\\"]\",\"desc\":\"i icon -info notification header icon\"}
+NFKios.alertspage.Informationicon.Mobiledevicesettings.Beforeyouturnonfocusmode.txt={\"locator\":\"xpath=//*[contains(@label,'Before you turn on Focus mode,')]\",\"desc\":\"Before you turn on Focus mode,\"}
+NFKios.alertspage.Informationicon.Mobiledevicesettings.Cancel.btn={\"locator\":\"xpath=//*[@name=\\\"xInCircleGray\\\"]\",\"desc\":\"xInCircleGray\"}
+NFKios.alertspage.Alerts.Back.btn= {\"locator\":\"xpath=//*[@name=\\\"MyAlertsViewController.backButton\\\"]\",\"desc\":\" back button for sound and vibration screen\"}
+NFKios.alertspage.schedule.customHighAlert= {\"locator\":\"xpath=//*[@label=\\\"High\\\"]\",\"desc\":\"High Alert Custom Schedule\"}
+NFKios.alertspage.schedule.notifyAboveValue= {\"locator\":\"xpath=//*[@name=\\\"MyAlertsHighViewController.notifyMeAboveField\\\"]\",\"desc\":\"Notify me above field\"} 
+
+NFKios.alertspage.alertsc.TreatasCritical.btn={\"locator\":\"xpath=//*[@identifier=\\\"InputFieldCell.switchButton\\\"]\",\"desc\":\"Treat as Critical button on Alert schedule\"}
+
+NFKios.alertspage.TreatasCritical.btn= {\"locator\":\"xpath=//*[@name=\\\"MyAlertsViewController.soundField\\\"]//*[@name=\\\"InputFieldCell.switchButton\\\"]\",\"desc\":\"Toggle buttons on Alert\"}
+

@@ -1,0 +1,205 @@
+﻿NFKios.signupPage.notification.allow.popup = {\"locator\":\"xpath=//*[@label=\\\"OK\\\"]\",\"desc\":\"Blutooth allow on notification popup\"}
+NFKios.signupPage.emailAdress.tBox =  {\"locator\":\"xpath=//*[@name=\\\"SignUpAdultViewController.emailField\\\"]\",\"desc\":\"Email adress Text box\"}
+NFKios.signupPage.confirmEmailAdress.tBox = {\"locator\":\"xpath=//*[@name=\\\"SignUpAdultViewController.confirmEmailField\\\"]\",\"desc\":\"Confirm email adress text box\"}
+NFKios.signupPage.password.tBox = {\"locator\":\"xpath=//*[@name=\\\"SignUpAdultViewController.passwordField\\\"]\",\"desc\":\"Password text box\"}
+NFKios.signuppage.confirmpassword.txt = {\"locator\":\"xpath=//*[@name=\\\"SignUpAdultViewController.confirmPasswordField\\\"]\",\"desc\":\"Confirm password window\"}
+NFKios.signupPage.dateOfBirth.tBox = {\"locator\":\"xpath=//*[@name=\\\"SignUpAdultViewController.birthDayField\\\"]|//*[contains(@name,'SignUpDependentProfileViewController.birthDayField')]\",\"desc\":\"Date of birth text box\"}
+NFKios.signuppage.officecode.txt={\"locator\":\"xpath=//*[@name=\\\"SignUpAdultViewController.clinicInfoView\\\"]\",\"desc\":\"Clinic Code field\"}
+NFKios.signuppage.secondscreen.continue.btn = {\"locator\":\"xpath=//*[@name=\\\"SignUpAdultViewController.continueButton\\\"]\",\"desc\":\"continue button on sign up first screen\"}
+NFKios.signuppage.clinicinfo.txt= {\"locator\":\"xpath=//*[@name="ClinicInfoView.infoContainerView"]/XCUIElementTypeOther[1]\",\"desc\":\"Clinic info text\"}
+NFKios.signupPage.countryTerms.cBox = {\"locator\":\"xpath=//*[contains(@name,'SignUpAdultViewController.termsAndPrivacyButton')]|//*[@name='RegisterViewController.termsAndPrivacyButton']\",\"desc\":\"Privecy police text for agreeing data accss outside country check box\"}
+NFKios.signuppage.birthday.month.pkr = {\"locator\":\"xpath=//XCUIElementTypePickerWheel[1]\",\"desc\":\"Date picker wheel\"}
+NFKios.signuppage.birthday.date.pkr = {\"locator\":\"xpath=//XCUIElementTypePickerWheel[2]\",\"desc\":\"Hour picker on picker wheel\"}
+NFKios.signuppage.timingPicker.year.pkr = {\"locator\":\"xpath=//XCUIElementTypePickerWheel[3]\",\"desc\":\"Minute picker wheel\"}
+NFKios.signuppage.bdpicker.done.btn = {\"locator\":\"xpath=//*[@name=\\\"PickerAccessoryView.doneButton\\\"]\",\"desc\":\"Done button on birth picker\"}
+NFKios.signuppage.firstname.txt = {\"locator\":\"xpath=//*[@name=\\\"SignUpAdultProfileViewController.firstNameField\\\"]|//*[contains(@name,'SignUpDependentProfileViewController.firstNameField')]\",\"desc\":\"User First name textfield\"}
+NFKios.signuppage.lastname.txt = {\"locator\":\"xpath=//*[@name=\\\"SignUpAdultProfileViewController.lastNameField\\\"]|//*[contains(@name,'SignUpDependentProfileViewController.lastNameField')]\",\"desc\":\"User Last name textfield\"}
+NFKios.signupPage.signUp.btn = {\"locator\":\"xpath=//*[@name=\\\"SignUpAdultProfileViewController.signUpButton\\\"]|//*[contains(@name,'SignUpDependentProfileViewController.signUpButton')]|//*[contains(@name,'SignUpDependentInformationViewController.signUpButton')]\",\"desc\":\"Signup button\"}
+NFKios.signup.gender.selection.male.btn={\"locator\":\"xpath=//*[@name=\\\"SignUpAdultProfileViewController.radioButtonMale\\\"]|//*[@name=\\\"SignUpDependentProfileViewController.radioButtonMale\\\"]\",\"desc\":\"select the gender as Male\"}
+NFKios.signup.gender.selection.female.btn={\"locator\":\"xpath=//*[@name=\\\"SignUpAdultProfileViewController.radioButtonFemale\\\"]|//*[contains(@name,'SignUpDependentProfileViewController.radioButtonFemale')]\",\"desc\":\"select the gender as Female\"}
+NFKios.signup.diabetestype.type1.btn={\"locator\":\"xpath=//*[@name=\\\"SignUpAdultProfileViewController.radioButtonTypeOne\\\"]|//*[contains(@name,'SignUpDependentProfileViewController.radioButtonTypeOne')]\",\"desc\":\"select the Type1 diabetes\"}
+NFKios.signup.diabetestype.type2.btn={\"locator\":\"xpath=//*[@name=\\\"SignUpAdultProfileViewController.radioButtonTypeTwo\\\"]|//*[contains(@name,'SignUpDependentProfileViewController.radioButtonTypeTwo')]\",\"desc\":\"select the Type2 diabetes\"}
+NFKios.signup.diabetestype.gestational.btn={\"locator\":\"xpath=//*[@name=\\\"RegisterProfileViewController.radioButtonGestation\\\"]\",\"desc\":\"select the type as Gestation\"}
+NFKios.signuppage.optin.title.lbl = {\"locator\":\"xpath=//*[@name=\\\"SignUpAdultViewController.optInPromotionsButton\\\"]\",\"desc\":\"Opt-In Title\"}
+NFKios.signupPage.static.lbl = {\"locator\":[\"xpath=//*[contains(@label,'%s')]\",\"xpath=//*[contains(text(),'%s')]\"],\"desc\":\"Static label\"}
+NFKios.signupPage.login.lnk = {\"locator\":\"xpath=//*[@label=\\\"Log In\\\"]\",\"desc\":\"Login link on sign up page\"}
+NFKios.signuppage.optin.iagree.lbl = {\"locator\":\"xpath=//*[@name=\\\"AgreementViewController.agreeButton\\\"]\",\"desc\":\"Opt-In I Agree button\"}
+NFKios.signuppage.optin.cancel.lbl = {\"locator\":\"xpath=//*[@name=\\\"AgreementViewController.cancelButton\\\"]\",\"desc\":\"Opt-In Cancel button\"}
+NFKios.signupPage.optin.privecy.lnk = {\"locator\":\"xpath=//*[@label=\\\"Privacy Policy\\\"]\",\"desc\":\"Opt-In Privacy link\"}
+NFKios.countryselectionPage.accounttype.No.btn = {\"locator\":\"xpath=//*[@label=\\\"No\\\"]\",\"desc\":\"Type of Account selection\"}
+NFKios.countryselectionPage.accounttype.Yes.btn = {\"locator\":\"xpath=//*[@label=\\\"Yes\\\"]\",\"desc\":\"Type of Account selection\"}
+NFKios.signuppage.back.btn = {\"locator\":\"xpath=//*[@name=\\\"SignUpAdultProfileViewController.backButton\\\"]\",\"desc\":\"Back button\"}
+NFKios.signupPage.safetynext.btn = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingTutorialViewController.nextButton\\\"]\",\"desc\":\"Next button on safety onboard\"}
+NFKios.signupPage.safetydone.btn = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingTutorialViewController.nextButton\\\"]|//*[@label='Done']\",\"desc\":\"Next button on safety onboard\"}
+NFKios.signupPage.safetyboard.TrustHowYouFeel.cBox = {\"locator\":\"xpath=//*[contains(@name,'SafetyOnboardingTrustHowYouFeelPageView.checkboxButton')]|//*[@label='I Understand']\",\"desc\":\"Safety onboarding TrustHowYouFeel Checkbox\"}
+NFKios.signupPage.safetyboard.NoMR.cBox = {\"locator\":\"xpath=//*[@label='I Understand']|//*[contains(@name,'SafetyOnboardingNoMRPageView.checkboxButton')]\",\"desc\":\"Safety onboarding NO MR Checkbox\"}
+NFKios.signupPage.safetyboard.TreatmentDecisions.cBox = {\"locator\":\"xpath=//*[contains(@name,'SafetyOnboardingTreatmentDecisionsPageView.checkboxButton')]|//*[@label='I Understand']\",\"desc\":\"Safety onboarding TreatmentDecisions Checkbox\"}
+NFKios.signupPage.safetyboard.AlertNotifications.cBox = {\"locator\":\"xpath=//*[contains(@name,'SafetyOnboardingAlertNotificationsPageView.checkboxButton')]|//*[@label='I Understand']\",\"desc\":\"Safety onboarding TreatmentDecisions Checkbox\"}
+NFKios.signupPage.safetyboard.Notifications.popup = {\"locator\":\"xpath=//*[@name=\\\"�Norfolk� Would Like to Send You Notifications\\\"]\",\"desc\":\"safety on board notification popup\"}
+NFKios.signupPage.safetyboard.Notifications.allow.popup = {\"locator\":\"xpath=//*[@label=\\\"Allow\\\"]\",\"desc\":\"safety on board allow on notification popup\"}
+NFKios.signupPage.pair.sensor.title={\"locator\":\"xpath=//*[@name=\\\"EnterSensorCodeViewController.headingLabel\\\"]\",\"desc\":\"Title of Sensor pair screen\"}
+NFKios.signupPage.pair.sensor.skip.btn= {\"locator\":\"xpath=//*[@name=\\\"EnterSensorCodeViewController.rightBarButton\\\"]\",\"desc\":\"Skip button of Sensor pair screen\"}
+NFKios.signupPage.start.sensor.title={\"locator\":\"xpath=//*[@name=\\\"StartSensorViewController.titleLabel\\\"]\",\"desc\":\"Title of Start Sensor screen\"}
+NFKios.signupPage.safetyonboarding.alertok.btn = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingAlertNotificationsViewController.okButton\\\"]\",\"desc\":\"Alert Notification screen OK button\"}
+NFKios.signupPage.notification.allow.popup={\"locator\":\"xpath=//*[@label=\\\"OK\\\"]\",\"desc\":\"Blutooth allow on notification popup\"}
+NFKios.signuppage.dependent.guardian.fname={\"locator\":\"xpath=//*[contains(@name,'SignUpDependentViewController.guardianFirstNameField')]\",\"desc\":\"Guardian First name\"}
+NFKios.signuppage.dependent.guardian.lname= {\"locator\":\"xpath=//*[contains(@name,'SignUpDependentViewController.guardianLastNameField')]\",\"desc\":\"Guardian last name\"}
+NFKios.signuppage.dependent.email= {\"locator\":\"xpath=//*[contains(@name,'SignUpDependentViewController.emailField')]\",\"desc\":\"Email of guardian\"}
+NFKios.signuppage.dependent.confirm.email= {\"locator\":\"xpath=//*[contains(@name,'SignUpDependentViewController.confirmEmailField')]\",\"desc\":\"Confirm Email of Guardian\"}
+NFKios.signuppage.dependent.continue= {\"locator\":\"xpath=//*[@name=\\\"Continue\\\"]\",\"desc\":\"Continue button\"}
+NFKios.signuppage.dependent.terms.checkbox= {\"locator\":\"xpath=//*[contains(@name,'SignUpDependentViewController.termsAndPrivacyButton')]\",\"desc\":\"Checkbox of terms and privacy policy\"}
+NFKios.signuppage.dependent.marketing.checkbox= {\"locator\":\"xpath=//*[contains(@name,'SignUpDependentViewController.marketingAgreementButton')]\",\"desc\":\"Checkbox of Marketing option\"}
+NFKios.signuppage.dependent.Clinic= {\"locator\":\"xpath=//*[contains(@name,'ClinicInfoView.clinicCodeField')]\",\"desc\":\"Clinic code\"}
+NFKios.signuppage.dependent.guardianaccount.text={\"locator\":\"xpath=//*[contains(@name,'SignUpDependentViewController.mainFormTitleLabel')]\",\"desc\":\"Instruction in text\"}
+NFKios.signuppage.dependent.password= {\"locator\":\"xpath=//*[contains(@name,'SignUpDependentViewController.passwordField')]\",\"desc\":\"Guardian Password \"}
+NFKios.signuppage.dependent.confirm.password= {\"locator\":\"xpath=//*[contains(@name,'SignUpDependentViewController.confirmPasswordField')]\",\"desc\":\"Guardian confirm password\"}
+NFKios.signuppage.addclinic.send.btn= {\"locator\":\"xpath=//*[@name=\\\"AddClinicViewController.searchButton\\\"]\",\"desc\":\"Send button of Add Clinic Page\"}
+NFKios.signuppage.addclinic.termchk.btn= {\"locator\":\"xpath=//*[@name=\\\"checkbox unchecked\\\"]\",\"desc\":\"Check box oon Add Clinic Page\"}
+NFKios.signup.page.UOM.select.title = {\"locator\":\"xpath=//*[@name=\\\"ChooseUOMViewController.titleLabel\\\"]\",\"desc\":\"UOM title\"}
+NFKios.signup.page.UOM.select.text = {\"locator\":\"xpath=//*[@name=\\\"ChooseUOMViewController.descriptionLabel\\\"]\",\"desc\":\"UOM descrption text1\"}
+NFKios.signup.page.UOM.select.text1 = {\"locator\":\"xpath=//*[@name=\\\"ChooseUOMViewController.exampleDescriptionLabel\\\"]\",\"desc\":\"UOM descrption text2\"}
+NFKios.signup.page.UOM.select.mgdl.button.text = {\"locator\":\"xpath=//*[@name=\\\"ChooseUOMViewController.mgdlExampleLabel\\\"]\",\"desc\":\"UOM mgdl title\"}
+NFKios.signup.page.UOM.select.mgdl.button = {\"locator\":\"xpath=//*[@name=\\\"ChooseUOMViewController.mgdlButton\\\"]\",\"desc\":\"UOM mgdl button\"}
+NFKios.signup.page.UOM.select.mmol.button.text = {\"locator\":\"xpath=//*[@name=\\\"ChooseUOMViewController.mmollExampleLabel\\\"]\",\"desc\":\"UOM mmol title\"}
+NFKios.signup.page.UOM.select.mmol.button = {\"locator\":\"xpath=//*[@name=\\\"ChooseUOMViewController.mmollButton\\\"]\",\"desc\":\"UOM mmol button\"}
+NFKios.signuppage.clinic.name= {\"locator\":\"xpath=//*[@name=\\\"ClinicInfoView.clinicNameLabel\\\"]\",\"desc\":\"Clinic Name on Signup page\"}
+NFKios.signuppage.clinic.phone= {\"locator\":\"xpath=//*[@name=\\\"ClinicInfoView.clinicPhoneLabel\\\"]\",\"desc\":\"Clinic Phoen field on Signup page\"}
+NFKios.signuppage.clinic.msg.txt= {\"locator\":\"xpath=//*[@name=\\\"ClinicInfoView.confirmationLabel\\\"]\",\"desc\":\"Text msg \"}
+NFKios.signuppage.clinic.cancel.btn= {\"locator\":\"xpath=//*[@name=\\\"ClinicInfoView.cancelButton\\\"]\",\"desc\":\"Cancel btn\"}
+NFKios.safteyonboarding.settings.btn= {\"locator\":\"xpath=//*[@name=\\\"AllowCriticalAlertsViewController.settingsButton\\\"]\",\"desc\":\"Allow Alert settings button\"}
+NFKios.settings.notification.btn= {\"locator\":\"xpath=//*[@label=\\\"Notifications, Banners, Sounds\\\"]\",\"desc\":\"Notification button\"}
+NFKios.settings.back.btn= {\"locator\":\"xpath=//*[@label=\\\"OneTouch\\\"]\",\"desc\":\"OneTouch Back button\"}
+NFKios.signuppage.update.notice.checkbox={\"locator\":\"xpath=//XCUIElementTypeWindow/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeButton[1]\",\"desc\":\"i icon title\"}
+NFKios.settings.backToApp.btn= {\"locator\":\"xpath=//*[@label=\\\"OneTouch 24/7 CGM\\\"]\",\"desc\":\"OneTouch Back button\"}
+NFKios.safteyonboarding.back.btn= {\"locator\":\"xpath=//*[@label=\\\"Back\\\"]\",\"desc\":\"safteyonboarding Back Button\"}
+NFKios.signupPage.safetyboard.UrgentLowNotification.txt={\"locator\":\"xpath=//*[@label=\\\"Urgent Low Notifications\\\"]\",\"desc\":\"Urgent Low Notifications Text\"}
+NFKios.signupPage.safetyboard.PairSensorScreen.txt={\"locator\":\"xpath=//*[@label=\\\"Start Sensor Session\\\"]\",\"desc\":\"Pair Sensor Screen Text\"}
+NFKios.signupPage.optin.customer.service.link = {\"locator\":\"xpath=//*[@name,'testt@test.com']\",\"desc\":\"customer service link on optin screen\"}
+NFKios.applysensor.title ={\"locator\":\"xpath=//*[@name=\\\"ApplySensorViewController.titleLabel\\\"]\",\"desc\":\"Apply sensor title\"}
+NFKios.applysensor.skip.btn ={\"locator\":\"xpath=//*[@name=\\\"Skip\\\"]\",\"desc\":\"Skip button on Apply sensor screen\"}
+NFKios.signupPage.error.icon={\"locator\":\"xpath=//*[@label=\\\"x fail red\\\"]\",\"desc\":\"X Icon \"}
+NFKios.signupPage.error.msg.password={\"locator\":\"xpath=//*[@label=\\\"Passwords must be between 8�16 characters, contain at least 1 number and 1 letter, and cannot contain < > " = +\\\"]\",\"desc\":\"Password error msg \"}
+NFKios.signupPage.error.msg.comfirm.password={\"locator\":\"xpath=//*[@label=\\\"Passwords do not match.\\\"]\",\"desc\":\"Confirm Password error msg \"}
+NFKios.signupPage.errorLabel =  {\"locator\":\"xpath=//*[@name=\\\"InputFieldView.errorLabel\\\"]\",\"desc\":\"Error Message\"}
+NFKios.signupPage.age.restriction.popup.title={\"locator\":\"xpath=//*[@label=\\\"Age Restriction\\\"]\",\"desc\":\"Age Restriction\"}
+NFKios.signupPage.age.restriction.popup.close={\"locator\":\"xpath=//*[@label=\\\"Close\\\"]\",\"desc\":\"Age Restriction Close popup\"}
+NFKios.signupPage.age.restriction.popup.ok={\"locator\":\"xpath=//*[@label=\\\"OK\\\"]\",\"desc\":\"Age Restriction OK popup\"}
+NFKios.signupPage.emancipation.email={\"locator\":\"xpath=//*[@name=\\\"UserEmancipationViewController.emailField\\\"]\",\"desc\":\"Email adress Text box\"}
+NFKios.signupPage.emancipation.confirmEmail={\"locator\":\"xpath=//*[@name=\\\"UserEmancipationViewController.confirmEmailField\\\"]\",\"desc\":\"Email adress Text box\"}
+NFKios.signupPage.emancipation.password={\"locator\":\"xpath=//*[@name=\\\"UserEmancipationViewController.passwordField\\\"]\",\"desc\":\"Email adress Text box\"}
+NFKios.signupPage.emancipation.confirmPassword={\"locator\":\"xpath=//*[@name=\\\"UserEmancipationViewController.confirmPasswordField\\\"]\",\"desc\":\"Email adress Text box\"}
+NFKios.signupPage.emancipation.termsAndPrivacy={\"locator\":\"xpath=//*[@name=\\\"UserEmancipationViewController.termsAndPrivacyButton\\\"]\",\"desc\":\"Email adress Text box\"}
+NFKios.signupPage.emancipation.marketingAgreement={\"locator\":\"xpath=//*[@name=\\\"UserEmancipationViewController.marketingAgreementButton\\\"]\",\"desc\":\"Email adress Text box\"}
+NFKios.signupPage.emancipation.continue={\"locator\":\"xpath=//*[@name=\\\"UserEmancipationViewController.continueButton\\\"]\",\"desc\":\" Emancipation Continue button\"}
+NFKios.signupPage.dependentprofile.title={\"locator\":\"xpath=//*[@name=\\\"SignUpDependentProfileViewController.headingLabel\\\"]\",\"desc\":\"Title of Dependent Profile screen\"}
+NFKios.signupPage.logo={\"locator\":\"xpath=//*[@name=\\\"SignUpDependentViewController.logoImageView\\\"]\",\"desc\":\" Logo\"}
+NFKios.signuppage.dependent.emailLabel= {\"locator\":\"xpath=//*[@name=\\\"SignUpDependentViewController.emailWarningFormTitleLabel\\\"]\",\"desc\":\"Email label on Signup dependent page\"}
+NFKios.signupPage.notification.bluetooth.popup.setting = {\"locator\":\"xpath=//*[@label=\\\"Settings\\\"]\",\"desc\":\"Blutooth popup setting\"}
+NFKios.signupPage.notification.bluetooth.popup.close = {\"locator\":\"xpath=//*[@label=\\\"Close\\\"]\",\"desc\":\"Blutooth popup setting\"}
+NFKios.signupPage.notification.notallow.popup = {\"locator\":\"xpath=//*[@label=\\\"Don\’t Allow\\\"]\",\"desc\":\"Blutooth Not allow on notification popup\"}
+NFKios.signupPage.notification.bluetooth.popup.cancel = {\"locator\":\"xpath=//*[@label=\\\"Cancel\\\"]\",\"desc\":\"Blutooth popup setting Cancel\"}
+
+
+NFKios.signupPage.oneTouch.logo= {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingTutorialViewController.logoImageView\\\"]\",\"desc\":\"Alert Notification screen OK button\"}
+NFKios.safetyonboarding.back.btn= {\"locator\":\"xpath=//*[@label=\\\"Back\\\"]\",\"desc\":\"safteyonboarding Back Button\"}
+NFKios.safetyonboarding.next.btn = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingTutorialViewController.nextButton\\\"]\",\"desc\":\"Next Button\"}
+NFKios.signuppage.addclinic.cancel.btn = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingTutorialViewController.backButton\\\"]\",\"desc\":\"Back Button\"}
+NFKios.safetyonboarding.bloodmeter.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingTrustHowYouFeelPageView.imageView\\\"]\",\"desc\":\"Blood measure on meter image\"}
+NFKios.safetyonboarding.TrustHowYouFeel.checkbox = {\"locator\":\"xpath=//*[contains(@name,'SafetyOnboardingTrustHowYouFeelPageView.checkboxButton')]|//*[@label='I Understand']\",\"desc\":\"Safety onboarding TrustHowYouFeel Checkbox\"}
+NFKios.safetyonboarding.secondscreen.text = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingTrustHowYouFeelPageView.descriptionLabel\\\"]\",\"desc\":\"second screen text\"}
+NFKios.safetyonboarding.areaOfCaution.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingAreasOfCautionPageView.imageView\\\"]\",\"desc\":\"Area of caution image\"}
+NFKios.safetyonboarding.SupportedUOM.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingTargetGlucoseRangePageView.imageView\\\"]\",\"desc\":\"SupportedUOM image\"}
+NFKios.safetyonboarding.currentReading.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingTreatmentDecisionsPageView.imageView\\\"]\",\"desc\":\"currentReading image\"}
+NFKios.safetyonboarding.trendArrowRisingQuickly.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingGlucoseTrendArrowPageView.risingQuicklyContentView\\\"]\",\"desc\":\"trendArrowRisingQuickly image\"}
+NFKios.safetyonboarding.trendArrowRising.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingGlucoseTrendArrowPageView.risingContentView\\\"]\",\"desc\":\"trendArrowRising image\"}
+NFKios.safetyonboarding.trendArrowRisingSlowly.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingGlucoseTrendArrowPageView.risingSlowlyContentView\\\"]\",\"desc\":\"trendArrowRisingSlowly image\"}
+NFKios.safetyonboarding.trendArrowSteady.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingGlucoseTrendArrowPageView.steadyContentView\\\"]\",\"desc\":\"trendArrowSteady image\"}
+NFKios.safetyonboarding.trendArrowFallingSlowly.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingGlucoseTrendArrowPageView.fallingSlowlyContentView\\\"]\",\"desc\":\"trendArrowFallingSlowly image\"}
+NFKios.safetyonboarding.trendArrowFalling.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingGlucoseTrendArrowPageView.fallingContentView\\\"]\",\"desc\":\"trendArrowFalling image\"}
+NFKios.safetyonboarding.trendArrowFallingQuickly.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingGlucoseTrendArrowPageView.fallingQuicklyContentView\\\"]\",\"desc\":\"trendArrowFallingQuickly image\"}
+NFKios.safetyonboarding.highReading.image = {\"locator\":\"xpath=//*[@name=\\\"trend_arrow_rising\\\"]\",\"desc\":\"highReading image\"}
+NFKios.safetyonboarding.inRangeReading.image = {\"locator\":\"xpath=//*[@name=\\\"trend_arrow_steady\\\"]\",\"desc\":\"inRangeReading image\"}
+NFKios.safetyonboarding.lowReading.image = {\"locator\":\"xpath=//*[@name=\\\"trend_arrow_slowlyFalling\\\"]\",\"desc\":\"lowReading image\"}
+NFKios.safetyonboarding.lowimageview.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingAlertNotificationsPageView.lowImageView\\\"]\",\"desc\":\"lowimageview image\"}
+NFKios.safetyonboarding.highimageview.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingAlertNotificationsPageView.highImageView\\\"]\",\"desc\":\"highimageview image\"}
+NFKios.safetyonboarding.alertNotificationScreen.text1 = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingAlertNotificationsViewController.descriptionContentView\\\"]\",\"desc\":\"alertNotificationScreen text\"}
+NFKios.safetyonboarding.alertNotificationScreen.text2 = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingAlertNotificationsViewController.bannerView\\\"]\",\"desc\":\"alertNotificationScreen text2\"}
+NFKios.safetyonboarding.ok.btn = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingAlertNotificationsViewController.okButton\\\"]\",\"desc\":\"ok Button\"}
+NFKios.safetyonboarding.alert.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingGlucoseTrendArrowPageView.fallingQuicklyContentView\\\"]\",\"desc\":\"alert image\"}
+NFKios.safetyonboarding.smartphone.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingSetYourAlertThresholdsPageView.imageView\\\"]\",\"desc\":\"smartphone image\"}
+NFKios.safetyonboarding.moreMenuAlert.label = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingSetYourAlertThresholdsPageView.myAlertsLabel\\\"]\",\"desc\":\"moreMenuAlert label\"}
+NFKios.safetyonboarding.urgentLowGlucoseAlert.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingUrgentAlarmsPageView.glucoseWillBeLowerImageView\\\"]\",\"desc\":\"urgentLowGlucoseAlert image\"}
+NFKios.safetyonboarding.urgentLowGlucoseAlarm.image = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingUrgentAlarmsPageView.glucoseIsLowerImageView\\\"]\",\"desc\":\"urgentLowGlucoseAlarm image\"}
+NFKios.safetyonboarding.setting.btn = {\"locator\":\"xpath=//*[@name=\\\"AllowCriticalAlertsViewController.settingsButton\\\"]\",\"desc\":\"setting Button\"}
+NFKios.safetyonboarding.popup.text1 = {\"locator\":\"xpath=//*[@name=\\\" OneTouch 24/7 CGM  Would Like to Send You Notifications\\\"]\",\"desc\":\"popup text1\"}
+NFKios.safetyonboarding.popup.text2 = {\"locator\":\"xpath=//*[@name=\\\"Notifications may include alerts, sounds, and icon badges. These can be configured in Settings.\\\"]\",\"desc\":\"popup text2\"}
+NFKios.safetyonboarding.popup.allow.btn = {\"locator\":\"xpath=//*[@name=\\\"Allow\\\"]\",\"desc\":\"popup allow Button\"}
+NFKios.safetyonboarding.popup.DontAllow.btn = {\"locator\":\"xpath=//*[@label=\\\"Don\’t Allow\\\"]\",\"desc\":\" Don't allow on notification popup\"}
+NFKios.safetyonboarding.AreasOfCaution.checkbox = {\"locator\":\"xpath=//*[contains(@name,'SafetyOnboardingAreasOfCautionPageView.checkboxButton')]|//*[@label='I Understand']\",\"desc\":\"Safety onboarding AreasOfCaution Checkbox\"}
+NFKios.safetyonboarding.TreatmentDecisions.checkbox = {\"locator\":\"xpath=//*[contains(@name,'SafetyOnboardingTreatmentDecisionsPageView.checkboxButton')]|//*[@label='I Understand']\",\"desc\":\"Safety onboarding TreatmentDecisions Checkbox\"}
+NFKios.safetyonboarding.AlertNotificationsPageView.checkbox = {\"locator\":\"xpath=//*[contains(@name,'SafetyOnboardingAlertNotificationsPageView.checkboxButton')]|//*[@label='I Understand']\",\"desc\":\"Safety onboarding AlertNotifications Checkbox\"}
+NFKios.safetyonboarding.Applysensor.skip.btn = {\"locator\":\"xpath=//*[@name=\\\"Skip\\\"]\",\"desc\":\"skip Button\"}
+NFKios.safetyonboarding.firstscreen.text1 = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingWelcomePageView.descriptionLabel\\\"]\",\"desc\":\"first screen text1\"}
+NFKios.safetyonboarding.firstscreen.text2 = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingWelcomePageView.warmupLabel\\\"]\",\"desc\":\"first screen text2\"}
+NFKios.safetyonboarding.thirdscreen.text1 = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingAreasOfCautionPageView.turnOffAutomaticUpdatesLabel\\\"]\",\"desc\":\"third screen text1\"}
+NFKios.safetyonboarding.thirdscreen.text2 = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingAreasOfCautionPageView.descriptionLabel\\\"]\",\"desc\":\"third screen text2\"}
+NFKios.safetyonboarding.seventhScreen.title = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingCurrentGlucoseReadingPageView.titleLabel\\\"]\",\"desc\":\"seventhScreen title\"}
+NFKios.safetyonboarding.seventhScreen.text = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingCurrentGlucoseReadingPageView.descriptionLabel\\\"]\",\"desc\":\"seventhScreen text\"}
+NFKios.safetyonboarding.eightscreen.text1 = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingAlertNotificationsPageView.descriptionLabel\\\"]\",\"desc\":\"eight screen text1\"}
+NFKios.safetyonboarding.eightscreen.text2 = {\"locator\":\"xpath=//*[@name=\\\"SafetyOnboardingAlertNotificationsPageView.alertLabel\\\"]\",\"desc\":\"eight screen text2\"}
+NFKios.signupPage.sensorpage.nextbtn =  {\"locator\":\"xpath=//*[@value=\\\"Next\\\"]\",\"desc\":\"Next button\"}
+NFKios.signupPage.option.cancel.btn={\"locator\":\"xpath=//*[@name=\\\"WebContentViewController.cancelButton\\\"]\",\"desc\":\"optin cancel btn\"}
+NFKios.signuppage.optin.check.box={\"locator\":\"xpath=//*[@name=\\\"SignUpAdultViewController.optInPromotionsButton\\\"]\",\"desc\":\"optin check box\"}
+NFKios.signuppage.optin.Iagree.btn={\"locator\":\"xpath=//*[@name=\\\"WebContentViewController.agreeButton\\\"]\",\"desc\":\"optin agree btn\"}
+NFKios.signuppage.optin.title={\"locator\":\"xpath=//*[@name=\\\"Opt In\\\"]\",\"desc\":\"Title of optin screen\"}
+
+NFKios.signuppage.dobcancel.btn={\"locator\":\"xpath=//*[@name=\\\"Cancel\\\"]\",\"desc\":\"dobcancel btn\"}
+NFKios.signupPage.greenLink.btn={\"locator\":\"xpath=//*[@name=\\\"SignUpAdultViewController.optInPromotionsLabel\\\"]\",\"desc\":\"greenLink btn\"}
+NFKios.signupPage.greenLinkText.btn={\"locator\":\"xpath=//*[@name=\\\"WebContentViewController.webView\\\"]\",\"desc\":\"greenLinkText btn\"}
+NFKios.signupPage.privacy.lnk={\"locator\":\"xpath=//*[@type=\\\"XCUIElementTypeLink\\\"]\",\"desc\":\"privacy lnk\"}
+NFKios.signupPage.privacyPolicy.txt={\"locator\":\"xpath=//*[@name=\\\"WebContentViewController.webView\\\"]\",\"desc\":\"privacyPolicy txt\"}
+NFKios.signupPage.clinicCode.btn={\"locator\":\"xpath=//*[@name=\\\"ClinicInfoView.clinicCodeField\\\"]\",\"desc\":\"clinicCode btn\"}
+NFKios.signupPage.clinicCode.txt={\"locator\":\"xpath=//*[@name=\\\"Trident Training Clinic\\\"]\",\"desc\":\"clinicCode txt\"}
+NFKios.signupPage.checkBox.btn={\"locator\":\"xpath=//*[@name=\\\"checkbox unchecked\\\"]\",\"desc\":\"checkBox btn\"}
+NFKios.signupPage.send.btn={\"locator\":\"xpath=//*[@name=\\\"AddClinicViewController.searchButton\\\"]\",\"desc\":\"send btn\"}
+
+
+NFKios.signupPage.applySensor.btn={\"locator\":\"xpath=//*[@name=\\\"How to apply the sensor\\\"]\",\"desc\":\"applySensor btn\"}
+NFKios.signupPage.sensorWear.btn={\"locator\":\"xpath=//*[contains(@name,'HowToApplySensorViewController.helpfulTipsLabel')]\",\"desc\":\"sensorWear btn\"}
+NFKios.signupPage.helpfulTips.btn={\"locator\":\"xpath=//*[contains(@name,'See Helpful Tips')]\",\"desc\":\"helpfulTips btn\"}
+NFKios.signupPage.backUpperArm.btn={\"locator\":\"xpath=//*[contains(@name,'Choose an application site on the abdomen or back of the upper arm')]\",\"desc\":\"backUpperArm btn\"}
+NFKios.signupPage.washAndDryHand.btn={\"locator\":\"xpath=//*[contains(@name,'Wash and dry hands. For abdomen, choose an application site where you have some fatty tissue (padding). Thoroughly clean site with soap and water. Disinfect site with alcohol prep pad. Air dry completely')]\",\"desc\":\"washAndDryHand btn\"}
+NFKios.signupPage.removePaperBacking.btn={\"locator\":\"xpath=//*[contains(@name,'Remove applicator from packaging. Remove paper backings from sensor adhesive patch. Do Not touch sensor adhesive.')]\",\"desc\":\"removePaperBacking btn\"}
+NFKios.signupPage.removeApplicator.btn={\"locator\":\"xpath=//*[contains(@label,'Remove applicator from packaging. Remove paper backings from sensor adhesive patch. Do Not touch sensor adhesive')]\",\"desc\":\"removeApplicator btn\"}
+NFKios.signupPage.adhesivePatch.btn={\"locator\":\"xpath=//*[contains(@name,'Press down on sensor and adhesive patch to make sure they are secure')]\",\"desc\":\"adhesivePatch btn\"}
+NFKios.safetyOnBoarding.back.btn={\"locator\":\"xpath=//*[@label=\\\"Back\\\"]\",\"desc\":\"safetyOnBoarding Back Button\"}
+NFKios.signupPage.rightAbdomenButton.btn={\"locator\":\"xpath=//*[contains(@name,'ApplySensorViewController.rightAbdomenButton')]\",\"desc\":\"rightAbdomenButton btn\"}
+NFKios.signupPage.leftAbdomenButton.btn={\"locator\":\"xpath=//*[contains(@name,'ApplySensorViewController.leftAbdomenButton')]\",\"desc\":\"leftAbdomenButton btn\"}
+NFKios.signupPage.leftArmButton.btn={\"locator\":\"xpath=//*[contains(@name,'ApplySensorViewController.leftArmButton')]\",\"desc\":\"leftArmButton btn\"}
+NFKios.signupPage.rightArmButton.btn={\"locator\":\"xpath=//*[contains(@name,'ApplySensorViewController.rightArmButton')]\",\"desc\":\"rightArmButton btn\"}
+NFKios.signupPage.safetyOnBoardingLastScreen.btn={\"locator\":\"xpath=//*[contains(@name,'SafetyOnboardingUrgentAlarmsPageView.titleLabel')]\",\"desc\":\"safetyOnBoardingLastScreen btn\"}
+NFKios.signupPage.next.btn={\"locator\":\"xpath=//*[contains(@name,'Next')]\",\"desc\":\"next btn\"}
+NFKios.signupPage.startPairSensor.btn={\"locator\":\"xpath=//*[contains(@name,'StartPairingSensorViewController.titleLabel')]\",\"desc\":\"startPairSensor btn\"}
+NFKios.signupPage.pairSensor.btn={\"locator\":\"xpath=//*[contains(@label,'Pair')]\",\"desc\":\"pairSensor btn\"}
+NFKios.signupPage.sensorWearText.btn={\"locator\":\"xpath=//*[contains(@name,'HowToApplySensorViewController.helpfulTipsLabel')]\",\"desc\":\"sensorWearText btn\"}
+NFKios.signupPage.helpfulTipsText.btn={\"locator\":\"xpath=//*[contains(@name,'Shave area, if necessary')]\",\"desc\":\"helpfulTipsText btn\"}
+NFKios.signupPage.helpfulTipsCross.btn={\"locator\":\"xpath=//*[contains(@name,'xInCircleGray')]\",\"desc\":\"helpfulTipsCross btn\"}
+NFKios.signupPage.pairSensorCancel.btn={\"locator\":\"xpath=//*[contains(@label,'Cancel')]\",\"desc\":\"pairSensorCancel btn\"}
+NFKios.applySensor.title={\"locator\":\"xpath=//*[@name=\\\"ApplySensorViewController.titleLabel\\\"]\",\"desc\":\"applySensor title\"}
+NFKios.signuppage.approveLocation.txt={\"locator\":\"xpath=//*[contains(@name,'ApplySensorViewController.descriptionLabel')]\",\"desc\":\"approveLocation txt\"}
+NFKios.signupPage.applyLink.btn={\"locator\":\"xpath=//*[@name=\\\"How to apply the sensor\\\"]\",\"desc\":\"applyLink btn\"}
+NFKios.signupPage.cleanDisinfect.txt={\"locator\":\"xpath=//*[contains(@label,'Clean, disinfect, and let application site air dry. Remove paper backings from the sensor adhesive patch. Press firmly on top of applicator to apply.')]\",\"desc\":\"cleanDisinfect txt\"}
+NFKios.signupPage.cancel.btn={\"locator\":\"xpath=//*[contains(@label,'Cancel')]\",\"desc\":\"cancel btn\"}
+
+NFKios.signupPage.healthcareInstructions.btn={\"locator\":\"xpath=//*[contains(@label,'Consult your healthcare professional for sensor application instructions.')]\",\"desc\":\"healthcareInstructions btn\"}
+NFKios.signupPage.done.btn={\"locator\":\"xpath=//*[contains(@label,'Done')]\",\"desc\":\"done btn\"}
+NFKios.signuppage.pairSensor.btn={\"locator\":\"xpath=//*[@label=\\\"Pair Sensor\\\"]\",\"desc\":\"PairSensor btn\"}
+NFKios.signuppage.applySensor.txt={\"locator\":\"xpath=//*[@label=\\\"Apply Sensor\\\"]\",\"desc\":\"applySensor txt\"}
+NFKios.signuppage.footerLabel.txt={\"locator\":\"xpath=//*[@label=\\\"Clean, disinfect, and let application site air dry. Remove paper backings from the sensor adhesive patch. Press firmly on top of applicator to apply.\\\"]\",\"desc\":\"footerLabel txt\"}
+NFKios.signuppage.sensorApplication.txt={\"locator\":\"xpath=//*[@label=\\\"Sensor Application\\\"]\",\"desc\":\"sensorApplication txt\"}
+NFKios.signuppage.unpairSensor.txt={\"locator\":\"xpath=//*[contains(@label,'Unpair Sensor')]\",\"desc\":\"unpairSensor txt\"}
+NFKios.safetyOnBoarding.cancel.btn={\"locator\":\"xpath=//*[@label=\\\"Cancel\\\"]\",\"desc\":\"unpairSensor txt\"}
+NFKios.safetyOnBoarding.stopSensor.btn={\"locator\":\"xpath=//*[@label=\\\"Stop Sensor\\\"]\",\"desc\":\"stopSensor txt\"}
+NFKios.safetyOnBoarding.2to5YearsPageSkip.btn={\"locator\":\"xpath=//*[contains(@label,'Skip')]\",\"desc\":\"2to5YearsPageSkip btn\"}
+NFKios.safetyOnBoarding.sensorApplication.howToApply.lnk={\"locator\":\"xpath=//*[contains(@label,'How to apply the sensor')]\",\"desc\":\"done btn\"}
+NFKios.signuppage.importantPopup.txt={\"locator\":\"xpath=//*[@label=\\\"Important\\\"]\",\"desc\":\"importantPopup txt\"}

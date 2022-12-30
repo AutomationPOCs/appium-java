@@ -1,0 +1,717 @@
+SCENARIO: The user should be able to create a new dependent account in the application. 
+META-DATA: {"description": "The user should be able to create a new guardian account in the application","author":"Taslim","testCaseId":"","groups":["NFKjob3"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP DEPENDENT' Page 
+When Guardian enters signup details using 'signupuser.guardian'   
+And user clicks on continue button 
+Then Guardian selects dependent gender as 'MALE' and diabetes type as 'TYPE 1'
+And Guardian enters dependent details and 'dependent.dob'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+Then user gets redirected to Home page  
+And user closes the app
+END
+
+SCENARIO: The user should be able to login using dependent account and verifies the login screen
+META-DATA: {"description": "The user should be able to login using dependent account and verifies the login screen","author":"Taslim","testCaseId":"","groups":["NFKjob3"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'LOG-IN DEPENDENT' Page
+When user enters valid login dependent details using 'Login.Dependent' 
+And user clicks on login button
+And user completes Safety Onboarding and skips Sensor pair
+Then user gets redirected to Home page  
+And user closes the app
+END
+
+
+SCENARIO: The user should be able to edit the Account details of dependent account 
+META-DATA: {"description": "The user should be able to edit the Account details of dependent account","author":"Taslim","testCaseId":"","groups":["NFKjob3"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP DEPENDENT' Page 
+When Guardian enters signup details using 'signupuser.guardian'   
+And user clicks on continue button 
+Then Guardian selects dependent gender as 'MALE' and diabetes type as 'TYPE 1'
+And Guardian enters dependent details and 'dependent.dob'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+And user clicks on more menu
+And user clicks on Account
+And user clicks edit profile button 
+When user edits the dependents profile details using 'signupdependent'
+And user clicks on save button
+When user enters password and clicks on login
+Then user verifies dependents edited 'signupdependent' details
+And user closes the app
+END
+
+
+SCENARIO: User verifies the Error pop-up on Login Own and Login Dependent page with inverse data
+META-DATA: {"description": "User verifies the Error pop-up on Login Own and Login Dependent page with inverse data","author":"Taslim","testCaseId":"","groups":["NFKjob3"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'LOG-IN OWN' Page
+When user enters valid login dependent details using 'Login.Dependent'
+Then user handles error pop-up 
+And user taps on Back button
+Then user gets redirected to 'LOG-IN DEPENDENT' Page
+And user enters login details using 'Login.UserDetail'
+Then user handles error pop-up
+And user closes the app
+END
+
+SCENARIO: To verify Pair and Apply sensor screen for peds user age less than five years
+META-DATA: {"description": "User verifies Pair and Apply sensor screen for peds user age less than five years","author":"Taslim","testCaseId":"","groups":["NFKjob3"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP DEPENDENT' Page
+When Guardian enters signup details using 'signupuser.guardian'
+And user clicks on continue button
+Then Guardian selects dependent gender as 'MALE' and diabetes type as 'TYPE 1'
+And Guardian enters dependent detail for two to five year old 
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+And user clicks on more menu
+And user clicks on My Devices
+When user redirects to My Devices screen and clicks on Start sensor session
+And user redirects to Apply sensor screen for two to five year old kid and clicks on How to apply sensor link
+And user selects 'LEFTBUTTOCK' location of body to apply sensor
+And user closes the app
+END
+
+
+
+SCENARIO: To verify Pair and Apply sensor screen for peds user age Six to Seventeen year
+META-DATA: {"description": "User verifies Pair and Apply sensor screen for peds user age Six to Seventeen year","author":"Taslim","testCaseId":"","groups":["NFKjob3"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP DEPENDENT' Page
+When Guardian enters signup details using 'signupuser.guardian'
+And user clicks on continue button
+Then Guardian selects dependent gender as 'MALE' and diabetes type as 'TYPE 1'
+And Guardian enters dependent detail for six to seventeen year old
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+And user clicks on more menu
+And user clicks on My Devices
+When user redirects to My Devices screen and clicks on Start sensor session
+And user redirects to Apply sensor screen and clicks on How to apply sensor link
+And user selects 'RIGHTARM' location of body to apply sensor
+And user closes the app
+END
+
+
+SCENARIO: Delete and Event from Event log screen using swipe left
+META-DATA: {"description": "Delete and Event from Event log screen using swipe left","author":"Roshani Guthe","testCaseId":"","groups":["NFKjob3"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+And user adds 'Activity' and 'Insulin' 'Carbs' event
+And user saves multiple events
+Then user verifies added event on Event Log
+And user delete the events using swipe
+Then user verifies No event on Event Log
+END
+
+SCENARIO: To verify First Time Use for HCP-created Patients
+META-DATA: {"description":" First Time Use for HCP-created Patients","author":"","testCaseId":"","groups":["NFKjob3"]}
+Given user resets app
+ And user opens app
+ When user selects country '${country.name}' from country list
+ And user gets redirected to 'LOG-IN OWN' Page
+ Then user enters login details using 'Login.hcppatient'
+ And user clicks on login button for gestationaluser
+ And user verifies reset password screen with prepopulated data
+ And user able to edit prepopulated data fields
+ And user not update dateofbirth field and redirects to reset password screen
+ And user closes the app
+END
+
+SCENARIO: User verify existing Gestational OTR patient display Gestational after login with RT App
+META-DATA: {"description":"To verify user has an existing OTR profile that indicates that the patient has Gestational Diabetes, the app shall display Gestational after Login","author":"Roshani Guthe","testCaseId":"","groups":["NFKjob3"]}
+Given user resets app
+ And user opens app
+ When user selects country '${country.name}' from country list
+ And user gets redirected to 'LOG-IN OWN' Page
+ Then user enters login details using 'Login.OTRuser'
+ And user clicks on login button
+ Then user verifies gestational screen 
+ And user verifies continue button gets enabled when selects diabetes type as 'TYPE 1'
+ And user clicks on cancel setup button 
+ And user closes the app
+END
+
+SCENARIO: To Verfiy if Bluetooth is currently turned off, a pop-up shall be displayed directing the user to turn Bluetooth On
+META-DATA: {"description":"To Verfiy if Bluetooth is currently turned off, a pop-up shall be displayed directing the user to turn Bluetooth On","author":"","testCaseId":"","groups":["NFKjob3"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+And user gets redirected to 'LOG-IN OWN' Page
+And user enters login details using 'Login.profileUSer'
+And user clicks on login button
+Then bluetooth is turned off
+And user completes Safety Onboarding and skips Sensor pair
+And user start sensor pairing
+And user allow location permission
+Then user verify that bluetooth popup displayed
+ And user closes the app
+END
+
+SCENARIO: User verify hcp created Gestational type patient age of 2 to 17 year display Gestational after login with RT App
+META-DATA: {"description":"User verify hcp created Gestational type patient age of 2 to 17 year display Gestational after login with RT App","author":"Roshani Guthe","testCaseId":"","groups":["NFKjob3"]}
+Given user resets app
+ And user opens app
+ When user selects country '${country.name}' from country list
+ Then user gets redirected to 'LOG-IN DEPENDENT' Page
+ When user enters valid login dependent details using 'Login.Gardianuser2to17yearage'
+ And user clicks on login button
+ Then user verifies gestational screen 
+ And user verifies continue button gets enabled when selects diabetes type as 'TYPE 1'
+ And user clicks on cancel setup button 
+ And user taps on Back button
+ And user closes the app
+END
+
+SCENARIO: User verifies AGP report Section under My Progress
+META-DATA: {"description": "User verifies AGP report Section under My Progress","author":"Talsim","testCaseId":"","groups":["NFKjob3"]}
+Given user resets app
+And user opens app 
+When user selects country '${country.name}' from country list 
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.averageuser'
+And user clicks on continue button 
+And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+Then user clicks on signup button 
+When user requests the cgmreading for AGP report
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+And user gets redirected to 'LOG-IN OWN' Page
+Then user enters newly created details to Login 
+And user clicks on login button
+And user completes Safety Onboarding and skips Sensor pair
+And user clicks on My Progress
+Then user verifies Ambulatory Glucose Profile section on My Progress screen
+And user closes the app
+END
+
+SCENARIO: Low Events on Progress screen
+META-DATA: {"description": "user verifies the Low Events on Progress screen","author":"Talsim","testCaseId":"","groups":["NFKjob3"]}
+Given user resets app
+And user opens app 
+When user selects country '${country.name}' from country list 
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.averageuser'
+And user clicks on continue button 
+And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+Then user clicks on signup button 
+When user requests the low cgmreading 
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+And user gets redirected to 'LOG-IN OWN' Page
+Then user enters newly created details to Login 
+And user clicks on login button
+And user completes Safety Onboarding and skips Sensor pair
+Then user verifies the Low Glucose Events on My Progress screen
+And user closes the app
+END
+
+SCENARIO: Verify Opt-in checkbox selection and de-selection on My Account screen
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15344", "description":"Verify Opt-in checkbox selection and de-selection on My Account screen", "groups":["NFKjob3"], "Module":" ","author":["Roshani"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+When user clicks on more menu
+And user clicks on Account
+And user selects checkbox of optin
+Then user verify optin screen
+And user clicks on cancel and again select checkbox of optin
+And user clicks on agree and verify optin check box selected
+And user de-select optin checkbox
+And user selects checkbox of optin and clicks on cancel
+And user closes the app
+END
+
+SCENARIO: Verify user's session is not expired when app is killed from background.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15341", "description":"Verify user's session is not expired when app is killed from background.", "groups":["NFKjob3"], "Module":" ","author":["Roshani"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+And user gets redirected to Home page
+And user closes the app
+And user opens app
+And user verify gets redirected to Home page
+And user closes the app
+END
+
+SCENARIO: Verify app doesn't display country field on edit account screen
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15342", "description":"Verify app doesn't display country field on edit account screen", "groups":["NFKjob3"], "Module":" ","author":["Roshani"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+When user clicks on more menu
+And user clicks on Account
+And user clicks edit profile button
+And user verify app doesnt display country field on edit screen
+And user closes the app
+END
+
+SCENARIO: Verify Help menu
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15533", "description":"Verify Help menu", "groups":["CGM"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets app
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	When user clicks on more menu
+	And user clicks on Help option
+	Then user verify help page options
+	Then user verify the Saftey Onboarding screens
+	Then user verifies the App tour screens
+	Then user verifies the Sensor Application screen
+	Then user validate the various options of Sensor application
+	Then user click back button
+	Then user verifies the App User Guide
+	Then user click back button
+	Then user verifies the About screen
+	Then user click back button
+	Then user verify the License screens
+	Then user click back button
+	And user closes the app
+END
+
+SCENARIO: Verify Opt-in checkbox selection and deselection
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15333", "description":"Verify Opt-in checkbox selection and deselection.", "groups":["NFKjob3"], "Module":" ","author":["Roshani"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user select optin checkbox
+And user taps on cancel button and verify optin checkbox deselected
+And user again select optin checkbox and click on I agree button
+And user verify signup first screen with optin checkbox selected 
+And user deselect optin checkbox
+And user closes the app
+END
+
+SCENARIO: Verify user can access all four menus of the application.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15338", "description":"Verify user can access all four menus of the application.", "groups":["NFKjob3","CGM"], "Module":"Sensor Pairing","author":["Vaibhav"]}
+	Given user resets app
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enters login details using 'Login.Sensor_UserDetail6'
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user clicks on eventlog tab
+	And user clicks on My Progress
+	And user clicks on more menu
+	And user clicks on Home tab
+	And user closes the app
+END
+
+SCENARIO: Verify region-native set country is displayed at top of the country list
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15297", "description":"Verify region-native set country is displayed at top of the country list.", "groups":["NFKjob3"], "Module":" ","author":["Roshani"]}
+Given user resets app
+And user opens app
+And user verifies by default country region
+When user selects a country '${uomcg_country.name}' from country list
+And user display selected '${uomcg_country.name}' country at top with green mark
+And user closes the app
+END
+
+SCENARIO: Verification of Invited status on Share screen.
+META-DATA: {"testCaseId":"","manualTestCaseId":"TC-16995", "description":" Verification of Invited status on Share screen..", "groups":["CGM"], "Module":"Share screen","author":["Pradnya"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user selects opt-in as 'I Agree' in sign up page    
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair 
+When user clicks on more menu
+And user clicks on Share
+Then user clicks on Add followers feild and verify share your data screen
+ And user click on invite followers button of invite followers screen
+ Then user enter follower details 'signup.user1'
+Then user click on invited follower name
+Then user click on add follower button using 'signup.user1'
+ Then user click follower name
+ And user closes the app
+END
+ 
+SCENARIO: Verify user can continue to next screen after entering all signup details
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15298", "description":"Verify user can continue to next screen after entering all signup details", "groups":["CGM"], "Module":"Non-Sensor Pairing","author":["Shubham"]} 
+ Given user resets app
+ And user opens app 
+ When user selects country '${country.name}' from country list 
+ Then user gets redirected to 'SIGN-UP MYSELF' Page
+ And user clicks on the DOB field and verify the date 
+ And user clicks on the green hyperlink and verifies Opt-in screen
+ And user clicks on the back button and redirected to the signup screen
+ When user enters signup details using 'signup.user1'
+ And user clicks on continue button 
+ And user closes the app
+END
+
+SCENARIO: Verify Safety Onboarding	
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15573", "description":"Verify Safety Onboarding", "groups":["CGM"], "Module":" ","author":["Rushikesh"]}
+Given user resets app
+And user opens app 
+When user selects country '${country.name}' from country list 
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user clicks on continue button 
+Then user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+And user clicks on signup button and verifies safety onboarding screen-1
+And user clicks on next button and verifies safety onboarding screen-2
+And user clicks on I Understand checkbox and verifies safety onboarding screen-3
+And user clicks on I Understand checkbox and verifies safety onboarding screen-4
+And user clicks on next button and verifies safety onboarding screen-5
+And user clicks on I Understand checkbox and verifies safety onboarding screen-6
+And user clicks on I Understand checkbox and verifies safety onboarding screen-7
+And user clicks on next button and verifies safety onboarding screen-8
+And user clicks on I Understand checkbox and verifies safety onboarding screen-9
+And user clicks on next button and verifies safety onboarding screen-10
+And user clicks on next button and verifies safety onboarding screen-11
+And user clicks on setting button and allow DND permission
+And user clicks on back button and app should display pair sensor screen
+And user clicks skip button and redirected to home screen
+And user closes the app
+END
+
+SCENARIO: Verification of Device Connection
+META-DATA: {"description": "Verification of Device Connection","author":"Shubham","testCaseId":"TC-19580","groups":["CGM"]}
+	Given user resets app
+	When user opens the application
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.averageuser'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+	Then user clicks on signup button
+	And user requests the cgmreading for days
+	Given user resets app
+	When user opens the application
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	Then user enters newly created details to Login
+	And user clicks on login button
+	And user completes Safety Onboarding and skips Sensor pair
+	When Turn off internet
+	And user clicks on eventlog tab
+	And user clicks Add an Event
+	And user verifies the Events
+	And user clicks on X icon from add an event screen
+	Then user clicks on progress tab and verifies selected day
+	Then user selects 14 days
+	And user clicks on 'AGP Report' and verify app not load the AGP report
+	And user click on home icon
+	And user verify homepage
+	When user clicks on more menu
+	And user clicks on Settings
+	Then user gets redirected to setting Page
+	And user clicks on back button
+	And user clicks on Alerts
+	Then user verifies Alert screen
+	And user clicks on back button
+	Then user verify reminder screens
+	And user clicks on back button
+	And user clicks on My Devices
+	When user redirects to My Devices screen
+	And user clicks on back button
+	And user clicks on Account
+	Then user verifies Opt-in selection account page
+	And user clicks on back button
+	And user clicks on Help option
+	Then user verify help page options
+	And user clicks on back button
+	And user select Contact Us
+	Then user verify Contact Us page
+	And user clicks on back button
+	And user closes the app
+END
+
+SCENARIO: Verify user with adult and guardian account can log in to the application
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15531", "description":"Verify user with adult and guardian account can log in to the application", "groups":["CGM"], "Module":"Sensor Pairing","author":["Shubham"]}
+	Given user resets app
+	And user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	Then user enters login details using 'Login.dependentOTRuser1'
+	And user verify login button and error message
+	And user closes the app
+END
+
+SCENARIO: Apply Sensor screen and 'How to apply the sensor' link from home screen & My Device screen
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20861", "description":"Apply Sensor screen and 'How to apply the sensor' link from home screen & My Device screen", "groups":["CGM2"], "Module":"Sensor Pairing","author":[""]}
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When user enters signup details using 'signup.user1'
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user verify on the home screen how to apply the home screen
+	And user verify Instructions on How to apply the sensor screen
+	And user verify the apply sensor screen
+	And user back to apply sensor screen
+	Given user resets application
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP DEPENDENT' Page
+	When Guardian enters signup details using 'signupuser.guardian'
+	And user clicks on continue button
+	And Guardian enters dependent details and 'dependent.dob'
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user verify on the home screen how to apply the home screen
+	And user verify Instructions on How to apply the sensor screen
+	And user verify the apply sensor screen
+	And user back to apply sensor screen
+	And user closes the app
+END
+
+SCENARIO: Apply Sensor screen from safety Onboarding for 6-17 years old patient.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20862", "description":"Apply Sensor screen and 'How to apply the sensor' link from home screen & My Device screen", "groups":["CGM"], "Module":"Sensor Pairing","author":["Shubham"]}
+ Given user resets app
+ Given user resets app
+ And user opens app
+ When user selects country '${country.name}' from country list
+ Then user gets redirected to 'SIGN-UP DEPENDENT' Page 
+ When Guardian enters signup details using 'signupuser.guardian'   
+ And user clicks on continue button 
+ Then Guardian selects dependent gender as 'MALE' and diabetes type as 'TYPE 1'
+ And Guardian enters dependent details and 'dependent.dob'
+ Then user clicks on signup button
+ And user completes Safety Onboarding
+ And user verify on the home screen how to apply the home screen
+ And user verify Instructions on How to apply the sensor screen
+ And user verify right and left Abdomen
+ And user verify right and left upper arm
+ And user verify the Start Pairing Sensor screen
+ And user verify on the home screen how to apply the home screen
+ And user verify Instructions on How to apply the sensor screen
+ And user verify Instructions on the See Helpful Tips screen
+ And user clicks on the skip button and verify home screen
+ And user closes the app
+END
+
+SCENARIO: Apply Sensor screen from safety Onboarding for 6-17 years old patient
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-20860", "description":"Apply Sensor screen from safety Onboarding for 6-17 years old patient", "groups":["CGM"], "Module":"Sensor Pairing","author":["Shubham"]}
+	Given user resets app
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+    When user enters signup details using 'signup.user1'
+    And user clicks on continue button 
+    And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+    Then user clicks on signup button
+	And user completes Safety Onboarding
+	And user verify the apply sensor screen
+	And user verify right and left Abdomen
+ 	And user verify right and left upper arm
+	And user verify the Start Pairing Sensor screen  
+	And user closes the app
+END
+
+SCENARIO: Verify adult user can recover password through Forgot Password link
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15386", "description":"Verify adult user can recover password through Forgot Password link", "groups":["WEB"], "Module":"Non-Sensor Pairing","author":["Yogesh"]}
+	Given user resets app
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When User enters signup details using 'signup.user1' for adult account
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user resets app
+	And user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user click on forgot password link
+	And user enter required details and click on send button
+	And user launches the Chrome browser and 'adultUser' reset password
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enter email and password 'Login.adultNewPassword' on login page
+	And user click on login button and verify notice screen
+	And user closes the app
+END
+
+SCENARIO: Verfiy user can login into app after recovering password through Forgot Password link
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-16284", "description":"Verfiy user can login into app after recovering password through Forgot Password link", "groups":["WEB"], "Module":"Non-Sensor Pairing","author":["Yogesh"]}
+	Given user resets app
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When User enters signup details using 'signup.user1' for adult account
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user resets app
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP DEPENDENT' Page
+	And Guardian enters signup details using 'signupuser.guardian' for dependent account
+	And user clicks on continue button
+	Then Guardian selects dependent gender as 'MALE' and diabetes type as 'TYPE 1'
+	And Guardian enters dependent detail for six to seventeen year old
+	Then user clicks on signup button
+	And user resets app
+	And user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user click on forgot password link
+	And user enter required details and click on send button
+	And user launches the Chrome browser and 'adultUser' reset password
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enter email and password 'Login.adultNewPassword' on login page
+	And user click on login button and verify notice screen
+	And user resets app
+	And user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user enter email and password 'Login.adultNewPassword' on login page
+	And user click on login button and verify error message
+	And user clear the password field and enter password as 'Login.dependentPasswordOne'
+	And user click on login button and verify notice screen
+	And user resets app
+	And user opens app
+	When user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user click on forgot password link
+	And user enter required details and click on send button
+	And user launches the Chrome browser and 'dependentUser' reset password
+	When user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN DEPENDENT' Page
+	And user enter email and password 'Login.dependentNewPassword' on login page
+	And user click on login button and verify notice screen
+	And user resets app
+	And user opens app
+	Then user selects country '${country.name}' from country list
+	And user gets redirected to 'LOG-IN OWN' Page
+	And user enter email and password 'Login.dependentNewPassword' on login page
+	And user click on login button and verify error message
+	And user clear the password field and enter password as 'Login.adultNewPassword'
+	And user click on login button and verify notice screen
+	And user closes the app
+END
+	
+SCENARIO: Verify error popups when user taps on Delete Account button from account screen	
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-15467", "description":"Verify error popups when user taps on Delete Account button from account screen", "groups":["CGM"], "Module":"Non-Sensor","author":["Rushikesh"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+And user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 2'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair 
+When user clicks on more menu
+And user clicks on Account
+And user clicks on delete account
+And user verifies field validation on delete account screen using 'fieldValidations.deleteAccount'
+And user turned off wifi and verifies delete account screen using 'fieldValidations.deleteAccount'
+And user closes the app
+END
+
+SCENARIO: Verification of Reset Alert when Sensor is Not Paired	
+META-DATA: {"testCaseId":"","manualTestCaseId":"TC-17307", "description":"Verification of Reset Alert when Sensor is Not Paired", "groups":["CGM"], "Module":"Alert screen","author":["Rushikesh"]}
+Given user resets app
+And user opens app
+When user selects country '${country.name}' from country list
+Then user gets redirected to 'SIGN-UP MYSELF' Page
+When user enters signup details using 'signup.user1'
+And user clicks on continue button
+And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+Then user clicks on signup button
+And user completes Safety Onboarding and skips Sensor pair
+When user clicks on more menu
+And user clicks on Alerts
+And user update the alert setting and navigate to home screen
+And user navigate to alert screen and verify reset alert setting button
+And user clicks on reset setting button and verify confirmation screen
+And user clicks on cancel button and verify no changes are made on alert screen
+And user reset alert setting and verify app should reset all the alerts setting configuration
+And user closes the app
+END
+
+SCENARIO: Verfiy after dependent emancipation, user can create dependent account using emancipated users username.
+META-DATA: {"testCaseId":"", "manualTestCaseId":"TC-16702", "description":"Verfiy after dependent emancipation, user can create dependent account using emancipated users username.", "groups":["WEB01"], "Module":"Non-Sensor Pairing","author":["Yogesh"]}
+	Given user resets app
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP MYSELF' Page
+	When User enters signup details using 'signup.user1' for adult account
+	And user clicks on continue button
+	And user selects gender as 'MALE' and diabetes type as 'TYPE 1'
+	Then user clicks on signup button
+	And user completes Safety Onboarding and skips Sensor pair
+	And user resets app
+	And user opens app
+	When user selects country '${country.name}' from country list
+	Then user gets redirected to 'SIGN-UP DEPENDENT' Page
+	And Guardian enters signup details using 'signupuser.guardian' for dependent account
+	And user clicks on continue button
+	Then Guardian selects dependent gender as 'MALE' and diabetes type as 'TYPE 2'
+	And Guardian enters dependent detail for six to seventeen year old
+	Then user clicks on signup button
+	And user resets app
+	And user opens app
+	And get the GUID
+	And get the AuthToken from GUID
+	And Emancipate the user now
+	Then user selects country '${country.name}' from country list
+#	And user gets redirected to 'LOG-IN DEPENDENT' Page
+#	And user enter email and password 'Login.adultNewPassword' on login page
+#	And user click on login button and verify notice screen
+	And user taps on Back button
+END

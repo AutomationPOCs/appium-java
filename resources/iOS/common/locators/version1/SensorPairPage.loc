@@ -1,0 +1,79 @@
+NFKios.sensorpairpage.title={\"locator\":\"xpath=//*[@name=\\\"EnterSensorCodeViewController.headingLabel\\\"]\",\"desc\":\"Title of Sensor pair screen\"}
+NFKios.sensorpairpage.sensor.skip.btn= {\"locator\":\"xpath=//*[@name=\\\"EnterSensorCodeViewController.rightBarButton\\\"]\",\"desc\":\"Skip button of Sensor pair screen\"}
+NFKios.sensorpairpage.code.all.field={\"locator\":\"xpath=//*[@name=\\\"EnterSensorCodeViewController.inputCodeView\\\"]\",\"desc\":\"Field to enter the sensor pair code\"}
+NFKios.sensorpairpage.code.first.field={\"locator\":\"xpath=//XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]\",\"desc\":\"First field of sensor pair code\"}
+NFKios.sensorpairpage.code.second.field={\"locator\":\"xpath=//XCUIElementTypeOther[1]/XCUIElementTypeStaticText[2]\",\"desc\":\"Second field of sensor pair code\"}  
+NFKios.sensorpairpage.code.third.field={\"locator\":\"xpath=//XCUIElementTypeOther[1]/XCUIElementTypeStaticText[3]\",\"desc\":\"Third field of sensor pair code\"}
+NFKios.sensorpairpage.code.fourth.field={\"locator\":\"xpath=//XCUIElementTypeOther[1]/XCUIElementTypeStaticText[4]\",\"desc\":\"Fourth field of sensor pair code\"}
+NFKios.sensorpairpage.code.fifth.field={\"locator\":\"xpath=//XCUIElementTypeOther[1]/XCUIElementTypeStaticText[5]\",\"desc\":\"Fifth field of sensor pair code\"}  
+NFKios.sensorpairpage.code.sixth.field={\"locator\":\"xpath=//XCUIElementTypeOther[1]/XCUIElementTypeStaticText[6]\",\"desc\":\"Sixth field of sensor pair code\"}  
+NFKios.sensorpairpage.code.seventh.field={\"locator\":\"xpath=//XCUIElementTypeOther[1]/XCUIElementTypeStaticText[7]\",\"desc\":\"Seventh field of sensor pair code\"}  
+NFKios.sensorpairpage.next.button={\"locator\":\"xpath=//*[@name=\\\"EnterSensorCodeViewController.rightBarButton\\\"]\",\"desc\":\"Next button on Sensor pair screen\"}
+NFKios.sensorpairpage.applysensor.title={\"locator\":\"xpath=//*[@name=\\\"ApplySensorViewController.titleLabel\\\"]\",\"desc\":\"Apply sensor title\"}
+NFKios.sensorpairpage.applysensor.next.button={\"locator\":\"xpath=//*[@name=\\\"ApplySensorViewController.nextButton\\\"]|//*[@label=\\\"Next\\\"]\",\"desc\":\"Next button on Apply sensor screen\"}
+NFKios.sensorpairpage.applysensor.back.button={\"locator\":\"xpath=//*[@name=\\\"Cancel\\"]\",\"desc\":\"Cancel button on Apply sensor screen\"}
+NFKios.sensorpairpage.applysensor.rightabdomen.btn={\"locator\":\"xpath=//*[@name=\\\"ApplySensorViewController.rightAbdomenButton\\"]\",\"desc\":\"Right Abdomen button\"}
+NFKios.sensorpairpage.applysensor.leftabdomen.btn={\"locator\":\"xpath=//*[@name=\\\"ApplySensorViewController.leftAbdomenButton\\"]\",\"desc\":\"Left Abdomen button\"}
+NFKios.sensorpairpage.applysensor.leftarm.btn={\"locator\":\"xpath=//*[@name=\\\"ApplySensorViewController.leftArmButton\\"]\",\"desc\":\"Left Arm button\"}
+NFKios.sensorpairpage.applysensor.rightarm.btn={\"locator\":\"xpath=//*[@name=\\\"ApplySensorViewController.rightArmButton\\"]\",\"desc\":\"Right Arm button\"}
+NFKios.sensorpairpage.applysensor.howtoapply.btn={\"locator\":\"xpath=//*[@name=\\\"ApplySensorViewController.howToButton\\"]\",\"desc\":\"How to apply button\"}
+NFKios.sensorpairpage.applysensor.footer.lbl={\"locator\":\"xpath=//*[@name=\\\"ApplySensorViewController.footerLabel\\"]\",\"desc\":\"Footer labelon Apply sensor page\"}
+NFKios.apply.sensor.back.btn = {\"locator\":\"xpath=//*[@name=\\\"ApplySensorViewController.backButton\\"]\",\"desc\":\"Title Apply sensor\"}
+NFKios.apply.sensor.title = {\"locator\":\"xpath=//*[@name=\\\"ApplySensorViewController.titleLabel\\"]\",\"desc\":\"Text message\"}
+NFKios.apply.sensor.text1 = {\"locator\":\"xpath=//*[@name=\\\"ApplySensorViewController.descriptionLabel\\"]\",\"desc\":\"How to apply link\"}
+NFKios.apply.sensor.how.to.apply.sensor.link = {\"locator\":\"xpath=//*[@name=\\\"How to apply the sensor\\\"]\",\"desc\":\"Title of Pop-up\"}
+NFKios.apply.sensor.text2 = {\"locator\":\"xpath=//*[@name=\\\"ApplySensorViewController.footerLabel\\"]\",\"desc\":\"Footer label on Apply sensor page\"}
+NFKios.how.to.apply.sensor.scrn.back.btn = {\"locator\":\"xpath=//*[@name=\\\"HowToApplySensorViewController.backButton\\"]\",\"desc\":\"back button\"}
+NFKios.how.to.apply.sensor.title = {\"locator\":\"xpath=//*[@name=\\\"Apply Sensor\\\"]\",\"desc\":\"Title of Pop-up\"}
+NFKios.how.to.apply.sensor.pair.btn = {\"locator\":\"xpath=//*[@name=\\\"HowToApplySensorViewController.pairButton\\"]\",\"desc\":\"Footer label on Apply sensor page\"}
+NFKios.how.to.apply.sensor.helpful.tips.link = {\"locator\":\"xpath=//*[@name=\\\"See Helpful Tips\\\"]\",\"desc\":\"Title of Pop-up\"}
+NFKios.how.to.apply.sensor.helpful.tips.title = {\"locator\":\"xpath=//*[@name=\\\"Helpful Tips\\\"]\",\"desc\":\"Title of Pop-up\"}
+NFKios.how.to.apply.sensor.helpful.tips.screen.X.btn = {\"locator\":\"xpath=//*[@name=\\\"xInCircleGray\\\"]\",\"desc\":\"Title of Pop-up\"}
+NFKios.how.to.apply.sensor.left.buttock.btn = {\"locator\":\"xpath=//*[@name=\\\"ApplySensorViewController.leftButtockButton\\"]\",\"desc\":\"Footer label on Apply sensor page\"}
+NFKios.how.to.apply.sensor.right.buttock.btn = {\"locator\":\"xpath=//*[@name=\\\"ApplySensorViewController.rightButtockButton\\"]\",\"desc\":\"Footer label on Apply sensor page\"}
+
+
+
+##CGM Automation
+NFKios.Sensorpairing.nextbtn = {\"locator\":\"xpath=//*[@value=\\\"Next\\"]\",\"desc\":\"next button\"}
+NFKios.Sensorpairing.continuebtn = {\"locator\":\"xpath=//XCUIElementTypeAlert/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeScrollView[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]\",\"desc\":\"continue button\"}
+NFKios.Sensorpairing.Passkeyfield = {\"locator\":\"xpath=//*[@type='XCUIElementTypeSecureTextField']\",\"desc\":\"passkey field\"}
+NFKios.Sensorpairing.Pairbtn={\"locator\":\"xpath=//XCUIElementTypeAlert/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeScrollView[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[3]\",\"desc\":\"Pair Button\"}
+NFKios.Sensorpairing.blutoothPairngRequest.popup = {\"locator\":\"xpath=//*[@name=\\\"Bluetooth Pairing Request\\\"]\",\"desc\":\"Title of Pop-up\"}
+NFKios.Sensorpairing.blutoothPairngRequest.content = {\"locator\":\"xpath=(//*[contains(@name,'Enter the code')])\",\"desc\":\"content of Pop-up\"}
+NFKios.Sensorpairing.sensorDidnotPair.popup = {\"locator\":\"xpath=//*[@name=\\\"Sensor Did Not Pair\\\"]\",\"desc\":\"sensor did not pair Pop-up\"}
+NFKios.Sensorpairing.sensorDidnotPair.tryAgian.btn = {\"locator\":\"xpath=//*[@name=\\\"Try Again\\\"]\",\"desc\":\"Try again button\"}
+NFKios.Sensorpairing.sensorwarm.title={\"locator\":\"xpath=//*[@name='Sensor Warming Up' and @value='Sensor Warming Up']\",\"desc\":\"warm up title\"}
+NFKios.Sensorpairing.sensorwarmup.ok= {\"locator\":\"xpath=//*[@label='OK']\",\"desc\":\"ok Button\"}
+NFKios.sensor.static.lbl = {\"locator\":[\"xpath=//*[contains(@label,'%s')]\",\"xpath=//*[contains(text(),'%s')]\"],\"desc\":\"Static label\"}
+NFKios.Sensorpairing.Stopsensor= {\"locator\":\"xpath=//*[@label='Stop Sensor']\",\"desc\":\"Stop Sensor\"}
+NFKios.Sensorpairing.CancelBtn= {\"locator\":\"xpath=//*[@label='Cancel']\",\"desc\":\"Cancel Button\"}
+NFKios.Sensorpairing.Link= {\"locator\":\"xpath=//*[@value='How do I remove my sensor?']\",\"desc\":\"Stop sensor link\"}
+NFKios.Sensorpairing.hompage.readings={\"locator\":\"xpath=//*[@identifier='CurrentCGMReadingView.cgmReadingLabel']\",\"desc\":\"sensor readings\"}
+NFKios.Sensorpairing.hompage.readingunit={\"locator\":\"xpath=//*[@identifier='CurrentCGMReadingView.unitLabel']\",\"desc\":\"sensor readings unit\"}
+NFKios.Sensorpairing.hompage.expirecntdwn={\"locator\":\"xpath=//*[@identifier='SensorExpirationCountDownView.countdownLabel']\",\"desc\":\"sensor expire countdown\"}
+NFKios.Sensorpairing.upairSensor.title={\"locator\":\"xpath=//*[@label='Unpair Sensor']\",\"desc\":\"Unpair Sensor Title\"}
+NFKios.Sensorpairing.upairSensor.header={\"locator\":\"xpath=//*[@identifier='UnpairSensorViewController.titleLabel']\",\"desc\":\"Unpair Sensor header\"}
+NFKios.Sensorpairing.upairSensor.description={\"locator\":\"xpath=//*[@identifier='UnpairSensorViewController.descriptionLabel']\",\"desc\":\"Unpair Sensor desc\"}
+NFKios.Sensorpairing.upairSensor.pairingcode={\"locator\":\"xpath=//*[@identifier='UnpairSensorViewController.pairingCodeLabel']\",\"desc\":\"Unpair Sensor pairing code\"}
+NFKios.Sensorpairing.upairSensor.unpairbtn={\"locator\":\"xpath=//*[@identifier='UnpairSensorViewController.unpairButton']\",\"desc\":\"Unpair Sensor button\"}
+NFKios.Sensorpairing.upairSensor.cancelbtn={\"locator\":\"xpath=//*[@identifier='UnpairSensorViewController.cancelButton']\",\"desc\":\"cancel  button\"}
+NFKios.Sensorpairing.sensor.expiryLessthan16days.popup = {\"locator\":\"xpath=//*[@value='Sensor Expires in Less Than 16 Days']\",\"desc\":\"Sensor Expires in Less Than 16 Days popup\"}
+
+NFKios.SensorExpirationCountDown.periodLabel={\"locator\":\"xpath=//*[@identifier=\\\"SensorExpirationCountDownView.periodLabel\\\"]\",\"desc\":\"Sensor Expiration Period\"}
+NFKios.Sensorpairing.startTour.btn = {\"locator\":\"xpath=//*[@name=\\\"Start Tour\\\"]\",\"desc\":\"Start Tour button\"}
+NFKios.Sensorexpiration.popup.title= {\"locator\":\"xpath=//*[@value='Sensor Expiring']\",\"desc\":\"Sensor expiraton popup\"}
+NFKios.Sensorexpiration.2hrpopup.desc={\"locator\":\"xpath=//*[@label='Your sensor session expires in less than 2 hours.']\",\"desc\":\"Sensor Expiration 2hr\"}
+NFKios.Sensorexpiration.ok.btn={\"locator\":\"xpath=//*[@label='OK']\",\"desc\":\"Sensor Expiration OK\"}
+NFKios.sensorpage.staticText.lbl = {\"locator\":\"xpath=//*[contains(@label,\\\"%s\\\")]\",\"desc\":\"Static text\"}
+NFKios.SensorHomepage.Banner={\"locator\":\"xpath=//*[@label='High Alert']\",\"desc\":\"High Alert Banner\"}
+NFKios.SensorHomepage.reading={\"locator\":\"xpath=//*[@identifier=\\\"CurrentCGMReadingView.cgmReadingLabel\\\"]\",\"desc\":\"Sensor Home Page Readings\"}
+NFKios.Sensorexpiration.logo={\"locator\":\"xpath=//*[@label='OneTouch 24/7 CGM']\",\"desc\":\"Sensor Expiration logo\"}
+
+NFKios.Sensorpairing.changesetting.notnow= {\"locator\":\"xpath=//*[@label='Not Now']\",\"desc\":\"Not Now\"}
+NFKios.Sensorpairing.changesetting.settings= {\"locator\":\"xpath=//*[@label='Settings']\",\"desc\":\"Not Now\"}
+
+NFKios.homescreen.pairsensor.btn = {\"locator\":\"xpath=//*[@name=\\\"StartSensorViewController.pairSensorButton\\"]\",\"desc\":\"home screen pair sensor btn button\"}
+NFKios.Sensorpairing.startPairing.cancel.btn= {\"locator\":\"xpath=//*[@label='Cancel']\",\"desc\":\"start pairing cancel button\"}
+NFKios.Sensorpairing.startPairing.tryAgain.btn= {\"locator\":\"xpath=//*[@label='Try Again']\",\"desc\":\"start pairing try again button\"}
+
